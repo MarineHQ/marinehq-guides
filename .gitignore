@@ -1,0 +1,4 @@
+site/guides/_smoke/
+content/_smoke.md
+.DS_Store
+__pycache__/
