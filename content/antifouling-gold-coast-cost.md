@@ -104,7 +104,7 @@ GCCM's package tells the story of the market: $69 a foot when it launched around
 
 **Moisture and blister checks.** No Australian pricing published. Ask; on an older hull it is worth more than the paint.
 
-<div class="callout orange" markdown="1"><span class="eyebrow">Cost trap</span>
+<div class="callout orange" markdown="1"><span class="eyebrow">Before you sign</span>
 A "from $X a foot" quote is a paint quote. Ask in writing whether it includes the lift both ways, the waterblast and levy, the number of hardstand days, the paint grade and litres, Propspeed, anodes and the polish. If it does not say, it is not included.</div>
 
 ## Paint: what it costs and how much you need

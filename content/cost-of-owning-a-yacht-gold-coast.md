@@ -100,7 +100,7 @@ GCCM's all-inclusive antifoul package is the clearest published price on the Coa
 
 For the antifoul work alone, HF Marine Services at GCCM publishes from $51 a foot for a standard two-coat job and from $86 a foot with a hull cut and polish, excluding the yard's lift and hardstand, Propspeed, anodes and any fairing.
 
-<div class="callout orange" markdown="1"><span class="eyebrow">Cost trap</span>
+<div class="callout orange" markdown="1"><span class="eyebrow">Before you sign</span>
 The per-foot price is never the whole bill. Propspeed on the running gear, new anodes, seacock servicing, a prop polish and any moisture or blister work are quoted separately, and on a 60-footer they add up quickly. Ask for the full scope in writing before she comes out of the water. Our antifouling guide walks through each line.</div>
 
 ## Insurance

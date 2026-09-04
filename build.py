@@ -83,7 +83,7 @@ HEAD = '''<!DOCTYPE html><html lang="en-AU"><head>
 <meta property="og:site_name" content="Marine HQ Guides"><meta property="og:locale" content="en_AU">
 <link rel="icon" href="/assets/white_favicon-64.png"><link rel="apple-touch-icon" href="/assets/white_icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css?v=__V__">
 __JSONLD__
 </head><body>
@@ -120,7 +120,7 @@ FOOT = '''
 </body></html>'''
 
 GUIDE = '''
-<section class="hero" style="background-image:linear-gradient(100deg,rgba(26,43,92,.94) 0%,rgba(26,43,92,.82) 45%,rgba(26,43,92,.35) 100%),url('/__HERO__')">
+<section class="hero" style="background-image:linear-gradient(180deg,rgba(22,34,63,.35) 0%,rgba(22,34,63,.55) 40%,rgba(22,34,63,.92) 100%),url('/__HERO__')">
   <div class="wrap">
     <div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> <a href="/__CATSLUG__/">__CAT__</a></div>
     <h1>__H1__</h1>
@@ -255,7 +255,7 @@ def build_guide(meta, guides):
     open(os.path.join(out, "index.html"), "w", encoding="utf-8").write(page)
 
 INDEX = '''
-<section class="hero home" style="background-image:linear-gradient(100deg,rgba(26,43,92,.94) 0%,rgba(26,43,92,.8) 50%,rgba(26,43,92,.3) 100%),url('/assets/login-bg.jpg')">
+<section class="hero home" style="background-image:linear-gradient(180deg,rgba(22,34,63,.30) 0%,rgba(22,34,63,.55) 45%,rgba(22,34,63,.92) 100%),url('/assets/login-bg.jpg')">
   <div class="wrap">
     <div class="eyebrow">Marine HQ Guides &middot; Gold Coast</div>
     <h1>Straight answers on owning a yacht on the Gold Coast.</h1>
