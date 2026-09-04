@@ -111,8 +111,8 @@ a:hover{text-decoration:underline}
 .side-cta .btn{width:100%;margin-bottom:8px}
 
 /* tail sections */
-.tail{max-width:var(--col);padding-bottom:40px}
-@media(min-width:960px){.tail{max-width:calc(var(--col) + 36px)}}
+.tail{max-width:var(--wrap);padding-bottom:40px}
+.tail>*{max-width:var(--col)}
 .tail h2{color:var(--navy);font-size:1.5rem;margin:44px 0 14px}
 .faq details{border:1.5px solid var(--line);border-radius:12px;margin-bottom:10px;background:#fff}
 .faq summary{cursor:pointer;padding:14px 46px 14px 18px;font-weight:700;color:var(--navy);list-style:none;position:relative}
