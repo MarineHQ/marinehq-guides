@@ -308,7 +308,6 @@ def check(guides):
     bad = 0
     for g in guides:
         probs = []
-        if not g.get("quote"):   probs.append("no quote")
         if not g.get("faq"):     probs.append("no FAQ")
         if not g.get("sources"): probs.append("no sources")
         if "{{cta}}" not in g["_body"]: probs.append("no {{cta}} placement")

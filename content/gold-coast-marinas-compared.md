@@ -6,8 +6,6 @@
   "category": "marinas",
   "date": "2026-09-05",
   "updated": "2026-09-05",
-  "quote": "Up the river you pay in time; on the Broadwater you pay in dollars. In cyclone season, the hour and a half at six knots is the best insurance you can buy.",
-  "quote_by": "Trish Perez, Marine HQ",
   "cta": "Not sure which marina suits your yacht and how you use her? Tell us and we will give you a straight answer.",
   "faq": [
     {"q": "Which Gold Coast marina is closest to open water?",
@@ -105,8 +103,6 @@ The 1 May 2026 rates, including GST, per month:
 | 82 ft / 25 m single | $4,122 | $5,500 |
 
 Wide and catamaran berths cost more (a 59 ft cat is $2,682 member, $4,430 visitor), three-phase power is 35 cents a kilowatt hour, and a 12-month contract on the 59 ft single is $19,311 for members. There is a waiting list for permanent berths, reported at around 300 vessels, and the club is adding 19 berths.
-
-{{quote}}
 
 ## The Boat Works, Coomera
 

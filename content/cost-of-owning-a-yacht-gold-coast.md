@@ -6,8 +6,6 @@
   "category": "costs",
   "date": "2026-09-05",
   "updated": "2026-09-05",
-  "quote": "Berthing is the bill everyone budgets for. The yard is the one that surprises them.",
-  "quote_by": "Trish Perez, Marine HQ",
   "cta": "Want a budget for your yacht, line by line, before you buy or before the next yard visit? One call.",
   "faq": [
     {"q": "Is it cheaper to keep a boat on the Gold Coast than in Sydney?",
@@ -89,8 +87,6 @@ A few things the rate card does not shout about:
 - **Rates are climbing.** Southport's 59 ft double berth went from $14,139 a year in May 2023 to $16,087 in May 2026, up 13.8% in three years.
 - **New marinas open at the top of the market.** Mantaray Marina at The Spit, opened May 2026, advertises monthly leases from $2,000 and twenty superyacht berths.
 - **Buying is an option.** Freehold berths at Hope Island, next to Sanctuary Cove, list at about $179,000 for 12 m and $320,000 for 18 m, with outgoings of $6,600 to $7,900 a year. Rentals in the same area run $1,050 to $1,300 a month.
-
-{{quote}}
 
 ## The yard: antifouling and everything that goes with it
 

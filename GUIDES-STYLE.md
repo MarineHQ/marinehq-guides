@@ -24,7 +24,7 @@ and ends with a way to call Marine HQ. It is not a diary post and it is not an a
 - **Opening paragraph**: give the answer straight away (a number, a range, a yes/no). No throat-clearing.
 - **Key facts box** right after the opening (see components).
 - **H2 sections** that follow the reader's questions in order. Short paragraphs. Tables for numbers.
-- `{{quote}}` after the first or second H2 — one sentence in Trish's voice (see Voice).
+- No attributed quotes. Trish asked (5 Sep 2026) for the "said by Trish" quote blocks to be removed; do not add `{{quote}}` or any quote in her name.
 - `{{cta}}` roughly two-thirds through — the mid-article call.
 - **A worked example** with the arithmetic shown, whenever the topic is a cost.
 - **"What we do"** or **"What to check"** section near the end — practical, first person plural.
@@ -55,8 +55,6 @@ Tables: Markdown pipe tables. First column is the label (rendered bold). Right-a
 - "You" for the owner, "we" for Marine HQ. "Your yacht", "she/her" for the vessel is fine.
 - No hype words (world-class, bespoke, seamless, unparalleled). No exclamation marks.
 - Honest about cost and hassle. Owners trust the guide that tells them the antifoul will be $10k.
-- The **quote** is Trish speaking from experience: one sentence, an opinion or a rule of thumb,
-  never a sales line. e.g. "Berthing is the bill people budget for; the yard is the one that surprises them."
 - Mention Marine HQ where it is genuinely relevant (we do this, here is what we check), never every paragraph.
 
 ## Local specifics to get right

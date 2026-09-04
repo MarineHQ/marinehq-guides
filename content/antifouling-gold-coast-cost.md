@@ -6,8 +6,6 @@
   "category": "maintenance",
   "date": "2026-09-05",
   "updated": "2026-09-05",
-  "quote": "The per-foot price gets her out of the water and painted. Everything you actually wanted looked at while she's out is a separate line.",
-  "quote_by": "Trish Perez, Marine HQ",
   "cta": "Yard visit coming up? We will scope it, quote it and stand on the hardstand while it is done.",
   "faq": [
     {"q": "How much does antifouling cost on the Gold Coast?",
@@ -89,8 +87,6 @@ Very little, which is why the same haul-out gets quoted three different ways.
 | Short Marine, Gold Coast Antifouling, ADG Marine, Pronto, Antifoul Solutions | Quote only | Short Marine says it does the job over 1,000 times a year; Runaway Bay lifts to 16 m. |
 
 GCCM's package tells the story of the market: $69 a foot when it launched around 2020, $85 a foot on older pages still live today, $89.50 now. Roughly 30% in five or six years.
-
-{{quote}}
 
 ## The extras, line by line
 
