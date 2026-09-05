@@ -123,7 +123,7 @@ FOOT = '''
 </body></html>'''
 
 GUIDE = '''
-<section class="hero" style="background-image:linear-gradient(180deg,rgba(22,34,63,.35) 0%,rgba(22,34,63,.55) 40%,rgba(22,34,63,.92) 100%),url('/__HERO__')">
+<section class="hero" style="background-image:linear-gradient(180deg,rgba(22,34,63,.50) 0%,rgba(22,34,63,.62) 40%,rgba(22,34,63,.94) 100%),url('/__HERO__')">
   <div class="wrap">
     <div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> <a href="/__CATSLUG__/">__CAT__</a></div>
     <h1>__H1__</h1>
@@ -258,7 +258,7 @@ def build_guide(meta, guides):
     write_page(os.path.join(out, "index.html"), page)
 
 INDEX = '''
-<section class="hero home" style="background-image:linear-gradient(180deg,rgba(22,34,63,.30) 0%,rgba(22,34,63,.55) 45%,rgba(22,34,63,.92) 100%),url('/assets/login-bg.jpg')">
+<section class="hero home" style="background-image:linear-gradient(180deg,rgba(22,34,63,.50) 0%,rgba(22,34,63,.62) 45%,rgba(22,34,63,.94) 100%),url('/assets/login-bg.jpg')">
   <div class="wrap">
     <div class="eyebrow">Marine HQ Guides &middot; Gold Coast</div>
     <h1>Straight answers on owning a yacht on the Gold Coast.</h1>
