@@ -28,6 +28,8 @@ ROOT    = os.path.dirname(os.path.abspath(__file__))
 CONTENT = os.path.join(ROOT, "content")
 SITE    = os.path.join(ROOT, "site")
 BASE    = "https://guides.marinehq.com.au"          # change if the guides end up under another host
+PREFIX  = ""                                         # e.g. "/marinehq-guides" for a GitHub Pages review build (--prefix)
+NOINDEX = False                                      # review builds: --noindex adds a robots noindex tag
 MAIN    = "https://www.marinehq.com.au"
 PHONE   = "0439 748 387"
 PHONE_H = "+61439748387"
@@ -252,7 +254,7 @@ def build_guide(meta, guides):
     page = shell(meta["title"] + " | Marine HQ Guides", meta["description"], canon, "article", jsonld_guide(meta), inner)
     out = os.path.join(SITE, "guides", meta["slug"])
     os.makedirs(out, exist_ok=True)
-    open(os.path.join(out, "index.html"), "w", encoding="utf-8").write(page)
+    write_page(os.path.join(out, "index.html"), page)
 
 INDEX = '''
 <section class="hero home" style="background-image:linear-gradient(180deg,rgba(22,34,63,.30) 0%,rgba(22,34,63,.55) 45%,rgba(22,34,63,.92) 100%),url('/assets/login-bg.jpg')">
@@ -280,7 +282,7 @@ def build_index(guides):
     page = shell("Marine HQ Guides — owning a yacht on the Gold Coast",
                  "Costs, marinas, maintenance and the paperwork of owning a motor yacht on the Gold Coast. Plain answers with the numbers shown.",
                  BASE + "/", "website", jl, INDEX.replace("__SECTIONS__", "\n".join(secs)))
-    open(os.path.join(SITE, "index.html"), "w", encoding="utf-8").write(page)
+    write_page(os.path.join(SITE, "index.html"), page)
 
 def build_hubs(guides):
     for s, l, intro in CATEGORIES:
@@ -291,7 +293,7 @@ def build_hubs(guides):
                     "" if gs else '<p class="empty">Guides for this section are being written. Call us in the meantime.</p>'))
         page = shell("%s — Marine HQ Guides" % l, intro, "%s/%s/" % (BASE, s), "website", "", inner)
         os.makedirs(os.path.join(SITE, s), exist_ok=True)
-        open(os.path.join(SITE, s, "index.html"), "w", encoding="utf-8").write(page)
+        write_page(os.path.join(SITE, s, "index.html"), page)
 
 def build_meta(guides):
     urls = ["%s/" % BASE] + ["%s/%s/" % (BASE, s) for s, _, _ in CATEGORIES] + ["%s/guides/%s/" % (BASE, g["slug"]) for g in guides]
@@ -317,7 +319,21 @@ def check(guides):
             bad += 1; print("  ! %s: %s" % (g["slug"], ", ".join(probs)))
     print("check: %d guide(s) with issues" % bad)
 
+_write_orig = None
+def write_page(path, html):
+    if PREFIX:
+        html = re.sub(r'(href|src)="/(?!/)', lambda m: '%s="%s/' % (m.group(1), PREFIX), html)
+        html = html.replace("url('/", "url('%s/" % PREFIX)
+    if NOINDEX:
+        html = html.replace("<head>", '<head>\n<meta name="robots" content="noindex,nofollow">', 1)
+    open(path, "w", encoding="utf-8").write(html)
+
 def main():
+    global PREFIX, NOINDEX, BASE
+    for i, a in enumerate(sys.argv):
+        if a == "--prefix" and i + 1 < len(sys.argv): PREFIX = sys.argv[i + 1].rstrip("/")
+        if a == "--base" and i + 1 < len(sys.argv):   BASE = sys.argv[i + 1].rstrip("/")
+        if a == "--noindex": NOINDEX = True
     paths = sorted(glob.glob(os.path.join(CONTENT, "*.md")))
     guides = [read_guide(p) for p in paths]
     guides.sort(key=lambda g: g["updated"], reverse=True)
