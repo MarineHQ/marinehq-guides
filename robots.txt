@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://guides.marinehq.com.au/sitemap.xml
+Sitemap: https://marinehq.github.io/marinehq-guides/sitemap.xml
