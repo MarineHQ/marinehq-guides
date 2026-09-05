@@ -109,7 +109,7 @@ Marine HQ spent the four days on the docks with a camera and a question list rat
 
 - **Owners.** What is the hardest part of owning a boat, do you use her as much as you would like, who looks after her when you are not aboard, and, the one everyone laughed at first, what is your honest annual running cost.
 - **People in the market.** First boat or not, what is the biggest concern about taking the leap, what size are you looking at and has that changed since you started shopping, and have you thought about who will manage her when you are not using her.
-- **The trades and brokers.** The one question every buyer should ask but never does, the biggest mistake first-time buyers make, the true annual cost, and the one piece of electronics a new owner should invest in first.
+- **The trades and brokers.** The one question every buyer should ask but never does, the biggest mistake first-time buyers make, the true annual cost, and the one piece of electronics a new owner should invest in first. The interview we will remember was with Australia's first female yacht broker, on how she got into the industry and what she tells buyers now.
 
 Two of our thirteen-year-olds ran a junior reporter edition, which produced better answers than the adults' questions did. Several of the answers turned into the guides on this site: the cost figures, the marina comparison and the haul-out checklist came straight from what owners on the docks said they wished someone had told them. We will be back in 2027 with the same camera and a longer list.
 
