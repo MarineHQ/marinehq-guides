@@ -42,6 +42,7 @@ CATEGORIES = [   # slug, label, one-liner (hub page intro)
   ("maintenance", "Maintenance", "What each job involves, how often it is due, and what to check before you pay for it."),
   ("marinas",     "Marinas",     "Where to keep her: every Gold Coast marina, compared on the things that matter."),
   ("buying",      "Buying & selling", "Surveys, sea trials, pre-purchase checks and getting a yacht ready for sale."),
+  ("cruising",    "Cruising & passages", "Taking her further: the Whitsundays, Sydney, and what to plan before you clear the Seaway."),
   ("ownership",   "Ownership",   "Crew, compliance, insurance, registration and the admin of owning a yacht."),
 ]
 CAT_LABEL = {s: l for s, l, _ in CATEGORIES}
