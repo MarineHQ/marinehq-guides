@@ -5,7 +5,8 @@
   "description": "Sanctuary Cove, Southport Yacht Club, The Boat Works, GCCM, Hope Harbour, Marina Mirage, Runaway Bay and more, compared on berths, depth, fuel, haul-out, distance to the Seaway and published rates.",
   "category": "marinas",
   "date": "2026-09-05",
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
+  "hero": "assets/photos/bow-marina.jpg",
   "cta": "Not sure which marina suits your yacht and how you use her? Tell us and we will give you a straight answer.",
   "faq": [
     {"q": "Which Gold Coast marina is closest to open water?",

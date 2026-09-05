@@ -76,3 +76,17 @@ Tables: Markdown pipe tables. First column is the label (rendered bold). Right-a
 - Don't use client vessels, owners, crew names or Marine HQ internal pricing.
 - Don't write "in this article we will…" — just write it.
 - Don't put more than one CTA block in the body (the sidebar and footer already carry it).
+
+## Photos (added 6 Sep 2026 — Trish: "what about adding some pics")
+- Photos live in `site/assets/photos/` (re-encoded JPEG, max 1800px, EXIF/GPS stripped). Source = the
+  `Marine HQ Website pics` library (already public on marinehq.com.au) — **never** a photo that shows a
+  managed vessel's name, hull number, owner or crew face without checking with Trish first.
+- Each guide sets its own `"hero": "assets/photos/<file>.jpg"` in the front matter. Pick the photo that
+  matches the subject (yard shots for maintenance, open water for passages, marina for berthing).
+- In the body, one or two figures per guide at most, where a picture explains something words cannot:
+  ```html
+  <figure><img src="/assets/photos/running-gear.jpg" alt="Props, shafts and rudders on the hardstand" loading="lazy"><figcaption><b>Running gear</b> — what Propspeed and new anodes protect.</figcaption></figure>
+  <div class="figrow"><figure>…</figure><figure>…</figure></div>   <!-- two side by side -->
+  ```
+- Always write a real `alt` and a caption that adds a fact. No stock-photo filler; if there is no honest
+  photo, use none.

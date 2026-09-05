@@ -5,7 +5,8 @@
   "description": "Per-foot yard packages, hardstand rates, paint prices, Propspeed and anodes, how often to do it in Gold Coast water, and a worked example for a 60 ft motor yacht.",
   "category": "maintenance",
   "date": "2026-09-05",
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
+  "hero": "assets/photos/travel-lift.jpg",
   "cta": "Yard visit coming up? We will scope it, quote it and stand on the hardstand while it is done.",
   "faq": [
     {"q": "How much does antifouling cost on the Gold Coast?",

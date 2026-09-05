@@ -5,7 +5,8 @@
   "description": "Berth, antifoul, insurance, servicing, fuel and rego for a 40–90 ft motor yacht on the Gold Coast, with published 2026 figures and a worked example for a 60-footer.",
   "category": "costs",
   "date": "2026-09-05",
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
+  "hero": "assets/photos/at-anchor.jpg",
   "cta": "Want a budget for your yacht, line by line, before you buy or before the next yard visit? One call.",
   "faq": [
     {"q": "Is it cheaper to keep a boat on the Gold Coast than in Sydney?",
