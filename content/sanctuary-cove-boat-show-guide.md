@@ -5,7 +5,7 @@
   "description": "SCIBS runs 20 to 23 May 2027 at Sanctuary Cove. What last year's show looked like, how to plan a visit, how buying at the show really works, and what Marine HQ did on the docks in 2026.",
   "category": "buying",
   "date": "2026-09-06",
-  "updated": "2026-09-06",
+  "updated": "2026-09-07",
   "hero": "assets/photos/bow-marina.jpg",
   "cta": "Going to the show to buy? Take us with you. We will look at her the way a manager does, not the way a salesperson does.",
   "faq": [
@@ -46,6 +46,8 @@
     {"t": "Megayacht News — Sanctuary Cove Marina expansion (November 2025)", "u": "https://megayachtnews.com/2025/11/sanctuary-cove-marina-expansion/"},
     {"t": "ASMEX 2026 — Australian Superyacht and Marine Export conference", "u": "https://www.asmex-conference.com.au/"},
     {"t": "The Boat Works — Beat the rush", "u": "https://theboatworks.com.au/beat-the-rush-2"},
+    {"t": "Superyacht Times — Flagship International appoints Audrey Greenwood (Queensland office)", "u": "https://www.superyachttimes.com/yacht-news/audrey-greenwood-yacht-broker-flagship-international"},
+    {"t": "Flagship International Yacht Brokers — Audrey Greenwood", "u": "https://flagshipinternational.com.au/about/meet-the-team/Audrey-Greenwood"},
     {"t": "McMichael Yacht Brokers — Boat show top ten tips", "u": "https://mcmichaelyachtbrokers.com/boat-show-top-ten-tips/"},
     {"t": "Discover Boating — Boat show shopping tips", "u": "https://www.discoverboating.com/resources/boat-show-season-shopping-tips"}
   ]
@@ -109,7 +111,7 @@ Marine HQ spent the four days on the docks with a camera and a question list rat
 
 - **Owners.** What is the hardest part of owning a boat, do you use her as much as you would like, who looks after her when you are not aboard, and, the one everyone laughed at first, what is your honest annual running cost.
 - **People in the market.** First boat or not, what is the biggest concern about taking the leap, what size are you looking at and has that changed since you started shopping, and have you thought about who will manage her when you are not using her.
-- **The trades and brokers.** The one question every buyer should ask but never does, the biggest mistake first-time buyers make, the true annual cost, and the one piece of electronics a new owner should invest in first. The interview we will remember was with Australia's first female yacht broker, on how she got into the industry and what she tells buyers now.
+- **The trades and brokers.** The one question every buyer should ask but never does, the biggest mistake first-time buyers make, the true annual cost, and the one piece of electronics a new owner should invest in first. The interview we will remember was with Audrey Greenwood of Flagship International Yacht Brokers, Australia's first female yacht broker, who founded her own brokerage in Noosa at 25 in the late 1980s and now leads Flagship's Queensland office at Gold Coast City Marina, on how she got into the industry and what she tells buyers now.
 
 Two of our thirteen-year-olds ran a junior reporter edition, which produced better answers than the adults' questions did. Several of the answers turned into the guides on this site: the cost figures, the marina comparison and the haul-out checklist came straight from what owners on the docks said they wished someone had told them. We will be back in 2027 with the same camera and a longer list.
 
