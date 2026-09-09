@@ -195,3 +195,4 @@ main.wrap>.grid{margin-top:36px}
 .body .figrow{display:grid;grid-template-columns:1fr;gap:14px;margin:26px 0 30px}
 @media(min-width:640px){.body .figrow{grid-template-columns:1fr 1fr}}
 .body .figrow figure{margin:0}
+.body .figrow figure img{aspect-ratio:4/3;object-fit:cover;width:100%}
