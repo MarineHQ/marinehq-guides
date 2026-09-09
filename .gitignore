@@ -2,3 +2,5 @@ site/guides/_smoke/
 content/_smoke.md
 .DS_Store
 __pycache__/
+photos-in/*
+!photos-in/README.txt
