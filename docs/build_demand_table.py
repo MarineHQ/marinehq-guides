@@ -42,7 +42,7 @@ ROWS = [  # guide, question(s) people ask, where found, signal
   "&ldquo;What is the typical cost range for ceramic coating on the Gold Coast?&rdquo; &middot; &ldquo;What is the downside of ceramic coating?&rdquo; &middot; &ldquo;Is it worth it, would you do it again?&rdquo;",
   "Google AU People also ask for <i>boat ceramic coating cost gold coast</i>; Tugnuts (19 replies); The Hull Truth ceramic threads (2022&ndash;2025); Neptune Oceanic detailing guide (Jul 2026, no numbers)",
   "Gold Coast results are car detailers. Only marine result is The Boat Butler with no price. No Australian page states $/ft or a wash-down cadence."),
- ("Do I need full-time crew? Can I drive her myself? <span class='new'>next</span>",
+ ("Do you need full-time crew? Can I drive her myself?",
   "&ldquo;Can I captain my own yacht?&rdquo; &middot; &ldquo;What is the largest yacht you can drive alone?&rdquo; &middot; &ldquo;At what point do I need to have a captain on my boat? I&rsquo;ve heard 24 metres is a threshold&hellip;&rdquo; &middot; &ldquo;Just purchased a 60&rsquo; motor yacht and lack experience&hellip; need training and to hire a captain for a while&rdquo;",
   "Google AU People also ask for <i>do i need a captain for my yacht</i> and <i>can i drive my own yacht australia</i>; Trawler Forum <i>At what point do I need a captain</i> (3 pages, ~60 posts); YachtForums; Quora (40+ answers); Reddit r/boating (26 answers); boatsales <i>How big a boat can I drive in Australia?</i>",
   "The universal answer online is &ldquo;no law, but your insurer will want a captain&rdquo;. Nobody covers the Queensland rules, the real crew costs, or what happens when a captain leaves."),
