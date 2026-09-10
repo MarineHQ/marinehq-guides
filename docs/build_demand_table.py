@@ -46,6 +46,14 @@ ROWS = [  # guide, question(s) people ask, where found, signal
   "&ldquo;Can I captain my own yacht?&rdquo; &middot; &ldquo;What is the largest yacht you can drive alone?&rdquo; &middot; &ldquo;At what point do I need to have a captain on my boat? I&rsquo;ve heard 24 metres is a threshold&hellip;&rdquo; &middot; &ldquo;Just purchased a 60&rsquo; motor yacht and lack experience&hellip; need training and to hire a captain for a while&rdquo;",
   "Google AU People also ask for <i>do i need a captain for my yacht</i> and <i>can i drive my own yacht australia</i>; Trawler Forum <i>At what point do I need a captain</i> (3 pages, ~60 posts); YachtForums; Quora (40+ answers); Reddit r/boating (26 answers); boatsales <i>How big a boat can I drive in Australia?</i>",
   "The universal answer online is &ldquo;no law, but your insurer will want a captain&rdquo;. Nobody covers the Queensland rules, the real crew costs, or what happens when a captain leaves."),
+ ("MyYacht: the owner app, screen by screen",
+  "&ldquo;What is yacht management and why is it important?&rdquo; &middot; &ldquo;What does a yacht manager do on a day-to-day basis?&rdquo; &middot; &ldquo;Who looks after your boat when you&rsquo;re not on board?&rdquo;",
+  "Competitor pages Chapman Yachting (Oct 2024, Apr 2026), Neptune Oceanic (May 2026), Southern Right Yachting; our own Dock Talk interviews at SCIBS 2026",
+  "Every competitor describes management in words; none shows the owner what they will actually see. This guide is the app, screen by screen, on the demo yacht."),
+ ("What size boat should I get?",
+  "&ldquo;What size boat should I buy?&rdquo; &middot; &ldquo;What size boat do I need for a family of 4?&rdquo; &middot; &ldquo;What is the largest boat one can single-hand?&rdquo; &middot; &ldquo;How big is too big for a first boat?&rdquo;",
+  "YachtBuyer buying guide (Aug 2026); Intermarine (Jul 2025); YBW forum (Jan 2018, 3 pages); Trawler Forum <i>Too big or too small?</i> (Feb 2023, 30 posts) and <i>Biggest boat for 1&frac12; persons</i> (Oct 2022, ~40 replies); YachtForums (3 pages); Boat Gold Coast and Club Marine buyer guides",
+  "Australian forums are trailer-boat and sail; no Australian page sizes a 40&ndash;90 ft motor yacht against Gold Coast berths, depth, fuel burn and the insurers&rsquo; ten-foot rule."),
 ]
 
 rows = "".join("<tr><td class='g'>%s</td><td>%s</td><td>%s</td><td class='s'>%s</td></tr>" % r for r in ROWS)
