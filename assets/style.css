@@ -196,3 +196,10 @@ main.wrap>.grid{margin-top:36px}
 @media(min-width:640px){.body .figrow{grid-template-columns:1fr 1fr}}
 .body .figrow figure{margin:0}
 .body .figrow figure img{aspect-ratio:4/3;object-fit:cover;width:100%}
+
+/* app screenshots (phone frames) */
+.body .phones{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:26px 0 30px}
+@media(min-width:720px){.body .phones{grid-template-columns:repeat(3,1fr)}}
+.body .phones figure{margin:0}
+.body .phones figure img{aspect-ratio:auto;object-fit:unset;width:100%;border:1px solid var(--line-2);border-radius:18px;background:#fff}
+.body .phones.two{grid-template-columns:repeat(2,1fr);max-width:560px}
