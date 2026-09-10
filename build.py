@@ -120,6 +120,7 @@ FOOT = '''
       Prices and figures in these guides are indicative, drawn from published sources on the date shown, and change without notice &mdash; always confirm with the provider. Nothing here is financial or legal advice.</p>
   </div>
 </footer>
+<script src="/assets/whatsapp-widget.js" defer></script>
 </body></html>'''
 
 GUIDE = '''
