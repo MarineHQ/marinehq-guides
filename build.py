@@ -30,6 +30,7 @@ SITE    = os.path.join(ROOT, "site")
 BASE    = "https://guides.marinehq.com.au"          # change if the guides end up under another host
 PREFIX  = ""                                         # e.g. "/marinehq-guides" for a GitHub Pages review build (--prefix)
 NOINDEX = False                                      # review builds: --noindex adds a robots noindex tag
+GA4     = "G-657FQN68L7"                                         # Google Analytics 4 measurement id, e.g. "G-XXXXXXXXXX" (--ga). Never added to --noindex review builds.
 MAIN    = "https://www.marinehq.com.au"
 PHONE   = "0439 748 387"
 PHONE_H = "+61439748387"
@@ -321,6 +322,10 @@ def check(guides):
             bad += 1; print("  ! %s: %s" % (g["slug"], ", ".join(probs)))
     print("check: %d guide(s) with issues" % bad)
 
+GA_SNIPPET = """<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','%s');</script>
+</head>"""
+
 _write_orig = None
 def write_page(path, html):
     if PREFIX:
@@ -328,14 +333,17 @@ def write_page(path, html):
         html = html.replace("url('/", "url('%s/" % PREFIX)
     if NOINDEX:
         html = html.replace("<head>", '<head>\n<meta name="robots" content="noindex,nofollow">', 1)
+    elif GA4:
+        html = html.replace("</head>", GA_SNIPPET % (GA4, GA4), 1)
     open(path, "w", encoding="utf-8").write(html)
 
 def main():
-    global PREFIX, NOINDEX, BASE
+    global PREFIX, NOINDEX, BASE, GA4
     for i, a in enumerate(sys.argv):
         if a == "--prefix" and i + 1 < len(sys.argv): PREFIX = sys.argv[i + 1].rstrip("/")
         if a == "--base" and i + 1 < len(sys.argv):   BASE = sys.argv[i + 1].rstrip("/")
         if a == "--noindex": NOINDEX = True
+        if a == "--ga" and i + 1 < len(sys.argv):     GA4 = sys.argv[i + 1].strip()
     paths = sorted(glob.glob(os.path.join(CONTENT, "*.md")))
     guides = [read_guide(p) for p in paths]
     guides.sort(key=lambda g: g["updated"], reverse=True)

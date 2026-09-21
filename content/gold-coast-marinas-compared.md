@@ -168,4 +168,4 @@ Tropical Cyclone Alfred brought gusts over 100 km/h to the Gold Coast in March 2
 
 ## What we do
 
-Marine HQ is based at Gold Coast City Marina in Coomera and looks after motor yachts at marinas across the Coast. We move boats up and down the river for yard periods, handle the marina paperwork and power accounts, and keep every berth, service and yard visit visible to the owner in their MyYacht app. If you are choosing a home for a new boat or thinking about moving her, call 0439 748 387 and we will tell you what we would do with your yacht.
+Marine HQ is based at The Boat Works in Coomera and looks after motor yachts on the Gold Coast, in Sydney and through the Whitsundays. We move boats up and down the river for yard periods, handle the marina paperwork and power accounts, and keep every berth, service and yard visit visible to the owner in their MyYacht app. If you are choosing a home for a new boat or thinking about moving her, call 0439 748 387 and we will tell you what we would do with your yacht.
