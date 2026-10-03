@@ -261,3 +261,26 @@ main.wrap>.grid{margin-top:36px}
 .maplist b{color:var(--navy);font-weight:600;display:block}
 .maplist i{font-style:normal;color:var(--ink-2);font-size:.84rem}
 .map .leaflet-tile-container img{width:256.6px!important;height:256.6px!important}
+
+/* ── Lock every page to the screen width (4 Oct 2026). Cause was the long email buttons (nowrap) in the
+      end-of-guide and footer call panels; this fixes them and adds a page-level guard. ── */
+html,body{max-width:100%;overflow-x:clip}
+@supports not (overflow-x:clip){html{overflow-x:hidden}}
+.foot-cta>*,.cta>*,.article>*,.grid>*{min-width:0}
+.foot-actions{max-width:100%}
+.foot-actions .btn,.side-cta .btn,.cta .btn{max-width:100%;white-space:normal;text-align:center;line-height:1.35;overflow-wrap:anywhere}
+@media(max-width:640px){
+  .cta.end{padding:30px 22px}
+  .foot-cta{padding:34px 22px}
+  .foot-actions{flex-direction:column;align-items:stretch}
+  .foot-actions .btn{width:100%;letter-spacing:.08em;font-size:.7rem;padding:14px 12px}
+  .cta.mid .btn{width:100%}
+  .hero h1{overflow-wrap:anywhere}
+  .body table{max-width:100%}
+  .keyfacts li{flex-direction:column;gap:2px}
+  .keyfacts li b{min-width:0}
+}
+.stat-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+.stat{min-width:0}
+.stat b{overflow-wrap:anywhere}
+@media(max-width:400px){.stat b{font-size:1.5rem}.stat{padding:14px 10px 12px}}
