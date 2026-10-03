@@ -5,7 +5,7 @@
   "description": "About 470 nautical miles, three to six days. The legs, the all-weather harbours and the bar entrances, the East Australian Current, fuel and berths in Sydney, the NSW rules, and whether to run her yourself or send a delivery skipper.",
   "category": "cruising",
   "date": "2026-09-06",
-  "updated": "2026-10-03",
+  "updated": "2026-10-04",
   "hero": "assets/photos/at-anchor.jpg",
   "cta": "Heading south? We plan the passage, prepare the boat, and can put a delivery skipper and crew aboard so she is waiting for you in Sydney.",
   "faq": [
@@ -79,6 +79,10 @@ Gold Coast to Sydney is about **470 nautical miles** of open coast, with the Eas
 </div>
 
 ## The legs
+
+The track at a glance, Seaway to Sydney Harbour.
+
+{{map:gold-coast-to-sydney}}
 
 The distances below are drawn from sail-training and cruising sources and do not agree with each other to the mile. Use them for planning, then measure the legs on your own chart with the offshore distance you actually intend to run.
 

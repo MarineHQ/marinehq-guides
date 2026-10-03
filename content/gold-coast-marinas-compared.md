@@ -5,7 +5,7 @@
   "description": "Sanctuary Cove, Southport Yacht Club, The Boat Works, GCCM, Hope Harbour, Marina Mirage, Runaway Bay and more, compared on berths, depth, fuel, haul-out, distance to the Seaway and published rates.",
   "category": "marinas",
   "date": "2026-09-05",
-  "updated": "2026-10-03",
+  "updated": "2026-10-04",
   "hero": "assets/photos/bow-marina.jpg",
   "cta": "Not sure which marina suits your yacht and how you use her? Tell us and we will give you a straight answer.",
   "faq": [
@@ -67,6 +67,10 @@ The Gold Coast has eleven commercial marinas and about 170 superyacht berths, mo
 </div>
 
 ## The comparison at a glance
+
+Eleven marinas on one map. Marine HQ is based at The Boat Works, number 3. Tap a number for the name.
+
+{{map:gold-coast-marinas}}
 
 | Marina | Where | Berths | Max vessel | Fuel on site | Haul-out on site | To the Seaway | Rates |
 |---|---|---|---|---|---|---|---|

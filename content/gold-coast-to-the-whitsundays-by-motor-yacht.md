@@ -5,7 +5,7 @@
   "description": "About 650 nautical miles, three days fast or a fortnight slow. The legs, the Wide Bay Bar and the Great Sandy Strait, fuel stops, Whitsundays marinas and their rates, the Marine Park mooring rules, the season, and what to do before you leave.",
   "category": "cruising",
   "date": "2026-09-06",
-  "updated": "2026-09-06",
+  "updated": "2026-10-04",
   "hero": "assets/photos/wake.jpg",
   "cta": "Whitsundays this season? We prepare the boat, plan the bars and tides, and can deliver her north so you fly in to a yacht on a mooring.",
   "faq": [
@@ -78,6 +78,10 @@ The run north is the one most Gold Coast owners dream about and fewer make than 
 </div>
 
 ## The legs
+
+The track at a glance, Seaway to Airlie Beach.
+
+{{map:gold-coast-to-whitsundays}}
 
 | Leg | Distance | Notes |
 |---|---|---|

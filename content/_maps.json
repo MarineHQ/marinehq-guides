@@ -1,0 +1,56 @@
+{
+ "gold-coast-marinas": {
+  "title": "Gold Coast marinas",
+  "caption": "The Gold Coast's marinas, numbered. The Broadwater marinas sit by the Seaway; the Coomera River marinas are about 11 nautical miles upstream at six knots.",
+  "height": 560, "line": false,
+  "points": [
+   {"n":"1","name":"Sanctuary Cove Marina","note":"Hope Island, Coomera River","lat":-27.8540,"lon":153.3640,"at":[-27.826,153.395]},
+   {"n":"2","name":"Southport Yacht Club","note":"Main Beach","lat":-27.9736,"lon":153.4266,"at":[-28.012,153.478]},
+   {"n":"3","name":"The Boat Works","note":"Coomera · marina and shipyard · Marine HQ's base","lat":-27.8704,"lon":153.3335,"at":[-27.893,153.296],"kind":"hq"},
+   {"n":"4","name":"Gold Coast City Marina & Shipyard (GCCM)","note":"Coomera","lat":-27.8621,"lon":153.3368,"at":[-27.846,153.296]},
+   {"n":"5","name":"Hope Harbour Marina","note":"Hope Island","lat":-27.8693,"lon":153.3737,"at":[-27.890,153.368]},
+   {"n":"6","name":"Marina Mirage","note":"Main Beach","lat":-27.9684,"lon":153.4260,"at":[-27.943,153.478]},
+   {"n":"7","name":"Runaway Bay Marina","note":"Runaway Bay","lat":-27.9007,"lon":153.4027},
+   {"n":"8","name":"Pacific Point Marina","note":"Steiglitz · formerly Horizon Shores","lat":-27.7531,"lon":153.3474},
+   {"n":"9","name":"Hope Island Marina","note":"Hope Island, next to Sanctuary Cove","lat":-27.8642,"lon":153.3507,"at":[-27.835,153.335]},
+   {"n":"10","name":"Mantaray Marina","note":"The Spit, Main Beach · new in 2026 · position approximate","lat":-27.9705,"lon":153.4270,"at":[-27.989,153.478],"kind":"new"},
+   {"n":"11","name":"Main Beach Superyacht Marina","note":"Mariner's Cove site · coming soon","lat":-27.9687,"lon":153.4272,"at":[-27.966,153.478],"kind":"new"},
+   {"n":"S","name":"Gold Coast Seaway","note":"The way to open water","lat":-27.9347,"lon":153.4292,"at":[-27.920,153.478],"kind":"sea"}
+  ]
+ },
+ "gold-coast-to-whitsundays": {
+  "title": "Gold Coast to the Whitsundays",
+  "caption": "The usual track north, stop by stop. Indicative only, not for navigation.",
+  "height": 620, "line": true,
+  "points": [
+   {"n":"1","name":"Gold Coast Seaway","note":"Departure","lat":-27.9347,"lon":153.4292},
+   {"n":"2","name":"Mooloolaba","note":"82 nm · fuel","lat":-26.6853,"lon":153.1292},
+   {"n":"3","name":"Wide Bay Bar","note":"Cross on the last of the flood, in daylight","lat":-25.8098,"lon":153.0577,"at":[-25.81,153.95]},
+   {"n":"4","name":"Urangan, Hervey Bay","note":"After the Great Sandy Strait · fuel","lat":-25.2970,"lon":152.9063,"at":[-25.05,153.75]},
+   {"n":"5","name":"Bundaberg Port Marina","note":"Port of entry · 24/7 fuel","lat":-24.7606,"lon":152.3876},
+   {"n":"6","name":"Pancake Creek","note":"Anchorage · follow the leads in","lat":-24.0215,"lon":151.7532,"at":[-24.02,152.55]},
+   {"n":"7","name":"Gladstone Marina","note":"Fuel dock","lat":-23.8359,"lon":151.2483,"at":[-23.84,150.45]},
+   {"n":"8","name":"Rosslyn Bay (Keppel Bay Marina)","note":"Yeppoon · fuel","lat":-23.1618,"lon":150.7874},
+   {"n":"9","name":"Middle Percy Island","note":"The classic stop","lat":-21.6588,"lon":150.2594},
+   {"n":"10","name":"Mackay Marina","note":"24/7 high-flow fuel","lat":-21.1132,"lon":149.2260},
+   {"n":"11","name":"Hamilton Island Marina","note":"Published berth rates","lat":-20.3475,"lon":148.9526,"at":[-20.35,149.80]},
+   {"n":"12","name":"Coral Sea Marina, Airlie Beach","note":"520 berths to 80 m","lat":-20.2643,"lon":148.7130,"at":[-19.85,148.20]}
+  ]
+ },
+ "gold-coast-to-sydney": {
+  "title": "Gold Coast to Sydney",
+  "caption": "The run south, stop by stop. Solid numbers are all-weather harbours; hollow numbers are bar entrances. Indicative only, not for navigation.",
+  "height": 620, "line": true,
+  "points": [
+   {"n":"1","name":"Gold Coast Seaway","note":"Departure · cross on the flood","lat":-27.9347,"lon":153.4292},
+   {"n":"2","name":"Yamba (Clarence River)","note":"Bar entrance","lat":-29.4358,"lon":153.3480,"kind":"bar"},
+   {"n":"3","name":"Coffs Harbour","note":"No bar · 143 berths","lat":-30.3039,"lon":153.1465},
+   {"n":"4","name":"Port Macquarie","note":"Bar entrance","lat":-31.4290,"lon":152.8987,"kind":"bar"},
+   {"n":"5","name":"Forster","note":"Bar entrance · one of the better ones","lat":-32.1821,"lon":152.5131,"kind":"bar"},
+   {"n":"6","name":"Port Stephens (Nelson Bay)","note":"All-weather · fuel 24/7","lat":-32.7186,"lon":152.1453,"at":[-32.45,153.05]},
+   {"n":"7","name":"Newcastle","note":"All-weather · published fuel and berth rates","lat":-32.9200,"lon":151.7602,"at":[-32.92,150.90]},
+   {"n":"8","name":"Pittwater (Broken Bay)","note":"16 nm north of Sydney Heads","lat":-33.6567,"lon":151.3053,"at":[-33.40,152.20]},
+   {"n":"9","name":"Sydney Harbour","note":"Rushcutters Bay","lat":-33.8750,"lon":151.2277,"at":[-34.15,152.10]}
+  ]
+ }
+}

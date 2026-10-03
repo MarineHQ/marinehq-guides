@@ -241,3 +241,23 @@ main.wrap>.grid{margin-top:36px}
 
 /* footer banner must never be wider than the phone (was forcing sideways scroll) */
 .foot .banner{width:100%;max-width:820px;height:auto}
+
+/* ── maps (4 Oct 2026) ── */
+.body .mapfig{margin:26px 0 34px}
+.map{width:100%;border:1px solid var(--line-2);border-radius:var(--r);background:#dfe7f1;z-index:0}
+.map .leaflet-tile-pane{filter:saturate(.55) brightness(1.04)}
+.map .leaflet-popup-content{font-family:var(--sans);font-size:.85rem;line-height:1.45;color:var(--ink)}
+.map .leaflet-popup-content b{color:var(--navy)}
+.pin{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;
+     font-family:var(--label);font-weight:700;font-size:.72rem;border:2px solid #fff;box-shadow:0 2px 6px rgba(22,34,63,.35);line-height:1}
+.pin.k-hq{background:var(--orange)}
+.pin.k-new{background:#fff;color:var(--navy);border-color:var(--navy);border-style:dashed}
+.pin.k-bar{background:#fff;color:var(--navy);border-color:var(--navy)}
+.pin.k-sea{background:var(--blue)}
+.maplist{list-style:none;padding:0!important;margin:14px 0 0!important;display:grid;grid-template-columns:1fr;gap:8px 22px}
+@media(min-width:640px){.maplist{grid-template-columns:1fr 1fr}}
+.maplist li{display:flex;gap:10px;align-items:flex-start;margin:0!important;padding:0!important;font-size:.9rem;line-height:1.4}
+.maplist .pin{flex:0 0 28px;box-shadow:none}
+.maplist b{color:var(--navy);font-weight:600;display:block}
+.maplist i{font-style:normal;color:var(--ink-2);font-size:.84rem}
+.map .leaflet-tile-container img{width:256.6px!important;height:256.6px!important}

@@ -241,6 +241,21 @@ def shell(title, desc, canon, ogtype, jsonld, inner):
                 .replace("__PHONE_H__", PHONE_H).replace("__PHONE__", PHONE).replace("__EMAIL__", EMAIL).replace("__MAIN__", MAIN))
     return page + inner + foot
 
+MAPS = json.load(open(os.path.join(CONTENT, "_maps.json"), encoding="utf-8"))
+LEAFLET = ('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">\n'
+           '<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>\n'
+           '<script src="/assets/maps.js" defer></script>\n')
+
+def render_map(mid):
+    m = MAPS[mid]
+    data = html.escape(json.dumps({"points": m["points"], "line": m.get("line", False)}), quote=True)
+    items = "".join('<li class="k-%s"><span class="pin k-%s">%s</span><span><b>%s</b>%s</span></li>'
+                    % (p.get("kind", "std"), p.get("kind", "std"), esc(p["n"]), esc(p["name"]),
+                       (" <i>%s</i>" % esc(p["note"])) if p.get("note") else "") for p in m["points"])
+    return ('<figure class="mapfig"><div class="map" role="img" aria-label="Map: %s" style="height:%dpx" data-map="%s"></div>'
+            '<ol class="maplist">%s</ol><figcaption><b>%s</b> — %s Map data &copy; OpenStreetMap contributors.</figcaption></figure>'
+            % (esc(m["title"]), m.get("height", 520), data, items, esc(m["title"]), esc(m["caption"])))
+
 def build_guide(meta, guides):
     body_md = meta["_body"]
     quote = QUOTE.replace("__Q__", esc(meta.get("quote", ""))).replace("__BY__", esc(meta.get("quote_by", "Trish Perez, Marine HQ")))
@@ -252,6 +267,10 @@ def build_guide(meta, guides):
     MD.reset()
     body_html = MD.convert(body_md)
     toc = MD.toc
+    has_map = False
+    for mid in re.findall(r"\{\{map:([a-z0-9-]+)\}\}", body_html):
+        body_html = body_html.replace("<p>{{map:%s}}</p>" % mid, render_map(mid)).replace("{{map:%s}}" % mid, render_map(mid))
+        has_map = True
     subj = "Enquiry from the guide: " + meta["title"]
     inner = (GUIDE.replace("__HERO__", meta["hero"]).replace("__CATSLUG__", meta["category"])
                   .replace("__CAT__", esc(CAT_LABEL.get(meta["category"], meta["category"])))
@@ -265,6 +284,8 @@ def build_guide(meta, guides):
                   .replace("__SUBJ__", html.escape(subj.replace(" ", "%20"))))
     canon = "%s/guides/%s/" % (BASE, meta["slug"])
     page = shell(meta["title"] + " | Marine HQ Guides", meta["description"], canon, "article", jsonld_guide(meta), inner)
+    if has_map:
+        page = page.replace("</body>", LEAFLET + "</body>")
     out = os.path.join(SITE, "guides", meta["slug"])
     os.makedirs(out, exist_ok=True)
     write_page(os.path.join(out, "index.html"), page)
