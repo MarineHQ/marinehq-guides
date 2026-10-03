@@ -203,3 +203,41 @@ main.wrap>.grid{margin-top:36px}
 .body .phones figure{margin:0}
 .body .phones figure img{aspect-ratio:auto;object-fit:unset;width:100%;border:1px solid var(--line-2);border-radius:18px;background:#fff}
 .body .phones.two{grid-template-columns:repeat(2,1fr);max-width:560px}
+
+/* ── One-site header (3 Oct 2026): same bar and menu as marinehq.com.au, guide sections on a second row ── */
+.mh{background:#1a3b70;color:#fff}
+.mh-bar{display:flex;align-items:center;gap:22px;height:84px;position:relative}
+.mh-logo img{height:54px;width:auto}
+.mh-nav{display:none;gap:22px;margin-left:18px;font-family:var(--sans);font-size:.8rem;font-weight:400;letter-spacing:.02em;text-transform:uppercase}
+.mh-nav a{color:#fff;white-space:nowrap;padding:6px 0;border-bottom:2px solid transparent}
+.mh-nav a:hover{text-decoration:none;color:#fb7414}
+.mh-nav a.on{color:#fb7414;border-bottom-color:#fb7414}
+.mh-cta{display:none;gap:14px;margin-left:auto}
+.mh-phone,.mh-contact{display:inline-flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:.9rem;font-weight:500;padding:11px 26px;border-radius:5px;white-space:nowrap}
+.mh-phone{color:#fff;border:1px solid #fff}
+.mh-contact{background:#fff;color:#1a3b70;border:1px solid #fff}
+.mh-phone:hover,.mh-contact:hover{text-decoration:none;background:#fb7414;border-color:#fb7414;color:#fff}
+.mh-menu{margin-left:auto}
+.mh-menu summary{list-style:none;cursor:pointer;width:44px;height:44px;display:flex;flex-direction:column;justify-content:center;gap:6px;align-items:center}
+.mh-menu summary::-webkit-details-marker{display:none}
+.mh-menu summary i{display:block;width:26px;height:2px;background:#fff}
+.mh-drawer{position:absolute;left:0;right:0;top:84px;z-index:40;background:#1a3b70;border-top:1px solid rgba(255,255,255,.18);padding:10px 22px 22px;display:flex;flex-direction:column;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.mh-drawer>a{color:#fff;font-family:var(--sans);font-size:1rem;text-transform:uppercase;letter-spacing:.03em;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.mh-drawer>a.on{color:#fb7414}
+.mh-drawer-sub{display:flex;flex-wrap:wrap;gap:8px 16px;padding:14px 0 6px}
+.mh-drawer-sub span{flex:0 0 100%;font-family:var(--label);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:#fb7414;font-weight:700}
+.mh-drawer-sub a{color:#dbe3f3;font-size:.92rem}
+.mh-drawer>a.mh-phone{margin-top:14px;border:1px solid #fff;text-transform:none;justify-content:center}
+@media(min-width:1080px){.mh-nav,.mh-cta{display:flex}.mh-menu{display:none}}
+@media(min-width:1080px) and (max-width:1240px){.mh-nav{gap:14px;font-size:.74rem}.mh-phone,.mh-contact{padding:10px 14px}}
+.sub{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.sub-bar{display:flex;align-items:center;gap:22px;height:48px;overflow-x:auto;white-space:nowrap;font-family:var(--label);font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;scrollbar-width:none}
+.sub-bar::-webkit-scrollbar{display:none}
+.sub-bar a{color:var(--navy)}
+.sub-bar a:hover{color:var(--orange);text-decoration:none}
+.sub-bar a.sub-home{color:var(--orange);padding-right:22px;border-right:1px solid var(--line-2)}
+.body h2,.body h3{scroll-margin-top:70px}
+@media(min-width:960px){.side>*{top:70px}}
+
+/* footer banner must never be wider than the phone (was forcing sideways scroll) */
+.foot .banner{width:100%;max-width:820px;height:auto}
