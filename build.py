@@ -91,13 +91,17 @@ HEAD = '''<!DOCTYPE html><html lang="en-AU"><head>
 <link rel="stylesheet" href="/assets/style.css?v=__V__">
 __JSONLD__
 </head><body>
-<header class="top">
-  <div class="wrap bar">
-    <a class="logo" href="/" aria-label="Marine HQ Guides"><img src="/assets/logo_navy.png" alt="Marine HQ"><span>Guides</span></a>
-    <nav class="nav" aria-label="Sections">__NAV__<a class="ext" href="__MAIN__">marinehq.com.au</a></nav>
-    <a class="btn call" href="tel:__PHONE_H__">Speak to us</a>
+<header class="mh">
+  <div class="wrap mh-bar">
+    <a class="mh-logo" href="__MAIN__/" aria-label="Marine HQ home"><img src="/assets/logo_orange.png" alt="Marine HQ"></a>
+    <nav class="mh-nav" aria-label="Marine HQ">__MAINNAV__</nav>
+    <div class="mh-cta"><a class="mh-phone" href="tel:__PHONE_H__">0439 748 387</a><a class="mh-contact" href="__MAIN__/contact">Contact us</a></div>
+    <details class="mh-menu"><summary aria-label="Menu"><i></i><i></i><i></i></summary>
+      <div class="mh-drawer">__MAINNAV__<div class="mh-drawer-sub"><span>Guides by topic</span>__NAV__</div><a class="mh-phone" href="tel:__PHONE_H__">Call 0439 748 387</a></div>
+    </details>
   </div>
 </header>
+<nav class="sub" aria-label="Guide sections"><div class="wrap sub-bar"><a class="sub-home" href="/">All guides</a>__NAV__</div></nav>
 '''
 
 FOOT = '''
@@ -217,6 +221,12 @@ def jsonld_guide(meta):
     out.append('<script type="application/ld+json">%s</script>' % json.dumps(crumbs))
     return "\n".join(out)
 
+MAIN_NAV = [("Yacht Management", "/yacht-management-coomera"), ("Yacht Maintenance", "/yacht-maintenance-coomera"),
+            ("Services", "/services"), ("Guides", None), ("Contact", "/contact"), ("About", "/about-us")]   # same order as marinehq.com.au
+
+def main_nav_html():
+    return "".join('<a class="on" href="/">%s</a>' % l if u is None else '<a href="%s%s">%s</a>' % (MAIN, u, l) for l, u in MAIN_NAV)
+
 def nav_html():
     return "".join('<a href="/%s/">%s</a>' % (s, l) for s, l, _ in CATEGORIES)
 
@@ -224,7 +234,7 @@ def shell(title, desc, canon, ogtype, jsonld, inner):
     v = datetime.date.today().strftime("%Y%m%d")
     page = (HEAD.replace("__TITLE__", esc(title)).replace("__DESC__", esc(desc)).replace("__CANON__", canon)
                 .replace("__OGTYPE__", ogtype).replace("__BASE__", BASE).replace("__V__", v)
-                .replace("__JSONLD__", jsonld).replace("__NAV__", nav_html()).replace("__MAIN__", MAIN)
+                .replace("__JSONLD__", jsonld).replace("__MAINNAV__", main_nav_html()).replace("__NAV__", nav_html()).replace("__MAIN__", MAIN)
                 .replace("__PHONE_H__", PHONE_H))
     foot = (FOOT.replace("__FOOTNAV__", nav_html() + '<a href="%s">Marine HQ home</a><a href="%s/contact">Contact</a>' % (MAIN, MAIN))
                 .replace("__YEAR__", str(datetime.date.today().year)).replace("__ABN__", ABN)
