@@ -68,7 +68,7 @@ The Gold Coast has eleven commercial marinas and about 170 superyacht berths, mo
 
 ## The comparison at a glance
 
-Eleven marinas on one map. Marine HQ is based at The Boat Works, number 3. Tap a number for the name.
+Eleven marinas on one map. Marine HQ works from both Coomera yards, The Boat Works and Gold Coast City Marina, numbers 3 and 4 in orange. Tap a number for the name.
 
 {{map:gold-coast-marinas}}
 
@@ -112,13 +112,13 @@ Wide and catamaran berths cost more (a 59 ft cat is $2,682 member, $4,430 visito
 
 ## The Boat Works, Coomera
 
-A working marina inside a 55-acre shipyard, and the biggest lifting capacity in the city: a 300-tonne Marine Travelift, a 100-tonne and a 70-tonne lift, plus a 45-tonne hydraulic lift for wide catamarans. The South Marina has 125 work berths, with around 150 in-water service berths and 300 hardstand allocations across the site, and 15 superyacht berths to 50 m with a 75 m alongside berth. Water is 3.5 m at low tide, maintained by dredging. It is about 11 nautical miles from the Seaway.
+One of Marine HQ's two bases. A working marina inside a 55-acre shipyard, and the biggest lifting capacity in the city: a 300-tonne Marine Travelift, a 100-tonne and a 70-tonne lift, plus a 45-tonne hydraulic lift for wide catamarans. The South Marina has 125 work berths, with around 150 in-water service berths and 300 hardstand allocations across the site, and 15 superyacht berths to 50 m with a 75 m alongside berth. Water is 3.5 m at low tide, maintained by dredging. It is about 11 nautical miles from the Seaway.
 
 The Boat Works is where you go to get things done: 80 to 90 marine trade tenants, owner-operated work allowed at no extra charge, a bunkering dock, pump-out, 24/7 CCTV with on-site caretakers, live-aboard ensuites, a hardstand area for up to 16 live-aboard boats, courtesy cars, an owners' lounge and three places to eat. It earned 5 Gold Anchors and Superyacht Ready status in 2023, and during Cyclone Alfred in March 2025 it secured about 400 vessels with no damage. Rates are not published.
 
 ## Gold Coast City Marina & Shipyard (GCCM), Coomera
 
-Marine HQ's home base, and the other half of the Coomera precinct. GCCM, operated by d'Albora, has 200 berths for vessels of 10 to 75 m, on-water service berths to 75 m, 24-hour security with site-wide CCTV, three-phase power to 125 amps and a 24/7 tap-and-go fuel wharf with bunkering on request. The shipyard runs 50-tonne and 300-tonne lifts, 50,000 m² of hardstand, sheds from 8 to 45 m, 300 dry-stack spaces and more than 90 businesses. It was the first shipyard in the Asia-Pacific to receive 5 Gold Anchors and took Marina of the Year, Boatyard of the Year and Dry Stack Facility of the Year at the 2025 industry awards.
+Marine HQ's other base, and the other half of the Coomera precinct. GCCM, operated by d'Albora, has 200 berths for vessels of 10 to 75 m, on-water service berths to 75 m, 24-hour security with site-wide CCTV, three-phase power to 125 amps and a 24/7 tap-and-go fuel wharf with bunkering on request. The shipyard runs 50-tonne and 300-tonne lifts, 50,000 m² of hardstand, sheds from 8 to 45 m, 300 dry-stack spaces and more than 90 businesses. It was the first shipyard in the Asia-Pacific to receive 5 Gold Anchors and took Marina of the Year, Boatyard of the Year and Dry Stack Facility of the Year at the 2025 industry awards.
 
 GCCM's last published berth schedule is from November 2022, marked as subject to change and excluding utilities: 51–60 ft $1,650 a month, 61–70 ft $1,925, 71–80 ft $2,400, 81–90 ft $3,200, 91–100 ft $5,000 and 101–110 ft $6,000, with vessels over 111 ft at $2.30 a foot a day on a monthly stay. Multihulls pay 1.5 times on a T-head and double in a berth. Freehold berths also change hands here; a 16 m berth on Pier H listed with annual outgoings of $4,245.
 
@@ -173,4 +173,4 @@ Tropical Cyclone Alfred brought gusts over 100 km/h to the Gold Coast in March 2
 
 ## What we do
 
-Marine HQ is based at The Boat Works in Coomera and looks after motor yachts on the Gold Coast, in Sydney and through the Whitsundays. We move boats up and down the river for yard periods, handle the marina paperwork and power accounts, and keep every berth, service and yard visit visible to the owner in their MyYacht app. If you are choosing a home for a new boat or thinking about moving her, call 0439 748 387 and we will tell you what we would do with your yacht.
+Marine HQ is based in the Coomera marine precinct, at The Boat Works and at Gold Coast City Marina, and looks after motor yachts on the Gold Coast, in Sydney and through the Whitsundays. We move boats up and down the river for yard periods, handle the marina paperwork and power accounts, and keep every berth, service and yard visit visible to the owner in their MyYacht app. If you are choosing a home for a new boat or thinking about moving her, call 0439 748 387 and we will tell you what we would do with your yacht.

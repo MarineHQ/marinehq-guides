@@ -6,8 +6,8 @@
   "points": [
    {"n":"1","name":"Sanctuary Cove Marina","note":"Hope Island, Coomera River","lat":-27.8540,"lon":153.3640,"at":[-27.826,153.395]},
    {"n":"2","name":"Southport Yacht Club","note":"Main Beach","lat":-27.9736,"lon":153.4266,"at":[-28.012,153.478]},
-   {"n":"3","name":"The Boat Works","note":"Coomera · marina and shipyard · Marine HQ's base","lat":-27.8704,"lon":153.3335,"at":[-27.893,153.296],"kind":"hq"},
-   {"n":"4","name":"Gold Coast City Marina & Shipyard (GCCM)","note":"Coomera","lat":-27.8621,"lon":153.3368,"at":[-27.846,153.296]},
+   {"n":"3","name":"The Boat Works","note":"Coomera · marina and shipyard · a Marine HQ base","lat":-27.8704,"lon":153.3335,"at":[-27.893,153.296],"kind":"hq"},
+   {"n":"4","name":"Gold Coast City Marina & Shipyard (GCCM)","note":"Coomera · marina and shipyard · a Marine HQ base","lat":-27.8621,"lon":153.3368,"at":[-27.846,153.296],"kind":"hq"},
    {"n":"5","name":"Hope Harbour Marina","note":"Hope Island","lat":-27.8693,"lon":153.3737,"at":[-27.890,153.368]},
    {"n":"6","name":"Marina Mirage","note":"Main Beach","lat":-27.9684,"lon":153.4260,"at":[-27.943,153.478]},
    {"n":"7","name":"Runaway Bay Marina","note":"Runaway Bay","lat":-27.9007,"lon":153.4027},

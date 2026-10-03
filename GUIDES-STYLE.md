@@ -93,3 +93,6 @@ Tables: Markdown pipe tables. First column is the label (rendered bold). Right-a
 
 ## Audience size range (3 Oct 2026 — Trish: "make it 40 – 120 ft boats")
 The guides are written for owners of **40 to 120 ft** motor yachts (was 40–90). Say "40 to 120 ft" wherever a range is given. Above about 82 ft most rates are quote-only, so give the sourced figures that exist (GCCM 2022 schedule 91–110 ft, Crew Pacific 100–120 ft crew pay) and say plainly where a price is on application.
+
+## Where Marine HQ is based (4 Oct 2026 — Trish: "put Gold Coast City Marina as base also… so both")
+Marine HQ has **two bases in the Coomera marine precinct: The Boat Works and Gold Coast City Marina & Shipyard (GCCM)**. Say both, never one alone. On maps both carry the orange `hq` pin. Address is written **76 - 84 Waterway Dr, Coomera QLD 4209** (not 76/84).
