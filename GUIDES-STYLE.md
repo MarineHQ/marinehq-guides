@@ -62,7 +62,7 @@ Tables: Markdown pipe tables. First column is the label (rendered bold). Right-a
   Gold Coast City Marina & Shipyard (GCCM), Hope Harbour, Marina Mirage, Runaway Bay, Horizon Shores.
 - Coomera River is tidal with 6-knot zones; the Gold Coast Seaway is the way to open water.
 - Queensland: TMR registration, Maritime Safety Queensland rules, warm water = faster fouling.
-- Marine HQ is at 76/84 Waterway Dr, Coomera QLD 4209 · 0439 748 387 · yachtsupport@marinehq.com.au.
+- Marine HQ is at 76 - 84 Waterway Dr, Coomera QLD 4209 (bases: The Boat Works and GCCM) · 0439 748 387 · yachtsupport@marinehq.com.au.
 
 ## Adding a guide (the routine)
 1. `content/<slug>.md` with the JSON front matter (copy an existing guide).
