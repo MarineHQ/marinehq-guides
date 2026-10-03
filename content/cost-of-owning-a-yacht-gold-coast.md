@@ -2,10 +2,10 @@
 {
   "title": "How much does it cost to own a yacht on the Gold Coast? (2026)",
   "slug": "cost-of-owning-a-yacht-gold-coast",
-  "description": "Berth, antifoul, insurance, servicing, fuel and rego for a 40–90 ft motor yacht on the Gold Coast, with published 2026 figures and a worked example for a 60-footer.",
+  "description": "Berth, antifoul, insurance, servicing, fuel and rego for a 40–120 ft motor yacht on the Gold Coast, with published 2026 figures and a worked example for a 60-footer.",
   "category": "costs",
   "date": "2026-09-05",
-  "updated": "2026-09-06",
+  "updated": "2026-10-03",
   "hero": "assets/photos/at-anchor.jpg",
   "cta": "Want a budget for your yacht, line by line, before you buy or before the next yard visit? One call.",
   "faq": [
@@ -87,6 +87,7 @@ A few things the rate card does not shout about:
 - **Wide and catamaran berths cost 30% to 40% more** at Southport; GCCM charges multihulls 1.5 times on a T-head and double in a berth.
 - **Rates are climbing.** Southport's 59 ft double berth went from $14,139 a year in May 2023 to $16,087 in May 2026, up 13.8% in three years.
 - **New marinas open at the top of the market.** Mantaray Marina at The Spit, opened May 2026, advertises monthly leases from $2,000 and twenty superyacht berths.
+- **Above 82 ft the rate card stops.** Southport quotes berths over 25 m on application. GCCM's 2022 schedule had 91–100 ft at $5,000 a month and 101–110 ft at $6,000, with vessels over 111 ft at $2.30 a foot a day, about $8,300 a month for a 120-footer.
 - **Buying is an option.** Freehold berths at Hope Island, next to Sanctuary Cove, list at about $179,000 for 12 m and $320,000 for 18 m, with outgoings of $6,600 to $7,900 a year. Rentals in the same area run $1,050 to $1,300 a month.
 
 ## The yard: antifouling and everything that goes with it

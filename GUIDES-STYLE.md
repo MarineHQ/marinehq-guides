@@ -90,3 +90,6 @@ Tables: Markdown pipe tables. First column is the label (rendered bold). Right-a
   ```
 - Always write a real `alt` and a caption that adds a fact. No stock-photo filler; if there is no honest
   photo, use none.
+
+## Audience size range (3 Oct 2026 — Trish: "make it 40 – 120 ft boats")
+The guides are written for owners of **40 to 120 ft** motor yachts (was 40–90). Say "40 to 120 ft" wherever a range is given. Above about 82 ft most rates are quote-only, so give the sourced figures that exist (GCCM 2022 schedule 91–110 ft, Crew Pacific 100–120 ft crew pay) and say plainly where a price is on application.

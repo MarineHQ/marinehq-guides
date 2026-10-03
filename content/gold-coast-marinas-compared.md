@@ -1,11 +1,11 @@
 ---json
 {
-  "title": "Gold Coast marinas compared: where to keep a 40–90 ft motor yacht",
+  "title": "Gold Coast marinas compared: where to keep a 40–120 ft motor yacht",
   "slug": "gold-coast-marinas-compared",
   "description": "Sanctuary Cove, Southport Yacht Club, The Boat Works, GCCM, Hope Harbour, Marina Mirage, Runaway Bay and more, compared on berths, depth, fuel, haul-out, distance to the Seaway and published rates.",
   "category": "marinas",
   "date": "2026-09-05",
-  "updated": "2026-09-06",
+  "updated": "2026-10-03",
   "hero": "assets/photos/bow-marina.jpg",
   "cta": "Not sure which marina suits your yacht and how you use her? Tell us and we will give you a straight answer.",
   "faq": [
@@ -102,6 +102,7 @@ The 1 May 2026 rates, including GST, per month:
 | 66 ft / 20 m single or T-head | $2,598 | $3,380 |
 | 73 ft / 22 m single | $3,174 | $4,013 |
 | 82 ft / 25 m single | $4,122 | $5,500 |
+| Over 82 ft / 25 m | on application | on application |
 
 Wide and catamaran berths cost more (a 59 ft cat is $2,682 member, $4,430 visitor), three-phase power is 35 cents a kilowatt hour, and a 12-month contract on the 59 ft single is $19,311 for members. There is a waiting list for permanent berths, reported at around 300 vessels, and the club is adding 19 berths.
 
@@ -115,7 +116,7 @@ The Boat Works is where you go to get things done: 80 to 90 marine trade tenants
 
 Marine HQ's home base, and the other half of the Coomera precinct. GCCM, operated by d'Albora, has 200 berths for vessels of 10 to 75 m, on-water service berths to 75 m, 24-hour security with site-wide CCTV, three-phase power to 125 amps and a 24/7 tap-and-go fuel wharf with bunkering on request. The shipyard runs 50-tonne and 300-tonne lifts, 50,000 m² of hardstand, sheds from 8 to 45 m, 300 dry-stack spaces and more than 90 businesses. It was the first shipyard in the Asia-Pacific to receive 5 Gold Anchors and took Marina of the Year, Boatyard of the Year and Dry Stack Facility of the Year at the 2025 industry awards.
 
-GCCM's last published berth schedule is from November 2022, marked as subject to change and excluding utilities: 51–60 ft $1,650 a month, 61–70 ft $1,925, 71–80 ft $2,400, 81–90 ft $3,200. Multihulls pay 1.5 times on a T-head and double in a berth. Freehold berths also change hands here; a 16 m berth on Pier H listed with annual outgoings of $4,245.
+GCCM's last published berth schedule is from November 2022, marked as subject to change and excluding utilities: 51–60 ft $1,650 a month, 61–70 ft $1,925, 71–80 ft $2,400, 81–90 ft $3,200, 91–100 ft $5,000 and 101–110 ft $6,000, with vessels over 111 ft at $2.30 a foot a day on a monthly stay. Multihulls pay 1.5 times on a T-head and double in a berth. Freehold berths also change hands here; a 16 m berth on Pier H listed with annual outgoings of $4,245.
 
 ## Hope Harbour Marina, Hope Island
 

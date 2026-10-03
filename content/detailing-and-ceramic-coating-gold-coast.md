@@ -5,7 +5,7 @@
   "description": "Wash-downs, cut and polish, wax versus sealant versus ceramic, gelcoat versus paint, teak and stainless, with the published Australian prices, the Queensland sun and salt factors, and Marine HQ's own wash-down routine.",
   "category": "maintenance",
   "date": "2026-09-10",
-  "updated": "2026-09-10",
+  "updated": "2026-10-03",
   "hero": "assets/photos/teak-deck.jpg",
   "cta": "Want her kept presentation-ready without thinking about it? Our crew wash, polish and inspect on a schedule, and photograph what they find.",
   "faq": [
@@ -14,7 +14,7 @@
     {"q": "How often should a yacht be washed on the Gold Coast?",
      "a": "A fresh-water rinse within 24 hours of every salt trip, and a full pH-neutral wash every two to four weeks. A boat on a wet berth needs more attention than one in a shed because the salt air never stops. Marine HQ crews wash managed yachts weekly or fortnightly depending on use and where she is kept."},
     {"q": "Is ceramic coating worth it on a boat?",
-     "a": "For a boat that is washed properly, usually yes: a professional ceramic lasts 18 to 36 months against two to three months for wax and about six to twelve for a sealant, and washing is easier because salt and grime do not stick. The catch is preparation. The hull has to be decontaminated, compounded and polished first, any imperfection is locked in, and it needs pH-neutral washes and a top-up every few months. Nobody in Australia publishes a price for a 40 to 90 ft vessel; jet skis start around $650 and trailer boats around $850."},
+     "a": "For a boat that is washed properly, usually yes: a professional ceramic lasts 18 to 36 months against two to three months for wax and about six to twelve for a sealant, and washing is easier because salt and grime do not stick. The catch is preparation. The hull has to be decontaminated, compounded and polished first, any imperfection is locked in, and it needs pH-neutral washes and a top-up every few months. Nobody in Australia publishes a price for a 40 to 120 ft vessel; jet skis start around $650 and trailer boats around $850."},
     {"q": "Can you cut and polish a painted hull?",
      "a": "Carefully, and not often. Awlgrip says not to use compounds on its topcoat at all; abrasives shorten the finish life and void the warranty. Alexseal allows compounding only by an experienced applicator at slow speed. Gelcoat can be cut repeatedly until it gets thin; paint has one shine and once it is compounded through, the fix is a repaint. Know which one your boat has before anyone picks up a buffer."},
     {"q": "What's the right way to look after teak decks?",
@@ -64,7 +64,7 @@ Gold Coast sun sits at the top of the UV scale for most of the year, the water i
 - **Wash** — fresh rinse within 24 hours of every salt trip; full pH-neutral wash every two to four weeks
 - **Protection** — wax two to three months; sealant six to twelve; professional ceramic 18 to 36 months with top-ups
 - **Prices** — no Gold Coast detailer publishes rates; Sydney's published card is $5 a foot to wash, $20 a foot to machine polish
-- **Ceramic** — no Australian price published for a 40 to 90 ft yacht; the preparation is most of the cost
+- **Ceramic** — no Australian price published for a 40 to 120 ft yacht; the preparation is most of the cost
 - **Gelcoat or paint** — gelcoat can be cut; Awlgrip and Alexseal cannot, or not much
 - **Teak** — never sanded as routine; sealed, not oiled; re-coat when it stops beading
 </div>
@@ -84,7 +84,7 @@ This is the Marine HQ crew routine, the one on the clipboard on every managed ya
 
 <ol class="steps"><li><b>Before you start.</b> Check the wind and the sun; avoid a strong breeze or full hot sun. Remove covers and cushions and stow them dry. Open and air the lockers. Fresh shore water connected, pH-neutral boat soap only, dedicated cloths for glass and clears, every hatch and port closed. No harsh brushes on gelcoat, glass or clears.</li><li><b>Rinse, top down.</b> Flush the whole vessel with fresh water from the top before anything touches her. Salt and grit lifted off first are salt and grit not ground in.</li><li><b>Wash section by section.</b> Hardtop, flybridge and arch; superstructure and cabin sides; hull topsides and boot stripe. Work in shade, soft mitt or soft brush, rinse each section before it dries.</li><li><b>Decks and non-skid.</b> Soft deck brush and soap, rinse thoroughly, clear the scuppers and drains.</li><li><b>Glass and clears.</b> Glass with a dedicated cleaner and a clean cloth. Clears and isinglass with fresh water and a soft cloth only, no chemicals, no scrubbing. Windex, Rain-X and ammonia products void the clears' warranty.</li><li><b>Stainless.</b> Rinse and wipe every rail, fitting and cleat. Spot-polish and protect as required. Report any rust or corrosion.</li><li><b>Teak.</b> Rinse well. A light scrub across the grain only if needed, never aggressive, and protect the caulking.</li><li><b>Chamois.</b> Gelcoat, glass and stainless, to stop water spots, especially on dark surfaces and glass.</li><li><b>Tender and aft deck.</b> Rinse and wipe the tender, wash the cockpit and aft deck, check the drains.</li><li><b>Covers, cushions, lockers.</b> Refit once dry with ventilation underneath; wash covers where needed; clean and air lockers then secure them.</li><li><b>Pack down.</b> Hoses coiled, mops and mitts hung to dry, buckets rinsed, gear back where it lives.</li><li><b>Finish and report.</b> A final walk-around for damage, corrosion, leaks and loose fittings; any issue photographed and reported; the wash logged with date and crew.</li></ol>
 
-How often: a fresh-water rinse within 24 hours of every salt trip, and a full wash every two to four weeks in season, more for a wet-berthed boat than a dry-stored one. Dry stacks stop at about 10 m, so for a 40 to 90 ft yacht the choice is a wet berth with a good routine, or a shed for the yard period.
+How often: a fresh-water rinse within 24 hours of every salt trip, and a full wash every two to four weeks in season, more for a wet-berthed boat than a dry-stored one. Dry stacks stop at about 10 m, so for a 40 to 120 ft yacht the choice is a wet berth with a good routine, or a shed for the yard period.
 
 {{cta}}
 

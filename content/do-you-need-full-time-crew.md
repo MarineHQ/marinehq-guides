@@ -2,10 +2,10 @@
 {
   "title": "Do you need full-time crew? Driving her yourself, day crew, captains, and what happens when your captain leaves",
   "slug": "do-you-need-full-time-crew",
-  "description": "The Queensland rules for an owner at the helm of a 40–90 ft motor yacht, what insurers actually ask, the four ways to run a boat and what each costs, the continuity problem when a captain moves on, and how a support network and the MyYacht app fix it.",
+  "description": "The Queensland rules for an owner at the helm of a 40–120 ft motor yacht, what insurers actually ask, the four ways to run a boat and what each costs, the continuity problem when a captain moves on, and how a support network and the MyYacht app fix it.",
   "category": "ownership",
   "date": "2026-09-10",
-  "updated": "2026-09-10",
+  "updated": "2026-10-03",
   "hero": "assets/photos/bow-marina.jpg",
   "cta": "Not sure how much crew your yacht really needs? Tell us how you use her and we will give you a straight answer, with the numbers.",
   "faq": [
@@ -74,7 +74,7 @@ The short version: in Queensland you can legally drive any size of private motor
 
 Yes, legally. Queensland requires a marine licence to operate any boat with an engine over 4.5 kW and sets no vessel length or tonnage limit for private recreational use. The old rule that limited new licence holders to boats under 12 m was removed in January 2013. The licence is for life. If your licence is from another state you can boat here on it as long as it is current; once you move to Queensland you have three months to swap it. New South Wales runs the same way in reverse: a Queensland licence is good for three months of NSW boating, and a NSW general boat licence covers any length as long as the use is not commercial.
 
-The line that matters is commercial use, and AMSA draws it clearly. A vessel used only for recreation is not a domestic commercial vessel, and AMSA specifically says that paying someone to operate or crew her, or paying an instructor to train you, does not change that. Chartering her, hiring her out, or taking money for a trip does. At that point she needs a certificate of survey, a certificate of operation and a certificated master: Coxswain Grade 1 for vessels under 12 m, Master under 24 m for most yachts in this range, Master under 45 m above that. The local pilotage rules only bite above 50 m, well beyond a 90-footer.
+The line that matters is commercial use, and AMSA draws it clearly. A vessel used only for recreation is not a domestic commercial vessel, and AMSA specifically says that paying someone to operate or crew her, or paying an instructor to train you, does not change that. Chartering her, hiring her out, or taking money for a trip does. At that point she needs a certificate of survey, a certificate of operation and a certificated master: Coxswain Grade 1 for vessels under 12 m, Master under 24 m for most yachts in this range, Master under 45 m above that. The local pilotage rules only bite above 50 m, well beyond a 120-footer.
 
 <div class="callout" markdown="1"><span class="eyebrow">Worth knowing</span>
 Some Gold Coast pages still say boats over 12 m need an "advanced" licence endorsement. That is the pre-2013 rule. Maritime Safety Queensland's own fact sheet is the source: any length, one licence.</div>

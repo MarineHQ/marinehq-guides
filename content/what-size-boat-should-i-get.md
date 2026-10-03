@@ -5,7 +5,7 @@
   "description": "The four questions that decide length, what each ten feet buys you in cabins and tankage, how every running cost scales with size, the Gold Coast depth and marina limits, the insurers' ten-foot rule, and new-boat price bands with dates.",
   "category": "buying",
   "date": "2026-09-11",
-  "updated": "2026-09-11",
+  "updated": "2026-10-03",
   "hero": "assets/photos/bow-marina.jpg",
   "cta": "Torn between two sizes? Bring us the shortlist. We will tell you what each one costs to run here and which one you will actually use.",
   "faq": [
@@ -28,6 +28,9 @@
     {"t": "YachtBuyer — How much does a new yacht cost to run (the 10% rule)", "u": "https://www.yachtbuyer.com/en/advice/how-much-does-a-new-yacht-cost-to-run"},
     {"t": "YachtBuyer — What size tender do I need (September 2026)", "u": "https://www.yachtbuyer.com/en-gb/advice/what-size-tender-do-i-need"},
     {"t": "Intermarine — What size boat should I buy (July 2025)", "u": "https://www.intermarineboats.com/news-events/what-size-boat-should-i-buy-a-complete-guide-for-every-boater/300"},
+    {"t": "Gold Coast City Marina & Shipyard — Berth fee schedule, November 2022 (PDF)", "u": "https://www.gccm.com.au/wp-content/uploads/2023/01/Marina-Berth-Schedule-211122VLB-light.pdf"},
+    {"t": "Crew Pacific — Crew salary guidelines, AUD (PDF, March 2022)", "u": "https://crewpacific.com.au/wp-content/uploads/2022/03/CREW-SALARY-GUIDELINES-AUD.pdf"},
+    {"t": "Hurricane Hole Marina — Maximum length to drive your own yacht", "u": "https://hurricaneholemarina.com/blog/what-is-the-maximum-length-to-drive-your-own-yacht/"},
     {"t": "YATCO — Yacht sizes explained (June 2025)", "u": "https://blog.yatco.com/yacht-sizes/"},
     {"t": "YATCO — Yacht depreciation (June 2025)", "u": "https://blog.yatco.com/yacht-depreciation/"},
     {"t": "YachtForums — How large can I go without a crew?", "u": "https://www.yachtforums.com/threads/how-large-can-i-go-without-a-crew.5363/"},
@@ -110,6 +113,8 @@ Every line scales with length, and some scale faster than length.
 | 65 ft | $23,954 (66 ft) | Palm Beach 65: 165 L/h at 25 knots; Riviera 645: 276 L/h at 22 | Quote | Owner with help |
 | 68 to 73 ft | $29,308 (73 ft) | Riviera 6800: 282 L/h at 27.7 knots | Quote | Captain likely |
 | 82 ft | $38,226 | Twin 1,500 hp class: 300 to 400 L/h at cruise | Quote | Captain and crew |
+
+**From 80 to 120 ft** the numbers stop being published and the rules change. Southport quotes berths over 82 ft on application; GCCM's 2022 schedule had 91–100 ft at $5,000 a month and 101–110 ft at $6,000. Published guidance is that a crew member is recommended from about 79 ft and a professional crew above about 98 ft, and the Crew Pacific guide puts a captain on a 100 to 120 ft yacht at $10,000 to $14,000 a month including super. At this size the question is less which boat than who runs her, which is our crew guide.
 
 Southport Yacht Club is the only Gold Coast marina with a published rate card; the others quote, and the resort marinas cost more. Visitor rates at Southport are 40 to 50% above member rates. Insurance follows the sum insured, so it scales with price rather than length, at somewhere between 1 and 3% of value a year. The 10% rule of thumb holds well for a new owner-operated boat under warranty and understates an older or larger one, which is why Australian brokers say 10 to 15%. Our cost-of-ownership guide builds the whole bill for a 60-footer.
 

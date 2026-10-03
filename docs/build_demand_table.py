@@ -53,7 +53,7 @@ ROWS = [  # guide, question(s) people ask, where found, signal
  ("What size boat should I get?",
   "&ldquo;What size boat should I buy?&rdquo; &middot; &ldquo;What size boat do I need for a family of 4?&rdquo; &middot; &ldquo;What is the largest boat one can single-hand?&rdquo; &middot; &ldquo;How big is too big for a first boat?&rdquo;",
   "YachtBuyer buying guide (Aug 2026); Intermarine (Jul 2025); YBW forum (Jan 2018, 3 pages); Trawler Forum <i>Too big or too small?</i> (Feb 2023, 30 posts) and <i>Biggest boat for 1&frac12; persons</i> (Oct 2022, ~40 replies); YachtForums (3 pages); Boat Gold Coast and Club Marine buyer guides",
-  "Australian forums are trailer-boat and sail; no Australian page sizes a 40&ndash;90 ft motor yacht against Gold Coast berths, depth, fuel burn and the insurers&rsquo; ten-foot rule."),
+  "Australian forums are trailer-boat and sail; no Australian page sizes a 40&ndash;120 ft motor yacht against Gold Coast berths, depth, fuel burn and the insurers&rsquo; ten-foot rule."),
 ]
 
 rows = "".join("<tr><td class='g'>%s</td><td>%s</td><td>%s</td><td class='s'>%s</td></tr>" % r for r in ROWS)

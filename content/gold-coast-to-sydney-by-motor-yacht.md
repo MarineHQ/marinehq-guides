@@ -5,7 +5,7 @@
   "description": "About 470 nautical miles, three to six days. The legs, the all-weather harbours and the bar entrances, the East Australian Current, fuel and berths in Sydney, the NSW rules, and whether to run her yourself or send a delivery skipper.",
   "category": "cruising",
   "date": "2026-09-06",
-  "updated": "2026-09-06",
+  "updated": "2026-10-03",
   "hero": "assets/photos/at-anchor.jpg",
   "cta": "Heading south? We plan the passage, prepare the boat, and can put a delivery skipper and crew aboard so she is waiting for you in Sydney.",
   "faq": [
@@ -110,7 +110,7 @@ Two bars deserve particular respect. **Ballina** shoals to 3 to 4 m and breaks h
 The NSW Government runs bar webcams at Tweed Heads, Brunswick Heads, Ballina, Evans Head, Iluka and Yamba, Coffs, Nambucca, South West Rocks, Port Macquarie, Camden Haven, Forster, Shoal Bay and Swansea. Watch the full two-minute cycle before you commit.
 
 <div class="callout" markdown="1"><span class="eyebrow">Worth knowing</span>
-For a 40 to 90 ft motor yacht the simplest plan skips the bars entirely: Seaway, Coffs, Port Stephens or Newcastle, Sydney. Three overnight stops, all of them enterable in the dark and in a blow. Keep Yamba and Forster in reserve for a boat that needs to shorten a leg.</div>
+For a 40 to 120 ft motor yacht the simplest plan skips the bars entirely: Seaway, Coffs, Port Stephens or Newcastle, Sydney. Three overnight stops, all of them enterable in the dark and in a blow. Keep Yamba and Forster in reserve for a boat that needs to shorten a leg.</div>
 
 ## Weather and the current
 
