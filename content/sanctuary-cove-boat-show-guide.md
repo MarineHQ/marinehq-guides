@@ -76,7 +76,7 @@ The 2025 show, for comparison, drew 45,865 visitors and 824 boats, 422 of them o
 
 ## What is actually there
 
-- **The Marina.** Superyachts, production motor yachts, sailing yachts and multihulls up to 165 ft, on a marina that now has 63 superyacht-capable berths. This is where a 40 to 90 ft buyer spends the day.
+- **The Marina.** Superyachts, production motor yachts, sailing yachts and multihulls up to 165 ft, on a marina that now has 63 superyacht-capable berths. This is where a 40 to 120 ft buyer spends the day.
 - **The Pavilion and Marina Village streets.** Trailer boats, outboards, tenders, jet skis and engines, plus the booths at the entrance.
 - **The Sports, Leisure and Fishing Precinct.** Twenty thousand square metres of gear, demos and masterclasses, with a fishing programme running 10am to 3.30pm.
 - **Sea Trial Zone, C Pier.** Test rides on smaller powerboats and tenders. Larger yachts are trialled by arrangement with the dealer.
