@@ -129,7 +129,7 @@ FOOT = '''
 </body></html>'''
 
 GUIDE = '''
-<section class="hero" style="background-image:linear-gradient(180deg,rgba(22,34,63,.50) 0%,rgba(22,34,63,.62) 40%,rgba(22,34,63,.94) 100%),url('/__HERO__')">
+<section class="hero" style="--photo:url('/__HERO__')">
   <div class="wrap">
     <div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> <a href="/__CATSLUG__/">__CAT__</a></div>
     <h1>__H1__</h1>
@@ -307,7 +307,7 @@ def build_links():
            '<title>Marine HQ — links</title><meta name="description" content="Marine HQ: yacht management on the Gold Coast. Guides, the Yacht Owner&rsquo;s Kit, and how to reach us.">'
            '<link rel="canonical" href="%s/links/"><link rel="icon" href="/assets/white_favicon-64.png">'
            '<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">'
-           '<link rel="stylesheet" href="/assets/style.css?v=%s">\n</head><body class="lkpage"><main class="lkwrap"><img class="lklogo" src="/assets/logo_orange.png" alt="Marine HQ">'
+           '<link rel="stylesheet" href="/assets/style.css?v=%s">\n</head><body class="lkpage"><main class="lkwrap"><img class="lklogo" src="/assets/logo_navy.png" alt="Marine HQ">'
            '<h1>Marine HQ</h1><p>Yacht management and maintenance. Gold Coast, Sydney, Whitsundays.</p>%s<p class="lkfoot">Freedom to enjoy.</p></main>\n</body></html>'
            % (BASE, datetime.date.today().strftime("%Y%m%d"), rows))
     os.makedirs(os.path.join(SITE, "links"), exist_ok=True)
@@ -365,7 +365,7 @@ def build_guide(meta, guides):
     write_page(os.path.join(out, "index.html"), page)
 
 INDEX = '''
-<section class="hero home" style="background-image:linear-gradient(180deg,rgba(22,34,63,.50) 0%,rgba(22,34,63,.62) 45%,rgba(22,34,63,.94) 100%),url('/assets/login-bg.jpg')">
+<section class="hero home" style="--photo:url('/assets/photos/at-anchor.jpg')">
   <div class="wrap">
     <div class="eyebrow">Marine HQ Guides &middot; Gold Coast</div>
     <h1>Straight answers on owning a yacht on the Gold Coast.</h1>

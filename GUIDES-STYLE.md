@@ -104,3 +104,12 @@ Marine HQ has **two bases in the Coomera marine precinct: The Boat Works and Gol
 - When a checkout link exists, paste it into the product's `buy` field; the button becomes "Buy now".
 - SOP and Vessel Dossier prices are NOT published on the guides; they are "quoted per yacht".
 - `/links/` is the Instagram bio page; edit `LINKS` in build.py.
+
+## Colour (4 Oct 2026)
+
+- No filled dark-blue blocks and no filled orange blocks, on pages or in the product PDFs.
+- Navy is for type and hairlines. Orange is a note only: a thin rule, a small label, a bullet, a number.
+- Panels sit on white or the pale wash with a 2px orange top line. Buttons are outlined, never filled.
+- Hero = light ground, navy headline, then the photo shown clean (no navy wash over it).
+- Table headers are a pale tint with navy type and an orange underline.
+- The one exception is the top menu bar, which stays navy to match www.marinehq.com.au.
