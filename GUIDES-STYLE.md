@@ -112,4 +112,11 @@ Marine HQ has **two bases in the Coomera marine precinct: The Boat Works and Gol
 - Panels sit on white or the pale wash with a 2px orange top line. Buttons are outlined, never filled.
 - Hero = light ground, navy headline, then the photo shown clean (no navy wash over it).
 - Table headers are a pale tint with navy type and an orange underline.
-- The one exception is the top menu bar, which stays navy to match www.marinehq.com.au.
+- The top menu bar is white too (navy logo, navy tracked small caps, hairline under). It no longer copies the navy bar on www.marinehq.com.au.
+
+## The luxury look (4 Oct 2026)
+
+- White everywhere. Big, clean photography. Thin 1px lines. Square corners. Tracked small-cap labels. Plenty of air.
+- Guide cards lead with a photo (`THUMBS` in build.py picks one per guide so a row never repeats a picture).
+- Headlines are light-weight Bodoni, large. Buttons are 1px outlined, square.
+- The product PDFs follow the same rule: no filled bands, outlined pills, orange as a hairline.

@@ -93,7 +93,7 @@ __JSONLD__
 </head><body>
 <header class="mh">
   <div class="wrap mh-bar">
-    <a class="mh-logo" href="__MAIN__/" aria-label="Marine HQ home"><img src="/assets/logo_orange.png" alt="Marine HQ"></a>
+    <a class="mh-logo" href="__MAIN__/" aria-label="Marine HQ home"><img src="/assets/logo_navy.png" alt="Marine HQ"></a>
     <nav class="mh-nav" aria-label="Marine HQ">__MAINNAV__</nav>
     <div class="mh-cta"><a class="mh-phone" href="tel:__PHONE_H__">0439 748 387</a><a class="mh-contact" href="__MAIN__/contact">Contact us</a></div>
     <details class="mh-menu"><summary aria-label="Menu"><i></i><i></i><i></i></summary>
@@ -193,10 +193,22 @@ def render_sources(meta):
             'They change &mdash; confirm with the provider before you rely on them.</p><ol>%s</ol></section>'
             % (nice_date(meta["updated"]), li))
 
+# card photo per guide, so a row of cards never repeats one picture; falls back to the guide's hero
+THUMBS = {
+    "cost-of-owning-a-yacht-gold-coast": "assets/photos/teak-deck.jpg",
+    "antifouling-gold-coast-cost": "assets/photos/hull-props.jpg",
+    "detailing-and-ceramic-coating-gold-coast": "assets/photos/polishing.jpg",
+    "what-size-boat-should-i-get": "assets/photos/aft-deck-sunset.jpg",
+    "sanctuary-cove-boat-show-guide": "assets/photos/cockpit-table.jpg",
+    "yacht-sops-standard-operating-procedures": "assets/photos/cockpit-table.jpg",
+}
+
 def card(g):
-    return ('<a class="gcard" href="/guides/%s/"><span class="eyebrow">%s</span><strong>%s</strong><p>%s</p>'
+    ph = THUMBS.get(g["slug"]) or g.get("hero") or "assets/photos/at-anchor.jpg"
+    return ('<a class="gcard" href="/guides/%s/"><span class="ph"><img src="/%s" alt="" loading="lazy"></span>'
+            '<span class="eyebrow">%s</span><strong>%s</strong><p>%s</p>'
             '<span class="more">%s min read &rarr;</span></a>'
-            % (g["slug"], esc(CAT_LABEL.get(g["category"], g["category"])), esc(g["title"]), esc(g["description"]), g["mins"]))
+            % (g["slug"], ph, esc(CAT_LABEL.get(g["category"], g["category"])), esc(g["title"]), esc(g["description"]), g["mins"]))
 
 def jsonld_guide(meta):
     url = "%s/guides/%s/" % (BASE, meta["slug"])
