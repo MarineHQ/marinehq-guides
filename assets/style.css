@@ -329,3 +329,39 @@ html,body{max-width:100%;overflow-x:clip}
 .lk b{display:block;font-weight:600;font-size:1.02rem}
 .lk span{display:block;font-size:.82rem;opacity:.75;margin-top:2px}
 .lkfoot{font-family:var(--serif);font-style:italic;color:#fb7414!important;margin-top:26px!important}
+
+/* ── Quieter branding (4 Oct 2026, Trish): no dark-blue blocks, no orange blocks. Navy and orange are
+      for type, hairlines and small notes only. The top bar stays navy to match marinehq.com.au. ── */
+.btn,.prod-act .btn,.cta.end .btn,.foot-cta .btn,.shop-done .btn,.side-cta .btn{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+.btn:hover,.prod-act .btn:hover,.cta.end .btn:hover,.foot-cta .btn:hover,.shop-done .btn:hover,.side-cta .btn:hover{background:#fff;color:var(--orange);border-color:var(--orange)}
+.btn.ghost,.cta.end .btn.ghost,.foot-cta .btn.ghost,.shop-done .btn.ghost{background:transparent;color:var(--navy);border:1px solid var(--line-2)}
+.btn.ghost:hover,.cta.end .btn.ghost:hover,.foot-cta .btn.ghost:hover,.shop-done .btn.ghost:hover{color:var(--orange);border-color:var(--orange)}
+.hero.small{background:var(--wash);color:var(--navy);border-bottom:1px solid var(--line);padding:46px 0 34px}
+.hero.small h1{color:var(--navy)}
+.hero.small .stand{color:var(--ink-2)}
+.hero.small .crumbs{color:var(--mute);text-shadow:none}
+.hero.small .crumbs a{color:var(--navy)}
+.cta.end,.foot-cta,.shop-done{background:var(--wash);color:var(--ink);border:1px solid var(--line);border-top:2px solid var(--orange)}
+.cta.end h2,.foot-cta h2,.shop-done h2{color:var(--navy)}
+.cta.end p,.foot-cta p,.shop-done p{color:var(--ink-2)}
+.shopcard.is-kit{border-top-color:var(--navy);background:#fff}
+.prod{background:#fff}
+.lkpage{background:#fff;color:var(--ink)}
+.lkwrap h1{color:var(--navy)}
+.lkwrap h1:after{content:"";display:block;width:44px;height:2px;background:var(--orange);margin:14px auto 0}
+.lkwrap p{color:var(--ink-2)}
+.lk{background:#fff;color:var(--navy);border:1px solid var(--line-2);border-radius:6px}
+.lk:hover{background:#fff;color:var(--orange);border-color:var(--orange)}
+.lkfoot{color:var(--orange)!important}
+.body th{background:#eef2f8;color:var(--navy);border-bottom:2px solid var(--orange)}
+/* hero: light ground, navy type, the photo shown clean underneath (no navy wash over it) */
+.hero{background:var(--wash);color:var(--navy);padding:54px 0 0}
+.hero.home{padding:64px 0 0}
+.hero h1{color:var(--navy)}
+.hero .stand{color:var(--ink-2)}
+.hero .eyebrow,.hero .crumbs,.hero .meta{text-shadow:none}
+.hero .meta,.hero .crumbs{color:var(--mute)}
+.hero .crumbs a{color:var(--navy)}
+.hero:after{content:"";display:block;height:clamp(170px,30vw,400px);margin-top:34px;background:var(--photo) center/cover no-repeat}
+.hero.small{padding:46px 0 34px}
+.hero.small:after{display:none}
