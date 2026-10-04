@@ -1,0 +1,26 @@
+{
+ "kit_name": "The Yacht Owner's Kit",
+ "order_note": "Order by email and we reply with a secure payment link, then send your PDF.",
+ "products": [
+  {"id":"checklists","name":"Owner Checklists: Pre-Departure, Stand Down, Wash-Down","short":"Owner Checklists","price":7,"status":"ready","img":"assets/products/checklists.jpg",
+   "blurb":"The three routines our crews run on every yacht we manage, written for an owner to use.",
+   "includes":["Pre-Departure: 43 checks in six groups, from passage planning to letting go","Stand Down: 30 checks to leave her secure and ready","Wash-Down: the 12-step professional wash routine","How to use them: print, laminate, keep aboard"],
+   "format":"PDF, 5 pages, A4, print-ready","buy":""},
+  {"id":"haul-out","name":"Annual Haul-Out Checklist","short":"Annual Haul-Out Checklist","price":12,"status":"ready","img":"assets/products/haul-out.jpg",
+   "blurb":"Everything that should happen while she is out of the water, in the order the yard works through it.",
+   "includes":["Pre-lift sea trial: what to measure before she comes out","Hull, running gear, engines, stabilisers, safety, electrical, systems, tender","Ten sections, 56 checks","What to get in writing before you sign the yard quote"],
+   "format":"PDF, 2 pages, A4, print-ready","buy":""},
+  {"id":"calculator","name":"Running Cost Calculator","short":"Running Cost Calculator","price":17,"status":"soon","img":"",
+   "blurb":"A spreadsheet that works out what your yacht costs a year: berth, fuel, insurance, servicing, yard and crew.",
+   "includes":["Enter your length, value, hours and berth","Annual, monthly and per-day-of-use cost","Fuel by hours and litres an hour","Works in Excel, Numbers and Google Sheets"],
+   "format":"Spreadsheet (.xlsx)","buy":""},
+  {"id":"programme","name":"Scheduled Maintenance Programme","short":"Scheduled Maintenance Programme","price":29,"status":"ready","img":"assets/products/programme.jpg",
+   "blurb":"What to do and how often: 121 maintenance tasks for a motor yacht, grouped by system and by how often they fall due.",
+   "includes":["121 tasks: fortnightly, monthly, quarterly, annual and by engine hours","Engines, gensets, stabilisers, hull, safety, electrical, systems, tender","Notes column for your own yacht","The schedule our managed fleet runs on"],
+   "format":"PDF, 7 pages, A4, print-ready","buy":""},
+  {"id":"kit","name":"The Yacht Owner's Kit","short":"The Yacht Owner's Kit","price":49,"status":"soon","img":"",
+   "blurb":"All four: the checklists, the haul-out checklist, the running cost calculator and the maintenance programme.",
+   "includes":["Owner Checklists ($7)","Annual Haul-Out Checklist ($12)","Running Cost Calculator ($17)","Scheduled Maintenance Programme ($29)","$65 bought separately: save $16"],
+   "format":"3 PDFs and a spreadsheet","buy":""}
+ ]
+}

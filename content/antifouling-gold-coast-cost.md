@@ -5,7 +5,7 @@
   "description": "Per-foot yard packages, hardstand rates, paint prices, Propspeed and anodes, how often to do it in Gold Coast water, and a worked example for a 60 ft motor yacht.",
   "category": "maintenance",
   "date": "2026-09-05",
-  "updated": "2026-09-06",
+  "updated": "2026-10-04",
   "hero": "assets/photos/travel-lift.jpg",
   "cta": "Yard visit coming up? We will scope it, quote it and stand on the hardstand while it is done.",
   "faq": [
@@ -153,6 +153,8 @@ Every line is from a published rate above or marked as a quote item.
 | **With polish** | **about $8,800** | **about $7,100 plus lift fees** |
 
 Upgrading from Micron One to Micron Extra 2 changes the tin cost by almost nothing at roller rates and buys a two-season claim. Seacocks, bearings, moisture work and any gelcoat repairs are on top. That is why the $10,000 allowance in our cost-of-ownership guide is a fair working number for a 60-footer, and why a neglected boat can double it.
+
+{{product:haul-out}}
 
 ## What to check before you sign
 

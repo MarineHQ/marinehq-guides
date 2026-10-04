@@ -5,7 +5,7 @@
   "description": "Berth, antifoul, insurance, servicing, fuel and rego for a 40–120 ft motor yacht on the Gold Coast, with published 2026 figures and a worked example for a 60-footer.",
   "category": "costs",
   "date": "2026-09-05",
-  "updated": "2026-10-03",
+  "updated": "2026-10-04",
   "hero": "assets/photos/at-anchor.jpg",
   "cta": "Want a budget for your yacht, line by line, before you buy or before the next yard visit? One call.",
   "faq": [
@@ -166,6 +166,8 @@ Every figure below comes from a published source above, or is flagged as an allo
 | **Used 100 hours a year** | **$122,485** | |
 
 That is a used boat in a member berth with a quiet engine year. Move her to a resort marina, insure at the top of the range or hit a 1,000-hour service and you are past $150,000 without trying. It is also why the 10% rule tends to hold: on a new $2.2 million Maritimo M55 or Riviera 6000, 10% is $220,000, and a well-used boat of that size can spend it.
+
+{{product:calculator}}
 
 ## Where the money hides
 

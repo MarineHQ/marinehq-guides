@@ -5,7 +5,7 @@
   "description": "The four questions that decide length, what each ten feet buys you in cabins and tankage, how every running cost scales with size, the Gold Coast depth and marina limits, the insurers' ten-foot rule, and new-boat price bands with dates.",
   "category": "buying",
   "date": "2026-09-11",
-  "updated": "2026-10-03",
+  "updated": "2026-10-04",
   "hero": "assets/photos/bow-marina.jpg",
   "cta": "Torn between two sizes? Bring us the shortlist. We will tell you what each one costs to run here and which one you will actually use.",
   "faq": [
@@ -154,6 +154,8 @@ New-boat prices in Australia, from published tests with their dates, so you can 
 Depreciation runs roughly 10 to 20% in the first year, 30 to 40% by year three and 40 to 50% by year five, then flattens. That is the case for a three to five year old boat: the big hit is taken, the warranty may still have life, and the survey tells you what you are buying. Riviera is widely noted for holding its price, and the Australian luxury segment gained share in late 2025 while trailer boats fell. Brokers put the deepest demand in the 30 to 70 ft power range, so a well-kept boat in this band is also the easiest to sell when you move up.
 
 Two schools of thought on the first boat, and both are right for someone. "Buy your second boat first" skips the starter boat you will outgrow in a year. "Start small" makes sure you like it before you commit. The compromise most experienced owners land on is a boat one size below the dream, run for two seasons, with the records kept so she sells well.
+
+{{product:calculator}}
 
 ## Before you decide
 

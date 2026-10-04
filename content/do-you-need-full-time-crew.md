@@ -5,7 +5,7 @@
   "description": "The Queensland rules for an owner at the helm of a 40–120 ft motor yacht, what insurers actually ask, the four ways to run a boat and what each costs, the continuity problem when a captain moves on, and how a support network and the MyYacht app fix it.",
   "category": "ownership",
   "date": "2026-09-10",
-  "updated": "2026-10-03",
+  "updated": "2026-10-04",
   "hero": "assets/photos/bow-marina.jpg",
   "cta": "Not sure how much crew your yacht really needs? Tell us how you use her and we will give you a straight answer, with the numbers.",
   "faq": [
@@ -144,6 +144,8 @@ MyYacht is the Marine HQ owner and crew app, and for a team it is the single pla
 - **Photos with notes.** Crew and directors talk on one thread, the owner sees what is shared with them.
 
 A captain who joins a Marine HQ boat opens the app and finds three years of history, the open defects, the trades, the schedule and the standard procedures. A captain who leaves takes nothing the boat needs.
+
+{{product:programme}}
 
 ## Learning to run her yourself
 

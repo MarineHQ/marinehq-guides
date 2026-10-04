@@ -5,7 +5,7 @@
   "description": "Wash-downs, cut and polish, wax versus sealant versus ceramic, gelcoat versus paint, teak and stainless, with the published Australian prices, the Queensland sun and salt factors, and Marine HQ's own wash-down routine.",
   "category": "maintenance",
   "date": "2026-09-10",
-  "updated": "2026-10-03",
+  "updated": "2026-10-04",
   "hero": "assets/photos/teak-deck.jpg",
   "cta": "Want her kept presentation-ready without thinking about it? Our crew wash, polish and inspect on a schedule, and photograph what they find.",
   "faq": [
@@ -83,6 +83,8 @@ Gold Coast sun sits at the top of the UV scale for most of the year, the water i
 This is the Marine HQ crew routine, the one on the clipboard on every managed yacht. A wash-down is also our regular close-up inspection, which is why it ends with a report.
 
 <ol class="steps"><li><b>Before you start.</b> Check the wind and the sun; avoid a strong breeze or full hot sun. Remove covers and cushions and stow them dry. Open and air the lockers. Fresh shore water connected, pH-neutral boat soap only, dedicated cloths for glass and clears, every hatch and port closed. No harsh brushes on gelcoat, glass or clears.</li><li><b>Rinse, top down.</b> Flush the whole vessel with fresh water from the top before anything touches her. Salt and grit lifted off first are salt and grit not ground in.</li><li><b>Wash section by section.</b> Hardtop, flybridge and arch; superstructure and cabin sides; hull topsides and boot stripe. Work in shade, soft mitt or soft brush, rinse each section before it dries.</li><li><b>Decks and non-skid.</b> Soft deck brush and soap, rinse thoroughly, clear the scuppers and drains.</li><li><b>Glass and clears.</b> Glass with a dedicated cleaner and a clean cloth. Clears and isinglass with fresh water and a soft cloth only, no chemicals, no scrubbing. Windex, Rain-X and ammonia products void the clears' warranty.</li><li><b>Stainless.</b> Rinse and wipe every rail, fitting and cleat. Spot-polish and protect as required. Report any rust or corrosion.</li><li><b>Teak.</b> Rinse well. A light scrub across the grain only if needed, never aggressive, and protect the caulking.</li><li><b>Chamois.</b> Gelcoat, glass and stainless, to stop water spots, especially on dark surfaces and glass.</li><li><b>Tender and aft deck.</b> Rinse and wipe the tender, wash the cockpit and aft deck, check the drains.</li><li><b>Covers, cushions, lockers.</b> Refit once dry with ventilation underneath; wash covers where needed; clean and air lockers then secure them.</li><li><b>Pack down.</b> Hoses coiled, mops and mitts hung to dry, buckets rinsed, gear back where it lives.</li><li><b>Finish and report.</b> A final walk-around for damage, corrosion, leaks and loose fittings; any issue photographed and reported; the wash logged with date and crew.</li></ol>
+
+{{product:checklists}}
 
 How often: a fresh-water rinse within 24 hours of every salt trip, and a full wash every two to four weeks in season, more for a wet-berthed boat than a dry-stored one. Dry stacks stop at about 10 m, so for a 40 to 120 ft yacht the choice is a wet berth with a good routine, or a shed for the yard period.
 

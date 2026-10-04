@@ -5,7 +5,7 @@
   "description": "Marine HQ's standard annual out-of-water scope for a motor yacht, section by section: hull, running gear, engines, stabilisers, safety, electrical, systems and tender, and what to ask for in writing.",
   "category": "maintenance",
   "date": "2026-09-06",
-  "updated": "2026-09-06",
+  "updated": "2026-10-04",
   "hero": "assets/photos/travel-lift.jpg",
   "cta": "Haul-out due? We will write the scope, get it quoted line by line and stand on the hardstand while it is done.",
   "faq": [
@@ -130,6 +130,8 @@ Keep the paint invoice, the slipway receipt and the anode sizes. The national bi
 - Tender engine serviced and hull checked.
 - Davit and lifting gear inspected and load-tested.
 - Water toys and equipment checked.
+
+{{product:haul-out}}
 
 ## What goes wrong, and how to stop it
 

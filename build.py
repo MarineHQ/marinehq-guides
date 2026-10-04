@@ -97,11 +97,11 @@ __JSONLD__
     <nav class="mh-nav" aria-label="Marine HQ">__MAINNAV__</nav>
     <div class="mh-cta"><a class="mh-phone" href="tel:__PHONE_H__">0439 748 387</a><a class="mh-contact" href="__MAIN__/contact">Contact us</a></div>
     <details class="mh-menu"><summary aria-label="Menu"><i></i><i></i><i></i></summary>
-      <div class="mh-drawer">__MAINNAV__<div class="mh-drawer-sub"><span>Guides by topic</span>__NAV__</div><a class="mh-phone" href="tel:__PHONE_H__">Call 0439 748 387</a></div>
+      <div class="mh-drawer">__MAINNAV__<div class="mh-drawer-sub"><span>Guides by topic</span>__NAV__<a href="/owners-kit/">Owner&rsquo;s Kit</a></div><a class="mh-phone" href="tel:__PHONE_H__">Call 0439 748 387</a></div>
     </details>
   </div>
 </header>
-<nav class="sub" aria-label="Guide sections"><div class="wrap sub-bar"><a class="sub-home" href="/">All guides</a>__NAV__</div></nav>
+<nav class="sub" aria-label="Guide sections"><div class="wrap sub-bar"><a class="sub-home" href="/">All guides</a>__NAV__<a class="sub-kit" href="/owners-kit/">Owner&rsquo;s Kit</a></div></nav>
 '''
 
 FOOT = '''
@@ -236,10 +236,82 @@ def shell(title, desc, canon, ogtype, jsonld, inner):
                 .replace("__OGTYPE__", ogtype).replace("__BASE__", BASE).replace("__V__", v)
                 .replace("__JSONLD__", jsonld).replace("__MAINNAV__", main_nav_html()).replace("__NAV__", nav_html()).replace("__MAIN__", MAIN)
                 .replace("__PHONE_H__", PHONE_H))
-    foot = (FOOT.replace("__FOOTNAV__", nav_html() + '<a href="%s">Marine HQ home</a><a href="%s/contact">Contact</a>' % (MAIN, MAIN))
+    foot = (FOOT.replace("__FOOTNAV__", nav_html() + '<a href="/owners-kit/">Owner&rsquo;s Kit</a><a href="%s">Marine HQ home</a><a href="%s/contact">Contact</a>' % (MAIN, MAIN))
                 .replace("__YEAR__", str(datetime.date.today().year)).replace("__ABN__", ABN)
                 .replace("__PHONE_H__", PHONE_H).replace("__PHONE__", PHONE).replace("__EMAIL__", EMAIL).replace("__MAIN__", MAIN))
     return page + inner + foot
+
+PRODUCTS = json.load(open(os.path.join(CONTENT, "_products.json"), encoding="utf-8"))
+PROD = {p["id"]: p for p in PRODUCTS["products"]}
+
+def order_link(p):
+    if p.get("buy"): return p["buy"]
+    ready = p["status"] == "ready"
+    subj = ("Order: %s ($%d)" if ready else "Tell me when it is ready: %s ($%d)") % (p["name"], p["price"])
+    body = ("Hi Marine HQ, I would like to order the %s ($%d). Please send the payment link." if ready
+            else "Hi Marine HQ, please let me know when the %s ($%d) is available.") % (p["name"], p["price"])
+    from urllib.parse import quote
+    return "mailto:%s?subject=%s&amp;body=%s" % (EMAIL, quote(subj), quote(body))
+
+def order_label(p):
+    if p.get("buy"): return "Buy now &middot; $%d" % p["price"]
+    return ("Order by email &middot; $%d" % p["price"]) if p["status"] == "ready" else "Tell me when it is ready"
+
+def render_product(pid):
+    p = PROD[pid]
+    img = ('<img src="/%s" alt="%s, first page" loading="lazy">' % (p["img"], esc(p["name"]))) if p.get("img") else '<div class="prod-ph">%s</div>' % esc(p["short"])
+    soon = "" if p["status"] == "ready" else '<span class="soon">Coming soon</span>'
+    return ('<aside class="prod"><a class="prod-img" href="/owners-kit/#%s">%s</a><div class="prod-txt"><span class="eyebrow">From %s %s</span>'
+            '<strong>%s</strong><p>%s</p><div class="prod-act"><span class="price">$%d</span><a class="btn" href="%s">%s</a>'
+            '<a class="prod-more" href="/owners-kit/#%s">What is inside</a></div></div></aside>'
+            % (p["id"], img, esc(PRODUCTS["kit_name"]), soon, esc(p["name"]), esc(p["blurb"]), p["price"], order_link(p), order_label(p), p["id"]))
+
+def build_shop():
+    cards = []
+    for p in PRODUCTS["products"]:
+        img = ('<img src="/%s" alt="%s, first page" loading="lazy">' % (p["img"], esc(p["name"]))) if p.get("img") else '<div class="prod-ph">%s</div>' % esc(p["short"])
+        soon = "" if p["status"] == "ready" else '<span class="soon">Coming soon</span>'
+        inc = "".join("<li>%s</li>" % esc(i) for i in p["includes"])
+        cards.append('<article class="shopcard%s" id="%s"><div class="shop-img">%s</div><div class="shop-txt"><h2>%s %s</h2><p class="blurb">%s</p><ul>%s</ul>'
+                     '<p class="fmt">%s</p><div class="prod-act"><span class="price">$%d</span><a class="btn" href="%s">%s</a></div></div></article>'
+                     % (" is-kit" if p["id"] == "kit" else "", p["id"], img, esc(p["name"]), soon, esc(p["blurb"]), inc, esc(p["format"]), p["price"], order_link(p), order_label(p)))
+    inner = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> Owner&rsquo;s Kit</div>'
+             '<h1>%s</h1><p class="stand">The checklists and schedules our crews work to, written for owners who run their own yacht. Download, print, keep aboard.</p></div></section>'
+             '<main class="wrap shop"><p class="shop-note">%s Prices in Australian dollars, GST included. Questions: <a href="tel:%s">%s</a>.</p>%s'
+             '<section class="shop-done"><div class="eyebrow">Rather have it written for your yacht?</div><h2>SOPs and the Vessel Dossier</h2>'
+             '<p>These are general documents for any motor yacht. Marine HQ also writes vessel-specific Standard Operating Procedures and a bound Vessel Dossier for individual yachts: her particulars, emergency response card, safety checklist, maintenance schedule and the procedures her crew work to.</p>'
+             '<div class="foot-actions"><a class="btn" href="/guides/yacht-sops-standard-operating-procedures/">Read the SOP guide</a><a class="btn ghost" href="mailto:%s?subject=SOPs%%20and%%20Vessel%%20Dossier%%20enquiry">Ask about SOPs for your yacht</a></div></section></main>'
+             % (esc(PRODUCTS["kit_name"]), esc(PRODUCTS["order_note"]), PHONE_H, PHONE, "".join(cards), EMAIL))
+    jl = "".join('<script type="application/ld+json">%s</script>' % json.dumps({"@context": "https://schema.org", "@type": "Product", "name": p["name"],
+          "description": p["blurb"], "brand": {"@type": "Organization", "name": ORG}, "image": (BASE + "/" + p["img"]) if p.get("img") else BASE + "/assets/top_banner_optimized.jpg",
+          "offers": {"@type": "Offer", "price": str(p["price"]), "priceCurrency": "AUD", "url": BASE + "/owners-kit/#" + p["id"],
+                     "availability": "https://schema.org/" + ("InStock" if p["status"] == "ready" else "PreOrder")}}) for p in PRODUCTS["products"])
+    page = shell("%s — checklists and schedules for yacht owners | Marine HQ" % PRODUCTS["kit_name"],
+                 "Pre-departure, stand-down and wash-down checklists, the annual haul-out checklist, a running cost calculator and a scheduled maintenance programme for motor yacht owners. From $7.",
+                 BASE + "/owners-kit/", "website", jl, inner)
+    os.makedirs(os.path.join(SITE, "owners-kit"), exist_ok=True)
+    write_page(os.path.join(SITE, "owners-kit", "index.html"), page)
+
+LINKS = [("Read the guides", "/", "Costs, marinas, maintenance, passages"),
+         ("The Yacht Owner&rsquo;s Kit", "/owners-kit/", "Checklists and schedules from $7"),
+         ("What does it cost to own a yacht?", "/guides/cost-of-owning-a-yacht-gold-coast/", "The Gold Coast numbers"),
+         ("Do you need full-time crew?", "/guides/do-you-need-full-time-crew/", "Driving her yourself, day crew, captains"),
+         ("MyYacht, the owner app", "/guides/myyacht-owner-app-guide/", "Screen by screen"),
+         ("Marine HQ website", MAIN + "/", "Yacht management and maintenance"),
+         ("WhatsApp us", "https://wa.me/61439748387", "Usually within the hour"),
+         ("Call %s" % PHONE, "tel:" + PHONE_H, "")]
+
+def build_links():
+    rows = "".join('<a class="lk" href="%s"><b>%s</b>%s</a>' % (u, t, ("<span>%s</span>" % d) if d else "") for t, u, d in LINKS)
+    doc = ('<!DOCTYPE html><html lang="en-AU"><head>\n<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+           '<title>Marine HQ — links</title><meta name="description" content="Marine HQ: yacht management on the Gold Coast. Guides, the Yacht Owner&rsquo;s Kit, and how to reach us.">'
+           '<link rel="canonical" href="%s/links/"><link rel="icon" href="/assets/white_favicon-64.png">'
+           '<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">'
+           '<link rel="stylesheet" href="/assets/style.css?v=%s">\n</head><body class="lkpage"><main class="lkwrap"><img class="lklogo" src="/assets/logo_orange.png" alt="Marine HQ">'
+           '<h1>Marine HQ</h1><p>Yacht management and maintenance. Gold Coast, Sydney, Whitsundays.</p>%s<p class="lkfoot">Freedom to enjoy.</p></main>\n</body></html>'
+           % (BASE, datetime.date.today().strftime("%Y%m%d"), rows))
+    os.makedirs(os.path.join(SITE, "links"), exist_ok=True)
+    write_page(os.path.join(SITE, "links", "index.html"), doc)
 
 MAPS = json.load(open(os.path.join(CONTENT, "_maps.json"), encoding="utf-8"))
 LEAFLET = ('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">\n'
@@ -267,6 +339,8 @@ def build_guide(meta, guides):
     MD.reset()
     body_html = MD.convert(body_md)
     toc = MD.toc
+    for pid in re.findall(r"\{\{product:([a-z0-9-]+)\}\}", body_html):
+        body_html = body_html.replace("<p>{{product:%s}}</p>" % pid, render_product(pid)).replace("{{product:%s}}" % pid, render_product(pid))
     has_map = False
     for mid in re.findall(r"\{\{map:([a-z0-9-]+)\}\}", body_html):
         body_html = body_html.replace("<p>{{map:%s}}</p>" % mid, render_map(mid)).replace("{{map:%s}}" % mid, render_map(mid))
@@ -330,7 +404,7 @@ def build_hubs(guides):
         write_page(os.path.join(SITE, s, "index.html"), page)
 
 def build_meta(guides):
-    urls = ["%s/" % BASE] + ["%s/%s/" % (BASE, s) for s, _, _ in CATEGORIES] + ["%s/guides/%s/" % (BASE, g["slug"]) for g in guides]
+    urls = ["%s/" % BASE] + ["%s/%s/" % (BASE, s) for s, _, _ in CATEGORIES] + [BASE + "/owners-kit/"] + ["%s/guides/%s/" % (BASE, g["slug"]) for g in guides]
     lm = {("%s/guides/%s/" % (BASE, g["slug"])): g["updated"] for g in guides}
     today = datetime.date.today().isoformat()
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -380,7 +454,7 @@ def main():
     guides.sort(key=lambda g: g["updated"], reverse=True)
     os.makedirs(os.path.join(SITE, "guides"), exist_ok=True)
     for g in guides: build_guide(g, guides)
-    build_index(guides); build_hubs(guides); build_meta(guides)
+    build_index(guides); build_hubs(guides); build_shop(); build_links(); build_meta(guides)
     print("built %d guide(s) → %s" % (len(guides), SITE))
     for g in guides: print("  /guides/%s/  (%d words, %s)" % (g["slug"], g["words"], CAT_LABEL.get(g["category"], g["category"])))
     if "--check" in sys.argv: check(guides)

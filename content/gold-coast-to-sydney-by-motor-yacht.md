@@ -176,6 +176,8 @@ Owners who enjoy the passage make a week of it. Owners who want the boat in Sydn
 
 Whichever way she goes, the pre-departure list is the same: insurance cruising range confirmed in writing for NSW waters, EPIRB registration current, life raft in date, fuel range checked against the longest leg with a third in hand, spares for impellers, belts and filters, a watch-keeping plan for the overnight legs, AIS on, and the weather window agreed the night before.
 
+{{product:checklists}}
+
 ## What we do
 
 Marine HQ prepares yachts for the run south and back: the pre-departure checks and sea trial, the insurance and registration paperwork, the fuel and spares, the passage plan with the bars marked, and a delivery skipper and crew when the owner would rather meet her in Sydney. Passages further afield work the same way — Fiji, New Caledonia, Indonesia and the wider Pacific — with our delivery crew aboard, or as weather routing and shore support if the owner or their own captain is making the crossing. While she is away her position, fuel and log are in the owner's MyYacht app, and when she comes home the post-passage service is already booked. Call 0439 748 387 or email yachtsupport@marinehq.com.au and tell us when you want her at Rushcutters Bay.

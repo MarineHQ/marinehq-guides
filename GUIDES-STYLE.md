@@ -96,3 +96,11 @@ The guides are written for owners of **40 to 120 ft** motor yachts (was 40–90)
 
 ## Where Marine HQ is based (4 Oct 2026 — Trish: "put Gold Coast City Marina as base also… so both")
 Marine HQ has **two bases in the Coomera marine precinct: The Boat Works and Gold Coast City Marina & Shipyard (GCCM)**. Say both, never one alone. On maps both carry the orange `hq` pin. Address is written **76 - 84 Waterway Dr, Coomera QLD 4209** (not 76/84).
+
+## Products in guides (4 Oct 2026)
+- The catalogue is `content/_products.json` (id, name, price, status ready|soon, img, blurb, includes, format, buy). Prices are Trish's, locked 22 Sep 2026: checklists $7, haul-out $12, calculator $17, programme $29, kit $49.
+- Put `{{product:<id>}}` on its own line where the product genuinely helps the reader (one per guide, never next to `{{cta}}`). It renders a product block linking to `/owners-kit/#<id>`.
+- `status: soon` shows "Coming soon" and a "Tell me when it is ready" button. Never mark a product `ready` until its PDF exists in `~/Documents/Marine HQ/Products/`.
+- When a checkout link exists, paste it into the product's `buy` field; the button becomes "Buy now".
+- SOP and Vessel Dossier prices are NOT published on the guides; they are "quoted per yacht".
+- `/links/` is the Instagram bio page; edit `LINKS` in build.py.
