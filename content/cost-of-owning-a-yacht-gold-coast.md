@@ -20,7 +20,7 @@
     {"q": "What does the 10% rule mean for a yacht?",
      "a": "The old rule of thumb is to set aside about 10% of the yacht's value each year for running costs, and 10% to 15% for larger or harder-used boats. On a $1.2 million yacht that is $120,000 to $180,000. Our worked example lands a little under that at the dock and over it once you add 100 hours of fuel."},
     {"q": "Is registration expensive in Queensland?",
-     "a": "No. A recreational vessel over 15 m and up to 20 m costs $753.60 a year to register in 2025–26, rising to $779.05 from 1 July 2026. Vessels over 20 m are $948.25. Vessels of 15 m and over need Maritime Safety Queensland to endorse any registration, transfer or change of particulars before a service centre will process it."}
+     "a": "No. A recreational vessel over 15 m and up to 20 m costs $779.05 a year to register from 1 July 2026, up from $753.60 in 2025–26. Vessels over 20 m are $980.25. Vessels of 15 m and over need Maritime Safety Queensland to endorse any registration, transfer or change of particulars before a service centre will process it."}
   ],
   "related": ["antifouling-gold-coast-cost", "gold-coast-marinas-compared"],
   "sources": [
@@ -56,7 +56,7 @@ A 60 ft motor yacht kept on the Gold Coast costs roughly **$70,000 to $80,000 a 
 - **Antifoul** — every 12 to 18 months; the yard visit is the biggest single maintenance bill
 - **Insurance** — 1% to 3% of insured value a year, so $12,000 to $36,000 on a $1.2 million boat
 - **Servicing** — engines and generator every year, on hours or calendar, whichever comes first
-- **Registration** — $753.60 a year for a 15 to 20 m vessel (2025–26)
+- **Registration** — $779.05 a year for a 15 to 20 m vessel (from 1 July 2026)
 - **Fuel** — about $500 an hour underway at fast cruise, at $2.84 a litre
 </div>
 
@@ -159,11 +159,11 @@ Every figure below comes from a published source above, or is flagged as an allo
 | Engine and generator servicing | $8,000 | Allowance: twin engines plus generator, routine year |
 | Unplanned repairs | $5,000 | Upper end of the published $1,000 to $5,000 range |
 | Wash-downs, fortnightly | $7,800 | $5 a foot, Sydney published rate |
-| Registration | $754 | Queensland, 15 to 20 m, 2025–26 |
+| Registration | $779 | Queensland, 15 to 20 m, from 1 July 2026 |
 | Safety gear, flares, EPIRB, extinguishers | $1,000 | Allowance |
-| **At the dock** | **$71,365** | |
+| **At the dock** | **$71,390** | |
 | Fuel, 100 hours | $51,120 | 180 L/h at $2.84 |
-| **Used 100 hours a year** | **$122,485** | |
+| **Used 100 hours a year** | **$122,510** | |
 
 That is a used boat in a member berth with a quiet engine year. Move her to a resort marina, insure at the top of the range or hit a 1,000-hour service and you are past $150,000 without trying. It is also why the 10% rule tends to hold: on a new $2.2 million Maritimo M55 or Riviera 6000, 10% is $220,000, and a well-used boat of that size can spend it.
 
