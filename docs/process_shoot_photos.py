@@ -72,8 +72,7 @@ def fill_from_edges(a, box, iters=1500):
 # navy polos is the MARINE / HQ wordmark without the boat mark, so that is what goes on.
 # frame -> quad on the shirt in full-res px: top-left, top-right, bottom-right, bottom-left
 BACK_PRINT = {
-    40: [(1100, 2045), (2030, 1995), (2020, 2430), (1090, 2500)],   # antifouling cover
-    38: [(480, 2450), (1600, 2390), (1590, 2900), (470, 2980)],      # same shirt, in the detailing guide
+    # none in use. Tried on frames 38 and 40 (5 Oct 2026) and Trish had it taken off again: the shirt stays plain.
 }
 LOGO = os.path.join(HERE, "..", "site", "assets", "logo_navy.png")
 NAVY = (27, 42, 82)
