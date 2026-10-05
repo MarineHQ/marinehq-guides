@@ -67,12 +67,46 @@ def fill_from_edges(a, box, iters=1500):
     p[inner] += rng.normal(0, 1.2, p.shape)[inner]
     a[y0:y1, x0:x1] = np.clip(p, 0, 255).astype(np.uint8)
 
+# Marine HQ back print added to a plain shirt back (Trish, 5 Oct 2026: "put a blue Marine HQ logo on the back of
+# this shirt ... like the others"). The shirt already carries the Marine HQ chest logo; the real back print on the
+# navy polos is the MARINE / HQ wordmark without the boat mark, so that is what goes on.
+# frame -> quad on the shirt in full-res px: top-left, top-right, bottom-right, bottom-left
+BACK_PRINT = {
+    40: [(1100, 2045), (2030, 1995), (2020, 2430), (1090, 2500)],   # antifouling cover
+    38: [(480, 2450), (1600, 2390), (1590, 2900), (470, 2980)],      # same shirt, in the detailing guide
+}
+LOGO = os.path.join(HERE, "..", "site", "assets", "logo_navy.png")
+NAVY = (27, 42, 82)
+
+def _persp(dst, src):
+    """coefficients mapping output (dst quad) back to input (src rect) for Image.transform"""
+    A, B = [], []
+    for (x, y), (u, v) in zip(dst, src):
+        A.append([x, y, 1, 0, 0, 0, -u * x, -u * y]); B.append(u)
+        A.append([0, 0, 0, x, y, 1, -v * x, -v * y]); B.append(v)
+    return np.linalg.solve(np.array(A, float), np.array(B, float)).tolist()
+
+def back_print(a, quad, strength=0.9):
+    from PIL import ImageFilter
+    logo = Image.open(LOGO).convert("RGBA")
+    logo = logo.crop((0, 142, logo.width, logo.height))                    # wordmark only, no boat mark
+    alpha = logo.split()[3].resize((logo.width * 4, logo.height * 4), Image.LANCZOS)
+    alpha = alpha.point(lambda v: 0 if v < 96 else (255 if v > 160 else int((v - 96) * 255 / 64)))   # re-crisp after upscaling
+    h, w = a.shape[:2]
+    src = [(0, 0), (alpha.width, 0), (alpha.width, alpha.height), (0, alpha.height)]
+    mask = alpha.transform((w, h), Image.PERSPECTIVE, _persp(quad, src), Image.BICUBIC).filter(ImageFilter.GaussianBlur(2.2))
+    m = (np.asarray(mask, np.float64) / 255.0 * strength)[..., None]
+    base = a.astype(np.float64)
+    ink = base * (np.array(NAVY, np.float64) / 255.0) * 1.12 + 6           # multiply: folds and weave show through the print
+    a[:] = np.clip(base * (1 - m) + ink * m, 0, 255).astype(np.uint8)
+
 def main():
     zoom = "--zoom" in sys.argv
     for n, (name, boxes) in SHOTS.items():
         im = ImageOps.exif_transpose(Image.open(FILES[n])).convert("RGB")
         a = np.array(im)
         for b in boxes: fill_from_edges(a, b)
+        if n in BACK_PRINT: back_print(a, BACK_PRINT[n])
         im = Image.fromarray(a)
         if n in CROP and not zoom: im = im.crop(CROP[n])
         if zoom:
