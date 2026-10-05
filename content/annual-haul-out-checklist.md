@@ -86,6 +86,8 @@ The annual services fall due here because the boat is idle and the trades are on
 - Sea strainers cleaned.
 - Engine mounts and bilges inspected.
 
+<figure><img src="/assets/photos/shoot-engine-room.jpg" alt="A Marine HQ engineer working at the fuel filters between the main engines of a motor yacht" loading="lazy"><figcaption><b>Engine room</b> — filters, strainers and impellers are done while access is easy and the boat is not going anywhere.</figcaption></figure>
+
 ## Stabilisers, thrusters and steering
 
 - Stabiliser annual service, Seakeeper or fin. On a fin system the fin seals and actuators are checked from outside while she is out.

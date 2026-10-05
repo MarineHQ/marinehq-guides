@@ -6,7 +6,7 @@
   "category": "ownership",
   "date": "2026-09-11",
   "updated": "2026-09-11",
-  "hero": "assets/photos/at-anchor.jpg",
+  "hero": "assets/photos/shoot-tender.jpg", "hero_pos": "center 45%",
   "cta": "Want to see it on your own yacht? Call and we will walk you through MyYacht with your boat's details.",
   "faq": [
     {"q": "Is MyYacht an app I download?",

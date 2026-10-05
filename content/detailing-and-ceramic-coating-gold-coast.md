@@ -6,7 +6,7 @@
   "category": "maintenance",
   "date": "2026-09-10",
   "updated": "2026-10-04",
-  "hero": "assets/photos/teak-deck.jpg",
+  "hero": "assets/photos/shoot-polisher-deck.jpg", "hero_pos": "center 62%",
   "cta": "Want her kept presentation-ready without thinking about it? Our crew wash, polish and inspect on a schedule, and photograph what they find.",
   "faq": [
     {"q": "How much does boat detailing cost on the Gold Coast?",
@@ -76,7 +76,7 @@ Gold Coast sun sits at the top of the UV scale for most of the year, the water i
 - **Silt.** The Coomera River runs at up to 100 NTU of turbidity after floods and higher upstream. A boat in the Coomera precinct wears a brown line at the waterline that a Broadwater boat does not.
 - **Birds.** Uric acid etches gelcoat within minutes in sun. Left for a week, the mark needs compounding out.
 
-<div class="figrow"><figure><img src="/assets/photos/polishing.jpg" alt="Two crew polishing the superstructure of a motor yacht under cover" loading="lazy"><figcaption><b>Under cover</b> — machine work happens in shade; gelcoat compounds and coatings do not like hot sun.</figcaption></figure><figure><img src="/assets/photos/polishing-2.jpg" alt="A crew member cutting and polishing the hull side of a motor yacht on the hardstand" loading="lazy"><figcaption><b>Cut and polish</b> — the least aggressive step that removes the oxidation, and no more.</figcaption></figure></div>
+<div class="figrow"><figure><img src="/assets/photos/shoot-polish-kit.jpg" alt="A rotary polisher, foam pads and microfibre cloths laid out beside a yacht" loading="lazy"><figcaption><b>The kit</b> — machine, graded pads and clean cloths; the pad and compound are matched to the surface, not the other way round.</figcaption></figure><figure><img src="/assets/photos/shoot-hull-polish.jpg" alt="A detailer machine-polishing the white hull side of a motor yacht" loading="lazy"><figcaption><b>Cut and polish</b> — the least aggressive step that removes the oxidation, and no more.</figcaption></figure></div>
 
 ## The wash-down: what a proper one includes
 
@@ -106,6 +106,8 @@ Ceramic is only as good as the preparation. The hull has to be stripped of every
 
 Ceramic Pro Australia's own page says what the coating does not do: it does not remove the need for wash-downs, and it does not fully prevent salt, water spots or marine growth. What it does is make the wash faster, because salt and grime do not bond, and stretch the interval between machine polishes.
 
+<figure class="vid"><video data-auto muted loop playsinline preload="none" poster="/assets/video/machine-polish.jpg"><source src="/assets/video/machine-polish.mp4" type="video/mp4"></video><figcaption><b>Machine polish</b> — a dual-action polisher on a white hardtop: slow passes, light pressure, the pad kept flat.</figcaption></figure>
+
 ## Gelcoat versus paint
 
 Know which one your boat has before anyone picks up a buffer.
@@ -125,6 +127,8 @@ Painted boats are the ones where a cheap detailer does real damage. Paint has on
 **Clears.** Fresh water and a soft cloth. The manufacturers list the products that void the warranty: Windex, Rain-X, Pledge, Plexus, Simple Green and anything with ammonia.
 
 <figure><img src="/assets/photos/cockpit-table.jpg" alt="A cleaned teak cockpit table and teak deck on a motor yacht" loading="lazy"><figcaption><b>Teak</b> — sealed, rinsed after salt, scrubbed across the grain, and never sanded as routine.</figcaption></figure>
+
+<figure><img src="/assets/photos/shoot-stainless.jpg" alt="A hand polishing a stainless steel rub rail on a white hull with a soft cloth" loading="lazy"><figcaption><b>Stainless</b> — rinsed and wiped every wash; tea-staining polished out before it pits.</figcaption></figure>
 
 ## What it costs
 

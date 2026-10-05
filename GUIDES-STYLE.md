@@ -120,3 +120,23 @@ Marine HQ has **two bases in the Coomera marine precinct: The Boat Works and Gol
 - Guide cards lead with a photo (`THUMBS` in build.py picks one per guide so a row never repeats a picture).
 - Headlines are light-weight Bodoni, large. Buttons are 1px outlined, square.
 - The product PDFs follow the same rule: no filled bands, outlined pills, orange as a hairline.
+
+## The professional shoot: photos and video (5 Oct 2026)
+
+- Source: 114 photos + 10 clips (Canon R6, May 2025) in
+  `~/Documents/Marine HQ/Marketing/Pics/2026100465467754161cc9a3bb806d05722e1d1eae5eb68f6ee029d19fd32c05d6819b46/`.
+  Web copies are made by `docs/process_shoot_photos.py` into `site/assets/photos/shoot-*.jpg`; never edit the originals.
+- Rules used when choosing: no vessel name or hull lettering (painted out in the script, or the frame is skipped:
+  frames 95-104 show a client yacht's name), no crew face as the subject (backs, hands, tools only, until Trish
+  says who may be shown), no other company's branding (frames 41-53, and the interior-detailing clip).
+- `"hero_pos": "center 60%"` in a guide's front matter sets which part of the hero photo shows in the wide band
+  and on its card. `"hero_video": "<name>"` plays `site/assets/video/<name>.mp4` in the hero instead; the hero photo
+  is its still frame.
+- Video: silent, looping, H.264 MP4, 720p (hero 900p), under about 7 MB, cut so no face or boat name is in frame.
+  In a guide body:
+  ```html
+  <figure class="vid"><video data-auto muted loop playsinline preload="none" poster="/assets/video/x.jpg"><source src="/assets/video/x.mp4" type="video/mp4"></video><figcaption><b>Label</b> — a caption that adds a fact.</figcaption></figure>
+  ```
+  `assets/video.js` plays clips only while on screen and not at all for reduced-motion visitors.
+- Not used: `Sunseeker 68 Tour Reel` (one specific yacht, whose footage it is not confirmed), the `dashboard` and
+  `logo` stings, and any clip section with a face or a name.

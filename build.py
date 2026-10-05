@@ -126,16 +126,17 @@ FOOT = '''
   </div>
 </footer>
 <script src="/assets/whatsapp-widget.js" defer></script>
+<script src="/assets/video.js" defer></script>
 </body></html>'''
 
 GUIDE = '''
-<section class="hero" style="--photo:url('/__HERO__')">
+<section class="hero__HEROCLS__" style="--photo:url('/__HERO__');--pos:__HEROPOS__">
   <div class="wrap">
     <div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> <a href="/__CATSLUG__/">__CAT__</a></div>
     <h1>__H1__</h1>
     <p class="stand">__DESC__</p>
     <div class="meta"><span>Updated __UPDATED__</span><span>&middot;</span><span>__MINS__ min read</span><span>&middot;</span><span>Gold Coast, Queensland</span></div>
-  </div>
+  </div>__HEROVID__
 </section>
 <main class="wrap article">
   <article class="body">
@@ -195,20 +196,22 @@ def render_sources(meta):
 
 # card photo per guide, so a row of cards never repeats one picture; falls back to the guide's hero
 THUMBS = {
-    "cost-of-owning-a-yacht-gold-coast": "assets/photos/teak-deck.jpg",
     "antifouling-gold-coast-cost": "assets/photos/hull-props.jpg",
-    "detailing-and-ceramic-coating-gold-coast": "assets/photos/polishing.jpg",
-    "what-size-boat-should-i-get": "assets/photos/aft-deck-sunset.jpg",
-    "sanctuary-cove-boat-show-guide": "assets/photos/cockpit-table.jpg",
-    "yacht-sops-standard-operating-procedures": "assets/photos/cockpit-table.jpg",
 }
+
+def hero_video(name, poster):
+    """A silent looping clip in the hero, from site/assets/video/<name>.mp4. The hero photo is its still frame."""
+    if not name: return ""
+    return ('\n  <video class="hero-vid" data-auto autoplay muted loop playsinline preload="metadata" poster="/%s">'
+            '<source src="/assets/video/%s.mp4" type="video/mp4"></video>' % (poster, name))
 
 def card(g):
     ph = THUMBS.get(g["slug"]) or g.get("hero") or "assets/photos/at-anchor.jpg"
-    return ('<a class="gcard" href="/guides/%s/"><span class="ph"><img src="/%s" alt="" loading="lazy"></span>'
+    pos = "center" if g["slug"] in THUMBS else g.get("hero_pos", "center")
+    return ('<a class="gcard" href="/guides/%s/"><span class="ph"><img src="/%s" alt="" loading="lazy" style="object-position:%s"></span>'
             '<span class="eyebrow">%s</span><strong>%s</strong><p>%s</p>'
             '<span class="more">%s min read &rarr;</span></a>'
-            % (g["slug"], ph, esc(CAT_LABEL.get(g["category"], g["category"])), esc(g["title"]), esc(g["description"]), g["mins"]))
+            % (g["slug"], ph, pos, esc(CAT_LABEL.get(g["category"], g["category"])), esc(g["title"]), esc(g["description"]), g["mins"]))
 
 def jsonld_guide(meta):
     url = "%s/guides/%s/" % (BASE, meta["slug"])
@@ -358,7 +361,10 @@ def build_guide(meta, guides):
         body_html = body_html.replace("<p>{{map:%s}}</p>" % mid, render_map(mid)).replace("{{map:%s}}" % mid, render_map(mid))
         has_map = True
     subj = "Enquiry from the guide: " + meta["title"]
-    inner = (GUIDE.replace("__HERO__", meta["hero"]).replace("__CATSLUG__", meta["category"])
+    inner = (GUIDE.replace("__HERO__", meta["hero"]).replace("__HEROPOS__", meta.get("hero_pos", "center"))
+                  .replace("__HEROCLS__", " has-vid" if meta.get("hero_video") else "")
+                  .replace("__HEROVID__", hero_video(meta.get("hero_video"), meta["hero"]))
+                  .replace("__CATSLUG__", meta["category"])
                   .replace("__CAT__", esc(CAT_LABEL.get(meta["category"], meta["category"])))
                   .replace("__H1__", esc(meta["title"])).replace("__DESC__", esc(meta["description"]))
                   .replace("__UPDATED__", nice_date(meta["updated"])).replace("__MINS__", str(meta["mins"]))
@@ -377,12 +383,13 @@ def build_guide(meta, guides):
     write_page(os.path.join(out, "index.html"), page)
 
 INDEX = '''
-<section class="hero home" style="--photo:url('/assets/photos/at-anchor.jpg')">
+<section class="hero home has-vid" style="--photo:url('/assets/photos/shoot-marina-aerial-2.jpg')">
   <div class="wrap">
     <div class="eyebrow">Marine HQ Guides &middot; Gold Coast</div>
     <h1>Straight answers on owning a yacht on the Gold Coast.</h1>
     <p class="stand">Costs, marinas, maintenance and the paperwork &mdash; written by the team that runs motor yachts here every day, with the numbers shown and the sources named.</p>
   </div>
+  <video class="hero-vid" data-auto autoplay muted loop playsinline preload="metadata" poster="/assets/photos/shoot-marina-aerial-2.jpg"><source src="/assets/video/marina-aerial.mp4" type="video/mp4"></video>
 </section>
 <main class="wrap">
 __SECTIONS__
@@ -446,7 +453,7 @@ GA_SNIPPET = """<script async src="https://www.googletagmanager.com/gtag/js?id=%
 _write_orig = None
 def write_page(path, html):
     if PREFIX:
-        html = re.sub(r'(href|src)="/(?!/)', lambda m: '%s="%s/' % (m.group(1), PREFIX), html)
+        html = re.sub(r'(href|src|poster)="/(?!/)', lambda m: '%s="%s/' % (m.group(1), PREFIX), html)
         html = html.replace("url('/", "url('%s/" % PREFIX)
     if NOINDEX:
         html = html.replace("<head>", '<head>\n<meta name="robots" content="noindex,nofollow">', 1)

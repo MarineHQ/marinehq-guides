@@ -6,7 +6,7 @@
   "category": "buying",
   "date": "2026-09-11",
   "updated": "2026-10-04",
-  "hero": "assets/photos/bow-marina.jpg",
+  "hero": "assets/photos/shoot-underway-2.jpg", "hero_pos": "center 55%",
   "cta": "Torn between two sizes? Bring us the shortlist. We will tell you what each one costs to run here and which one you will actually use.",
   "faq": [
     {"q": "What size motor yacht suits a couple on the Gold Coast?",

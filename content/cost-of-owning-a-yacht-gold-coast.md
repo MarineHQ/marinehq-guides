@@ -6,7 +6,7 @@
   "category": "costs",
   "date": "2026-09-05",
   "updated": "2026-10-04",
-  "hero": "assets/photos/at-anchor.jpg",
+  "hero": "assets/photos/shoot-dock-crew.jpg", "hero_pos": "center 45%",
   "cta": "Want a budget for your yacht, line by line, before you buy or before the next yard visit? One call.",
   "faq": [
     {"q": "Is it cheaper to keep a boat on the Gold Coast than in Sydney?",

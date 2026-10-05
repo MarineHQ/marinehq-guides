@@ -6,7 +6,7 @@
   "category": "buying",
   "date": "2026-09-06",
   "updated": "2026-09-07",
-  "hero": "assets/photos/bow-marina.jpg",
+  "hero": "assets/photos/shoot-rail-polish.jpg", "hero_pos": "center 55%",
   "cta": "Going to the show to buy? Take us with you. We will look at her the way a manager does, not the way a salesperson does.",
   "faq": [
     {"q": "When is the Sanctuary Cove boat show in 2027?",

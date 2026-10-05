@@ -415,3 +415,10 @@ html,body{max-width:100%;overflow-x:clip}
 .gcard strong{font-weight:400;font-size:1.5rem;line-height:1.18}
 .gcard:hover strong{color:var(--orange)}
 .gcard .more{color:var(--navy);padding-top:6px}
+
+/* photos + video from the professional shoot (5 Oct 2026) */
+.hero:after{background-position:var(--pos,center)}
+.hero.has-vid:after{display:none}
+.hero-vid{display:block;width:100%;height:clamp(230px,46vw,620px);object-fit:cover;margin-top:52px;background:var(--wash)}
+.gcard .ph img{object-position:center}
+.body figure.vid video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--wash);border:1px solid var(--line)}

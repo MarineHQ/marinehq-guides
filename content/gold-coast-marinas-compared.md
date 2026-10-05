@@ -6,7 +6,7 @@
   "category": "marinas",
   "date": "2026-09-05",
   "updated": "2026-10-04",
-  "hero": "assets/photos/bow-marina.jpg",
+  "hero": "assets/photos/shoot-marina-aerial.jpg", "hero_pos": "center", "hero_video": "berthing-aerial",
   "cta": "Not sure which marina suits your yacht and how you use her? Tell us and we will give you a straight answer.",
   "faq": [
     {"q": "Which Gold Coast marina is closest to open water?",

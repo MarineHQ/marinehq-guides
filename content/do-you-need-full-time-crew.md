@@ -6,7 +6,7 @@
   "category": "ownership",
   "date": "2026-09-10",
   "updated": "2026-10-04",
-  "hero": "assets/photos/bow-marina.jpg",
+  "hero": "assets/photos/shoot-dock-hose.jpg", "hero_pos": "center 35%",
   "cta": "Not sure how much crew your yacht really needs? Tell us how you use her and we will give you a straight answer, with the numbers.",
   "faq": [
     {"q": "Can I drive my own 60 or 70 ft motor yacht in Queensland?",
@@ -79,6 +79,8 @@ The line that matters is commercial use, and AMSA draws it clearly. A vessel use
 <div class="callout" markdown="1"><span class="eyebrow">Worth knowing</span>
 Some Gold Coast pages still say boats over 12 m need an "advanced" licence endorsement. That is the pre-2013 rule. Maritime Safety Queensland's own fact sheet is the source: any length, one licence.</div>
 
+<figure class="vid"><video data-auto muted loop playsinline preload="none" poster="/assets/video/helm-remote.jpg"><source src="/assets/video/helm-remote.mp4" type="video/mp4"></video><figcaption><b>At the controls</b> — a wireless remote for close-quarters berthing, and the helm under way.</figcaption></figure>
+
 ## What your insurer will actually ask
 
 Every owner-operator question online ends with "your insurer will want a captain", so it is worth reading what Australian policies say. None of them publish a length or a value above which a professional skipper is compulsory.
@@ -97,7 +99,7 @@ Upkeep is the part it has not. Yachting World's view is that after 60 ft the tim
 
 That is the real question. Not whether you are allowed to drive her, but who is going to do the other forty hours a week.
 
-<figure><img src="/assets/photos/polishing.jpg" alt="Two crew polishing the superstructure of a motor yacht" loading="lazy"><figcaption><b>The other forty hours</b> — the washing, polishing and checking that keep a yacht ready to go.</figcaption></figure>
+<figure><img src="/assets/photos/shoot-wash-down.jpg" alt="A Marine HQ crew member washing the side of a motor yacht in her berth" loading="lazy"><figcaption><b>The other forty hours</b> — the washing, polishing and checking that keep a yacht ready to go.</figcaption></figure>
 
 ## Four ways to run a yacht
 
