@@ -6,7 +6,7 @@
   "category": "cruising",
   "date": "2026-09-06",
   "updated": "2026-10-04",
-  "hero": "assets/photos/at-anchor.jpg",
+  "hero": "assets/photos/shoot-heading-out.jpg", "hero_pos": "center 45%",
   "cta": "Heading south? We plan the passage, prepare the boat, and can put a delivery skipper and crew aboard so she is waiting for you in Sydney.",
   "faq": [
     {"q": "How far is it from the Gold Coast to Sydney by sea?",

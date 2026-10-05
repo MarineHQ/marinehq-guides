@@ -40,7 +40,10 @@ SHOTS = {
     105: ("shoot-tender",          []),
     108: ("shoot-engine-room",     []),
     109: ("shoot-engine-room-2",   []),
+    21:  ("shoot-heading-out",     [(3095, 3195, 3295, 3300)]),   # transom name; portrait frame, cropped to landscape below
 }
+CROP = {21: (0, 1750, 4000, 4417)}   # frame -> crop box (after patching), for portrait frames used as wide heroes
+# shoot-at-helm.jpg is a still from the docking clip (11.8 s), made with ffmpeg; see GUIDES-STYLE.md.
 
 def fill_from_edges(a, box, iters=1500):
     """Replace the inside of box with a smooth surface interpolated from its border (Laplace)."""
@@ -66,6 +69,7 @@ def main():
         a = np.array(im)
         for b in boxes: fill_from_edges(a, b)
         im = Image.fromarray(a)
+        if n in CROP and not zoom: im = im.crop(CROP[n])
         if zoom:
             for i, (x0, y0, x1, y1) in enumerate(boxes):
                 m = 260

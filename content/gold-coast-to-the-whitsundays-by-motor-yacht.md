@@ -6,7 +6,7 @@
   "category": "cruising",
   "date": "2026-09-06",
   "updated": "2026-10-04",
-  "hero": "assets/photos/wake.jpg",
+  "hero": "assets/photos/shoot-at-helm.jpg", "hero_pos": "center 60%",
   "cta": "Whitsundays this season? We prepare the boat, plan the bars and tides, and can deliver her north so you fly in to a yacht on a mooring.",
   "faq": [
     {"q": "How far is it from the Gold Coast to the Whitsundays by sea?",
