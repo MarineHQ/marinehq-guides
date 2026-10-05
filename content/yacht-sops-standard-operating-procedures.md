@@ -6,7 +6,7 @@
   "category": "ownership",
   "date": "2026-10-04",
   "updated": "2026-10-04",
-  "hero": "assets/photos/shoot-engine-room-2.jpg", "hero_pos": "center 85%",
+  "hero": "assets/photos/shoot-generator.jpg", "hero_pos": "center 45%",
   "cta": "Want procedures written for your yacht, not a template? We write them aboard, with whoever runs her.",
   "faq": [
     {"q": "What is an SOP on a yacht?",

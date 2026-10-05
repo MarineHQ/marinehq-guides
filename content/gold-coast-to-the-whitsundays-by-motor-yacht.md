@@ -97,7 +97,7 @@ The track at a glance, Seaway to Airlie Beach.
 
 The classic plan runs Gold Coast, Mooloolaba, the bar and the Strait, Bundaberg, Pancake Creek, then north in 50 to 60 nm hops. A fast motor yacht leaves the Seaway at first light, fuels at Mooloolaba, takes the bar on the afternoon flood or runs outside overnight, and is at Bundaberg or Pancake Creek on day two, Rosslyn Bay on day three, Mackay or the islands on day four.
 
-<figure><img src="/assets/photos/at-anchor.jpg" alt="A motor yacht lying at anchor in calm water" loading="lazy"><figcaption><b>At anchor</b> — in the Whitsundays, take a public mooring wherever one is free and anchor only in sand or mud.</figcaption></figure>
+<figure><img src="/assets/photos/shoot-letting-go.jpg" alt="A crew member coiling a dock line on the marina beside a motor yacht" loading="lazy"><figcaption><b>Letting go</b> — a fast motor yacht leaves the Seaway at first light, with lines and fenders stowed before open water.</figcaption></figure>
 
 ## The Wide Bay Bar and the Strait
 

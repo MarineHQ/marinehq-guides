@@ -6,7 +6,7 @@
   "category": "maintenance",
   "date": "2026-09-05",
   "updated": "2026-10-04",
-  "hero": "assets/photos/travel-lift.jpg",
+  "hero": "assets/photos/shoot-hull-polish-2.jpg", "hero_pos": "center 45%",
   "cta": "Yard visit coming up? We will scope it, quote it and stand on the hardstand while it is done.",
   "faq": [
     {"q": "How much does antifouling cost on the Gold Coast?",

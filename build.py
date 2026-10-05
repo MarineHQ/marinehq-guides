@@ -195,9 +195,7 @@ def render_sources(meta):
             % (nice_date(meta["updated"]), li))
 
 # card photo per guide, so a row of cards never repeats one picture; falls back to the guide's hero
-THUMBS = {
-    "antifouling-gold-coast-cost": "assets/photos/hull-props.jpg",
-}
+THUMBS = {}
 
 def hero_video(name, poster):
     """A silent looping clip in the hero, from site/assets/video/<name>.mp4. The hero photo is its still frame."""
@@ -206,7 +204,7 @@ def hero_video(name, poster):
             '<source src="/assets/video/%s.mp4" type="video/mp4"></video>' % (poster, name))
 
 def card(g):
-    ph = THUMBS.get(g["slug"]) or g.get("hero") or "assets/photos/at-anchor.jpg"
+    ph = THUMBS.get(g["slug"]) or g.get("hero") or "assets/photos/shoot-underway.jpg"
     pos = "center" if g["slug"] in THUMBS else g.get("hero_pos", "center")
     return ('<a class="gcard" href="/guides/%s/"><span class="ph"><img src="/%s" alt="" loading="lazy" style="object-position:%s"></span>'
             '<span class="eyebrow">%s</span><strong>%s</strong><p>%s</p>'

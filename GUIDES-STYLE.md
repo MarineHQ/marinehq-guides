@@ -140,3 +140,7 @@ Marine HQ has **two bases in the Coomera marine precinct: The Boat Works and Gol
   `assets/video.js` plays clips only while on screen and not at all for reduced-motion visitors.
 - Not used: `Sunseeker 68 Tour Reel` (one specific yacht, whose footage it is not confirmed), the `dashboard` and
   `logo` stings, and any clip section with a face or a name.
+- From 5 Oct 2026 every cover and every photo inside a guide comes from this shoot (Trish: replace the old ones
+  "on the cover and inside the guide"). The older `Marine HQ Website pics` files are still in `site/assets/photos/`
+  but nothing uses them; do not bring them back. Where the shoot has no honest photo for a section (the yard, the
+  running gear, open water, teak), the section goes without one.

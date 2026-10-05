@@ -6,7 +6,7 @@
   "category": "maintenance",
   "date": "2026-09-06",
   "updated": "2026-10-04",
-  "hero": "assets/photos/travel-lift.jpg",
+  "hero": "assets/photos/shoot-engine-room-2.jpg", "hero_pos": "center 85%",
   "cta": "Haul-out due? We will write the scope, get it quoted line by line and stand on the hardstand while it is done.",
   "faq": [
     {"q": "How often should a motor yacht be hauled out?",
@@ -57,13 +57,9 @@ Once she is on blocks nothing can be run under load, so the diagnostic happens o
 - Stabiliser, thruster and steering behaviour, and any hydraulic noise.
 - A note of the engine and generator hours, because the service schedule runs on hours or calendar, whichever comes first.
 
-<figure><img src="/assets/photos/hull-props.jpg" alt="The underwater hull, tunnel and twin propellers of a motor yacht in the travel lift" loading="lazy"><figcaption><b>Out of the water</b> — the hull, tunnel and props you only see once a year.</figcaption></figure>
-
 ## Hull and underwater
 
 <ol class="steps"><li><b>Haul out and high-pressure wash.</b> Done on a wash-down pad that captures the run-off; the yard's environmental levy pays for that. Photograph the hull before the wash if the growth tells a story.</li><li><b>Full hull inspection and report.</b> Blisters, moisture readings on an older hull, gelcoat damage, keel and chine condition. This is the step that decides whether the antifoul is a straight recoat or a bigger job.</li><li><b>Antifoul, full application.</b> Two coats, a third on the waterline and leading edges, the brand and litres named in the quote. The whole antifouling job, prices included, is in our antifouling guide.</li><li><b>Anodes renewed.</b> Hull, shaft, rudder and trim tabs. Photograph the old ones next to the new; how far they have gone tells you whether the boat's bonding is doing its job.</li><li><b>Propellers.</b> Inspect, clean, check for corrosion and dings, Propspeed. A prop scan and repitch is a separate job if the sea trial showed vibration.</li><li><b>Shafts, cutless bearings, P-brackets and stern glands.</b> Lift the shaft and feel for play. A worn cutless bearing is the most common thing added to a scope on the hardstand.</li><li><b>Through-hulls and seacocks.</b> Every one exercised, serviced and checked for corrosion. A seacock that will not turn is a boat that cannot be saved from a burst hose.</li><li><b>Rudders and bearings.</b> Check for play and for water in the rudder.</li><li><b>Thruster tunnels.</b> Cleaned, anodes replaced, props checked.</li></ol>
-
-<div class="figrow"><figure><img src="/assets/photos/running-gear.jpg" alt="Twin propellers, shafts and rudders under a motor yacht on the hardstand" loading="lazy"><figcaption><b>Running gear</b> — props, shafts, P-brackets and rudders, all only reachable out of the water.</figcaption></figure><figure><img src="/assets/photos/stabiliser-fin.jpg" alt="A stabiliser fin on the hull of a motor yacht out of the water" loading="lazy"><figcaption><b>Stabiliser fin</b> — the seal and the actuator get their annual look here.</figcaption></figure></div>
 
 ## Topsides and presentation
 
@@ -85,8 +81,6 @@ The annual services fall due here because the boat is idle and the trades are on
 - Belts, hoses and coolant inspected or renewed.
 - Sea strainers cleaned.
 - Engine mounts and bilges inspected.
-
-<figure><img src="/assets/photos/shoot-engine-room.jpg" alt="A Marine HQ engineer working at the fuel filters between the main engines of a motor yacht" loading="lazy"><figcaption><b>Engine room</b> — filters, strainers and impellers are done while access is easy and the boat is not going anywhere.</figcaption></figure>
 
 ## Stabilisers, thrusters and steering
 
@@ -132,6 +126,8 @@ Keep the paint invoice, the slipway receipt and the anode sizes. The national bi
 - Tender engine serviced and hull checked.
 - Davit and lifting gear inspected and load-tested.
 - Water toys and equipment checked.
+
+<figure><img src="/assets/photos/shoot-tender-2.jpg" alt="A Marine HQ crew member working on a yacht tender beside its outboard engine" loading="lazy"><figcaption><b>Tender</b> — the outboard is serviced and the hull checked while the yacht is in the yard.</figcaption></figure>
 
 {{product:haul-out}}
 

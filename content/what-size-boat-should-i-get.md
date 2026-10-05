@@ -99,7 +99,7 @@ The Australian production boats make the bands easy to see. Volume grows with th
 
 Two things move with length that buyers underestimate. **The tender** grows with the boat: a swim-platform tender is about 3 m on a 12 to 15 m yacht and 3.5 m on a 20 to 25 m yacht, and a garage on a 65 to 68 ft boat swallows a 3.7 m RIB. **The systems** grow with it: air conditioning on a boat this size means a generator, 17.5 kW is the base spec on the M50, and the gyro that stops her rolling at anchor is a Seakeeper 10 on a 50 to 60 ft boat, list price about US$127,000 before installation, and a Seakeeper 18 at 60 to 75 ft.
 
-<figure><img src="/assets/photos/wake.jpg" alt="Open water off the aft deck of a motor yacht at cruising speed" loading="lazy"><figcaption><b>Use decides length</b> — a boat for the Broadwater and a boat for the Whitsundays are different boats.</figcaption></figure>
+<figure><img src="/assets/photos/shoot-berthing-aerial.jpg" alt="Aerial view of a motor yacht backing into a marina berth between two other yachts" loading="lazy"><figcaption><b>Use decides length</b> — a boat for the Broadwater and a boat for the Whitsundays are different boats, and so are the berths they fit.</figcaption></figure>
 
 ## How the running costs scale
 

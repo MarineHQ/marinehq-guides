@@ -126,8 +126,6 @@ Painted boats are the ones where a cheap detailer does real damage. Paint has on
 
 **Clears.** Fresh water and a soft cloth. The manufacturers list the products that void the warranty: Windex, Rain-X, Pledge, Plexus, Simple Green and anything with ammonia.
 
-<figure><img src="/assets/photos/cockpit-table.jpg" alt="A cleaned teak cockpit table and teak deck on a motor yacht" loading="lazy"><figcaption><b>Teak</b> — sealed, rinsed after salt, scrubbed across the grain, and never sanded as routine.</figcaption></figure>
-
 <figure><img src="/assets/photos/shoot-stainless.jpg" alt="A hand polishing a stainless steel rub rail on a white hull with a soft cloth" loading="lazy"><figcaption><b>Stainless</b> — rinsed and wiped every wash; tea-staining polished out before it pits.</figcaption></figure>
 
 ## What it costs

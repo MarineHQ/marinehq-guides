@@ -84,7 +84,7 @@ The 2025 show, for comparison, drew 45,865 visitors and 824 boats, 422 of them o
 - **Lagoon Beach Club.** The hospitality precinct, Thursday to Saturday, from a $129 brunch to a $290 full day, admission included.
 - **The trades.** Gold Coast City Marina and The Boat Works both exhibit with their on-site trade partners, and The Boat Works runs an out-of-water used-boat show at Coomera during the same week, twenty minutes away by car.
 
-<figure><img src="/assets/photos/aft-deck-sunset.jpg" alt="The aft deck of a motor yacht at a marina at sunset" loading="lazy"><figcaption><b>Show week</b> — the Coomera precinct is a ten-minute boat ride from the show, and both yards are busiest in the weeks before it.</figcaption></figure>
+<figure><img src="/assets/photos/shoot-stainless-2.jpg" alt="A crew member polishing the stainless rub rail of a motor yacht" loading="lazy"><figcaption><b>Show week</b> — the Coomera precinct is a ten-minute boat ride from the show, and both yards are busiest in the weeks before it.</figcaption></figure>
 
 ## Planning a day that is worth it
 

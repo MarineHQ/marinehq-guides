@@ -99,8 +99,6 @@ The distances below are drawn from sail-training and cruising sources and do not
 
 Southport to Coffs is roughly 150 nm, Coffs to Port Stephens 160 nm and the longest single leg, and Port Stephens to Sydney 85 to 110 nm depending on where you finish. A fast motor yacht that leaves the Seaway at first light on the flood can be in Coffs for dinner, Port Stephens the next night, and Sydney Harbour by the third afternoon.
 
-<figure><img src="/assets/photos/wake.jpg" alt="The wake of a motor yacht on open ocean under a clear sky" loading="lazy"><figcaption><b>Open coast</b> — heading south the East Australian Current is with you; heading home you stay inside the 50-metre line.</figcaption></figure>
-
 ## Harbours: all-weather or bar
 
 The single most useful thing to know about this coast is which entrances you can take in anything and which ones you cannot.
@@ -175,6 +173,8 @@ Owners who enjoy the passage make a week of it. Owners who want the boat in Sydn
 - Others quote per delivery, typically half up front plus expenses, with the owner's insurance in force for the trip.
 
 Whichever way she goes, the pre-departure list is the same: insurance cruising range confirmed in writing for NSW waters, EPIRB registration current, life raft in date, fuel range checked against the longest leg with a third in hand, spares for impellers, belts and filters, a watch-keeping plan for the overnight legs, AIS on, and the weather window agreed the night before.
+
+<figure><img src="/assets/photos/shoot-making-ready.jpg" alt="Hands fitting chafe protection to a mooring line on the foredeck of a motor yacht" loading="lazy"><figcaption><b>Making ready</b> — lines, chafe gear and fenders are checked before she leaves, whoever is at the helm.</figcaption></figure>
 
 {{product:checklists}}
 

@@ -40,10 +40,15 @@ SHOTS = {
     105: ("shoot-tender",          []),
     108: ("shoot-engine-room",     []),
     109: ("shoot-engine-room-2",   []),
+    40:  ("shoot-hull-polish-2",   []),
+    111: ("shoot-generator",       []),
+    106: ("shoot-tender-2",        []),
+    75:  ("shoot-stainless-2",     []),
     21:  ("shoot-heading-out",     [(3095, 3195, 3295, 3300)]),   # transom name; portrait frame, cropped to landscape below
 }
 CROP = {21: (0, 1750, 4000, 4417)}   # frame -> crop box (after patching), for portrait frames used as wide heroes
-# shoot-at-helm.jpg is a still from the docking clip (11.8 s), made with ffmpeg; see GUIDES-STYLE.md.
+# Stills taken from the clips with ffmpeg (-ss <t> -frames:v 1): shoot-at-helm (docking 11.8 s), shoot-letting-go (docking 32.4 s),
+# shoot-making-ready (general-maintenance 33 s), shoot-berthing-aerial (drone-2 31 s), shoot-marina-aerial (drone-2 1 s), shoot-marina-aerial-2 (drone-1 0.5 s).
 
 def fill_from_edges(a, box, iters=1500):
     """Replace the inside of box with a smooth surface interpolated from its border (Laplace)."""
