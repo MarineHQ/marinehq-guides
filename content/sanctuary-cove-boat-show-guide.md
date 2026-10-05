@@ -105,6 +105,8 @@ Before the deposit, get answers to the questions that decide what she costs to o
 <div class="callout" markdown="1"><span class="eyebrow">Worth knowing</span>
 The two days before the show, the Australian marine industry holds its ASMEX conference on the Gold Coast, and the yards at Coomera are at their busiest in the weeks leading in. If your own boat needs a haul-out around May, book it for March or April, or for June when the yards run their winter specials.</div>
 
+{{product:calculator}}
+
 ## What we did at the show in 2026
 
 Marine HQ spent the four days on the docks with a camera and a question list rather than a stand. We called it Dock Talk: short interviews with three groups of people, for our Instagram and for us.

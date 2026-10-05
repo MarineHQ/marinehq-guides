@@ -163,6 +163,8 @@ Guideline limits for the run from the Seaway to the Coomera precinct without a p
 
 Tropical Cyclone Alfred brought gusts over 100 km/h to the Gold Coast in March 2025 and stripped about six million cubic metres of sand from the beaches. The Coomera River marinas came through it as the region's storm shelter: The Boat Works hauled 275 boats and secured 125 in the water without a scratch, and Hope Harbour's off-river basin did what it was built for. Most policies require you to haul out or secure the vessel within a set time once a cyclone is named, and yard space goes quickly, so the marina you choose is part of your insurance plan whether you think of it that way or not.
 
+{{product:calculator}}
+
 ## How to choose
 
 - **You run out the Seaway most weekends:** Main Beach, Runaway Bay or Mantaray. Pay for the position.

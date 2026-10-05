@@ -112,6 +112,8 @@ At any time, one tap produces a branded works report for your yacht: every job c
 
 <div class="phones two"><figure><img src="/assets/photos/app/23-report.jpg" alt="Sea Philly works report with completed jobs, notes and photos" loading="lazy"><figcaption><b>Works report</b> — print or save as PDF.</figcaption></figure><figure><img src="/assets/photos/app/03-overview.jpg" alt="Overview screen with the yacht's particulars, insurance and last haul-out" loading="lazy"><figcaption><b>Overview</b> — the yacht at a glance.</figcaption></figure></div>
 
+{{product:programme}}
+
 ## For the team, not just the owner
 
 MyYacht has a crew side. Crew sign in the same way, see only the jobs assigned to them, clock on and off against a job, add photos and progress, tick and sign checklists, read the operating procedures and log a trip. Their hours flow to the job card. Their notes and photos stay between crew and Marine HQ until a director shares them with you, so what reaches your screen is the finished picture, not the working-out.

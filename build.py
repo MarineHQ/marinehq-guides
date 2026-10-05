@@ -144,13 +144,13 @@ __BODY__
   </article>
   <aside class="side">
     <div class="card toc"><div class="eyebrow">In this guide</div>__TOC__</div>
-    <div class="card cta side-cta">
+    <div class="side-stick">__SIDEPROD__<div class="card cta side-cta">
       <div class="eyebrow">Talk to Marine HQ</div>
       <h3>Want this handled, not just explained?</h3>
       <p>We manage motor yachts on the Gold Coast end to end. One call and it is on our list, not yours.</p>
       <a class="btn" href="tel:__PHONE_H__">Call __PHONE__</a>
       <a class="btn ghost" href="mailto:__EMAIL__?subject=__SUBJ__">Email us</a>
-    </div>
+    </div></div>
   </aside>
 </main>
 <section class="wrap tail">
@@ -279,6 +279,31 @@ def render_product(pid):
             '<a class="prod-more" href="/owners-kit/#%s">What is inside</a></div></div></aside>'
             % (p["id"], img, esc(PRODUCTS["kit_name"]), soon, esc(p["name"]), esc(p["blurb"]), p["price"], order_link(p), order_label(p), p["id"]))
 
+def product_strip(pid):
+    """One slim line early in a guide, so the product is seen before the reader is most of the way down."""
+    p = PROD[pid]
+    img = ('<img src="/%s" alt="" loading="lazy">' % p["img"]) if p.get("img") else ""
+    return ('<a class="pstrip" href="/owners-kit/#%s">%s<span class="t"><span class="eyebrow">From %s</span><strong>%s</strong></span>'
+            '<span class="price">$%d</span><span class="go">See it &rarr;</span></a>' % (p["id"], img, esc(PRODUCTS["kit_name"]), esc(p["name"]), p["price"]))
+
+def product_side(pid):
+    """The same product as a card in the side column (desktop), which stays in view while the guide scrolls."""
+    p = PROD[pid]
+    img = ('<img src="/%s" alt="%s, first page" loading="lazy">' % (p["img"], esc(p["name"]))) if p.get("img") else ""
+    return ('<a class="side-prod" href="/owners-kit/#%s"><span class="eyebrow">From %s</span>%s<strong>%s</strong>'
+            '<span class="sp-row"><span class="price">$%d</span><span class="go">See what is inside &rarr;</span></span></a>'
+            % (p["id"], esc(PRODUCTS["kit_name"]), img, esc(p["short"]), p["price"]))
+
+def kit_row():
+    """Home page: the five products in one row, above the guides."""
+    cards = "".join('<a class="kitcard" href="/owners-kit/#%s"><span class="ph"><img src="/%s" alt="%s" loading="lazy"></span>'
+                    '<strong>%s</strong><span class="price">$%d</span></a>' % (p["id"], p["img"], esc(p["name"]), esc(p["short"]), p["price"])
+                    for p in PRODUCTS["products"] if p.get("img") and p["status"] == "ready")
+    return ('<section class="cat kitrow"><div class="cat-head"><h2><a href="/owners-kit/">%s</a></h2>'
+            '<p>The checklists, schedule and cost calculator our crews work to, written for owners who run their own yacht. From $7.</p></div>'
+            '<div class="kitgrid">%s</div><a class="kit-all" href="/owners-kit/">See everything in the kit &rarr;</a></section>'
+            % (esc(PRODUCTS["kit_name"]), cards))
+
 def build_shop():
     cards = []
     for p in PRODUCTS["products"]:
@@ -352,8 +377,15 @@ def build_guide(meta, guides):
     MD.reset()
     body_html = MD.convert(body_md)
     toc = MD.toc
-    for pid in re.findall(r"\{\{product:([a-z0-9-]+)\}\}", body_html):
+    pids = re.findall(r"\{\{product:([a-z0-9-]+)\}\}", body_html)
+    for pid in pids:
         body_html = body_html.replace("<p>{{product:%s}}</p>" % pid, render_product(pid)).replace("{{product:%s}}" % pid, render_product(pid))
+    lead_pid = meta.get("product") or (pids[0] if pids else None)
+    if lead_pid:                                  # slim strip before the second section, unless the full block is already that high
+        h2s = [m.start() for m in re.finditer(r"<h2", body_html)]
+        if len(h2s) >= 2 and not (0 <= body_html.find('class="prod"') < h2s[1]):
+            at = h2s[1] if h2s[1] <= 0.25 * len(body_html) else h2s[0]      # a long first section (map, big table) would bury it
+            body_html = body_html[:at] + product_strip(lead_pid) + "\n" + body_html[at:]
     has_map = False
     for mid in re.findall(r"\{\{map:([a-z0-9-]+)\}\}", body_html):
         body_html = body_html.replace("<p>{{map:%s}}</p>" % mid, render_map(mid)).replace("{{map:%s}}" % mid, render_map(mid))
@@ -361,6 +393,7 @@ def build_guide(meta, guides):
     subj = "Enquiry from the guide: " + meta["title"]
     inner = (GUIDE.replace("__HERO__", meta["hero"]).replace("__HEROPOS__", meta.get("hero_pos", "center"))
                   .replace("__HEROCLS__", " has-vid" if meta.get("hero_video") else "")
+                  .replace("__SIDEPROD__", product_side(lead_pid) if lead_pid else "")
                   .replace("__HEROVID__", hero_video(meta.get("hero_video"), meta["hero"]))
                   .replace("__CATSLUG__", meta["category"])
                   .replace("__CAT__", esc(CAT_LABEL.get(meta["category"], meta["category"])))
@@ -390,6 +423,7 @@ INDEX = '''
   <video class="hero-vid" data-auto autoplay muted loop playsinline preload="metadata" poster="/assets/photos/shoot-marina-aerial-2.jpg"><source src="/assets/video/marina-aerial.mp4" type="video/mp4"></video>
 </section>
 <main class="wrap">
+__KIT__
 __SECTIONS__
 </main>
 '''
@@ -406,7 +440,7 @@ def build_index(guides):
          "publisher": {"@type": "Organization", "name": ORG, "url": MAIN}})
     page = shell("Marine HQ Guides — owning a yacht on the Gold Coast",
                  "Costs, marinas, maintenance and the paperwork of owning a motor yacht on the Gold Coast. Plain answers with the numbers shown.",
-                 BASE + "/", "website", jl, INDEX.replace("__SECTIONS__", "\n".join(secs)))
+                 BASE + "/", "website", jl, INDEX.replace("__KIT__", kit_row()).replace("__SECTIONS__", "\n".join(secs)))
     write_page(os.path.join(SITE, "index.html"), page)
 
 def build_hubs(guides):
