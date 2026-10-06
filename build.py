@@ -244,7 +244,7 @@ def nav_html():
     return "".join('<a href="/%s/">%s</a>' % (s, l) for s, l, _ in CATEGORIES)
 
 def shell(title, desc, canon, ogtype, jsonld, inner):
-    v = datetime.date.today().strftime("%Y%m%d")
+    v = datetime.date.today().strftime("%Y%m%d%H%M")
     page = (HEAD.replace("__TITLE__", esc(title)).replace("__DESC__", esc(desc)).replace("__CANON__", canon)
                 .replace("__OGTYPE__", ogtype).replace("__BASE__", BASE).replace("__V__", v)
                 .replace("__JSONLD__", jsonld).replace("__MAINNAV__", main_nav_html()).replace("__NAV__", nav_html()).replace("__MAIN__", MAIN)
@@ -392,7 +392,7 @@ def build_links():
            '<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">'
            '<link rel="stylesheet" href="/assets/style.css?v=%s">\n</head><body class="lkpage"><main class="lkwrap"><img class="lklogo" src="/assets/logo_navy.png" alt="Marine HQ">'
            '<h1>Marine HQ</h1><p>Yacht management and maintenance. Gold Coast, Sydney, Whitsundays.</p>%s<p class="lkfoot">Freedom to enjoy.</p></main>\n</body></html>'
-           % (BASE, datetime.date.today().strftime("%Y%m%d"), rows))
+           % (BASE, datetime.date.today().strftime("%Y%m%d%H%M"), rows))
     os.makedirs(os.path.join(SITE, "links"), exist_ok=True)
     write_page(os.path.join(SITE, "links", "index.html"), doc)
 
