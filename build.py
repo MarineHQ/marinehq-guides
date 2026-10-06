@@ -353,9 +353,8 @@ def build_free():
              '<main class="wrap freegrid"><a class="freeimg" href="/guides/annual-haul-out-checklist/"><img src="/assets/products/free-haul-out.jpg" alt="Marine HQ Annual Haul-Out Checklist, first page" loading="eager"></a>'
              '<div class="freetxt"><h2>What is in it</h2><ul class="freeinc">%s</ul>'
              '<div class="formbox"><div class="eyebrow">Where should we send it?</div><p>Put your email in and the download opens straight away.</p>%s'
-             '<p class="fine">We will only use your email to send useful yacht-owner guides. Unsubscribe any time.</p></div>'
-             </div></main>'
-             % (inc, FREE_FORM, WA_BIO, PHONE_H, PHONE))
+             '<p class="fine">We will only use your email to send useful yacht-owner guides. Unsubscribe any time.</p></div></div></main>'
+             % (inc, FREE_FORM))
     page = shell("FREE Annual Haul-Out Checklist for yacht owners | Marine HQ",
                  "A free one-page haul-out checklist from Marine HQ: the ten checks that matter when your yacht comes out of the water. Free download.",
                  BASE + "/free-haul-out-checklist/", "website", "", inner)
