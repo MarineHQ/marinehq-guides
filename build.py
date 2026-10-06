@@ -337,19 +337,19 @@ def build_shop():
     os.makedirs(os.path.join(SITE, "owners-kit"), exist_ok=True)
     write_page(os.path.join(SITE, "owners-kit", "index.html"), page)
 
-FREE_PDF = "/dl/MHQ-Annual-Haul-Out-Checklist-FREE.pdf"
+FREE_PDF = "/dl/MHQ-10-Haul-Out-Checks-FREE.pdf"
 FREE_FORM = '<script id="form-script-tag-25708478" src="https://yachtsupport.systeme.io/public/remote/page/45334936e30b683521b509541ddb327b3ab87629.js"></script>'
 WA_BIO = "https://wa.me/61439748387?text=Hi%20Marine%20HQ%2C%20I%20found%20you%20on%20Instagram"
 
 def build_free():
     inc = "".join("<li>%s</li>" % i for i in [
-        "Before she lifts: the sea-trial readings to take, and what they tell you",
-        "The first hour out of the water: blisters, damp patches, the shaft and props",
-        "Thru-hulls and seacocks, sacrificial anodes, stray-current warning signs",
-        "Antifoul: what to ask the yard before they paint",
-        "Two pages, A4, tick-box, print-ready"])
+        "Before she lifts: the sea-trial readings to take, and why",
+        "On the hardstand: hull, anodes, running gear and every seacock",
+        "Machinery and safety gear: what to renew and what to check the dates on",
+        "What to get in writing before you sign the yard quote",
+        "One page, A4, tick-box, print-ready"])
     inner = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> Free checklist</div>'
-             '<h1>FREE Annual Haul&#8209;Out Checklist</h1><p class="stand">The checks our crews run before, during and after a yacht comes out of the water. Free, and yours to print.</p></div></section>'
+             '<h1>FREE Annual Haul&#8209;Out Checklist</h1><p class="stand">The ten checks our crews make sure happen every time a yacht comes out of the water. Free, and yours to print.</p></div></section>'
              '<main class="wrap freegrid"><a class="freeimg" href="/guides/annual-haul-out-checklist/"><img src="/assets/products/free-haul-out.jpg" alt="Marine HQ Annual Haul-Out Checklist, first page" loading="eager"></a>'
              '<div class="freetxt"><h2>What is in it</h2><ul class="freeinc">%s</ul>'
              '<div class="formbox"><div class="eyebrow">Where should we send it?</div><p>Put your email in and the download opens straight away.</p>%s'
@@ -357,7 +357,7 @@ def build_free():
              '<p class="alt">Rather talk to a person? <a href="%s">Message us on WhatsApp</a> or call <a href="tel:%s">%s</a>.</p></div></main>'
              % (inc, FREE_FORM, WA_BIO, PHONE_H, PHONE))
     page = shell("FREE Annual Haul-Out Checklist for yacht owners | Marine HQ",
-                 "A free two-page haul-out checklist from Marine HQ: sea-trial readings, hull, running gear, thru-hulls and antifoul checks. Free download.",
+                 "A free one-page haul-out checklist from Marine HQ: the ten checks that matter when your yacht comes out of the water. Free download.",
                  BASE + "/free-haul-out-checklist/", "website", "", inner)
     os.makedirs(os.path.join(SITE, "free-haul-out-checklist", "thanks"), exist_ok=True)
     write_page(os.path.join(SITE, "free-haul-out-checklist", "index.html"), page)
