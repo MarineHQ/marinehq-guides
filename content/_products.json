@@ -89,6 +89,26 @@
    "launch": true
   },
   {
+   "id": "dashboards",
+   "name": "Checklist Dashboards: the four owner checklists on your phone",
+   "short": "Checklist Dashboards",
+   "price": 19,
+   "status": "soon",
+   "img": "assets/products/dashboards.jpg",
+   "blurb": "The same four checklists, working: tick them off on your phone, flag what needs fixing, add photos, and turn it into a one-page report.",
+   "includes": [
+    "Pre-Departure (43 checks), Stand Down (30), Wash-Down (43 tasks) and Annual Haul-Out (55)",
+    "Pass / fail / not applicable on every line, with notes and a photo from your phone camera",
+    "A live dashboard: percent checked, what needs action, ready to go or not",
+    "A one-page branded report to save as a PDF or send to your surveyor, insurer or yard",
+    "Opens on any phone or tablet, no app and no login. Your records stay on your device"
+   ],
+   "format": "Private web link. Works offline once opened. Add to your home screen",
+   "buy": "",
+   "buy_planned": "",
+   "cta": "Get the dashboards"
+  },
+  {
    "id": "kit",
    "name": "The Yacht Owner's Kit",
    "short": "The Yacht Owner's Kit",
