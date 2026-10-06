@@ -131,6 +131,8 @@ Keep the paint invoice, the slipway receipt and the anode sizes. The national bi
 
 {{product:haul-out}}
 
+{{product:launch-sea-trial}}
+
 ## What goes wrong, and how to stop it
 
 - **The scope grows on the hardstand.** It always does; the question is whether each addition arrives as a priced line for your approval or as a surprise on the invoice. Insist on the former.
