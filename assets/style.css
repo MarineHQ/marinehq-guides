@@ -468,3 +468,5 @@ html,body{max-width:100%;overflow-x:clip}
 .formbox p{margin:0 0 12px}.formbox .fine{font-size:.82rem;color:var(--mute);margin:12px 0 0}
 .freetxt .alt{font-size:.95rem;color:var(--mute)}
 @media(max-width:760px){.freegrid{grid-template-columns:minmax(0,1fr);gap:22px}.freeimg{max-width:240px}}
+
+.launch{display:block;font-family:var(--label);font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-top:4px}
