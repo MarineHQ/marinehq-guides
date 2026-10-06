@@ -17,7 +17,10 @@
     "How to use them: print, laminate, keep aboard"
    ],
    "format": "PDF, 5 pages, A4, print-ready",
-   "buy": ""
+   "buy": "",
+   "buy_planned": "https://yachtsupport.systeme.io/owner-checklists",
+   "cta": "Get yours now",
+   "was": null
   },
   {
    "id": "haul-out",
@@ -34,7 +37,10 @@
     "What to get in writing before you sign the yard quote"
    ],
    "format": "PDF, 2 pages, A4, print-ready",
-   "buy": ""
+   "buy": "",
+   "buy_planned": "https://yachtsupport.systeme.io/annual-haul-out",
+   "cta": "Get the checklist",
+   "was": null
   },
   {
    "id": "calculator",
@@ -53,7 +59,10 @@
     "Works in Excel, Apple Numbers and Google Sheets"
    ],
    "format": "Spreadsheet (.xlsx), 6 tabs",
-   "buy": ""
+   "buy": "",
+   "buy_planned": "https://yachtsupport.systeme.io/running-cost-calculator",
+   "cta": "Get the calculator",
+   "was": null
   },
   {
    "id": "programme",
@@ -70,7 +79,10 @@
     "The schedule our managed fleet runs on"
    ],
    "format": "PDF, 7 pages, A4, print-ready",
-   "buy": ""
+   "buy": "",
+   "buy_planned": "https://yachtsupport.systeme.io/maintenance-programme",
+   "cta": "Get the programme",
+   "was": null
   },
   {
    "id": "kit",
@@ -89,7 +101,10 @@
     "$65 bought separately: save $16"
    ],
    "format": "One download: 4 PDFs and a spreadsheet",
-   "buy": ""
+   "buy": "",
+   "buy_planned": "https://yachtsupport.systeme.io/owners-kit",
+   "cta": "Bundle and save now",
+   "was": 65
   }
  ]
 }

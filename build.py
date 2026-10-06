@@ -266,8 +266,15 @@ def order_link(p):
     from urllib.parse import quote
     return "mailto:%s?subject=%s&amp;body=%s" % (EMAIL, quote(subj), quote(body))
 
+def price_html(p, cls="price"):
+    """$49, or <s>$65</s> $49 when a genuine 'was' price is set."""
+    if p.get("was"):
+        return '<span class="%s"><s>$%d</s> $%d</span>' % (cls, p["was"], p["price"])
+    return '<span class="%s">$%d</span>' % (cls, p["price"])
+
 def order_label(p):
-    if p.get("buy"): return "Buy now &middot; $%d" % p["price"]
+    """Button text. With a pay page it is the product's own call to action; until then the email fallback says so."""
+    if p.get("buy"): return "%s &middot; $%d" % (esc(p.get("cta", "Buy now")), p["price"])
     return ("Order by email &middot; $%d" % p["price"]) if p["status"] == "ready" else "Tell me when it is ready"
 
 def render_product(pid):
@@ -275,29 +282,29 @@ def render_product(pid):
     img = ('<img src="/%s" alt="%s, first page" loading="lazy">' % (p["img"], esc(p["name"]))) if p.get("img") else '<div class="prod-ph">%s</div>' % esc(p["short"])
     soon = "" if p["status"] == "ready" else '<span class="soon">Coming soon</span>'
     return ('<aside class="prod"><a class="prod-img" href="/owners-kit/#%s">%s</a><div class="prod-txt"><span class="eyebrow">From %s %s</span>'
-            '<strong>%s</strong><p>%s</p><div class="prod-act"><span class="price">$%d</span><a class="btn" href="%s">%s</a>'
+            '<strong>%s</strong><p>%s</p><div class="prod-act">%s<a class="btn" href="%s">%s</a>'
             '<a class="prod-more" href="/owners-kit/#%s">What is inside</a></div></div></aside>'
-            % (p["id"], img, esc(PRODUCTS["kit_name"]), soon, esc(p["name"]), esc(p["blurb"]), p["price"], order_link(p), order_label(p), p["id"]))
+            % (p["id"], img, esc(PRODUCTS["kit_name"]), soon, esc(p["name"]), esc(p["blurb"]), price_html(p), order_link(p), order_label(p), p["id"]))
 
 def product_strip(pid):
     """One slim line early in a guide, so the product is seen before the reader is most of the way down."""
     p = PROD[pid]
     img = ('<img src="/%s" alt="" loading="lazy">' % p["img"]) if p.get("img") else ""
     return ('<a class="pstrip" href="/owners-kit/#%s">%s<span class="t"><span class="eyebrow">From %s</span><strong>%s</strong></span>'
-            '<span class="price">$%d</span><span class="go">See it &rarr;</span></a>' % (p["id"], img, esc(PRODUCTS["kit_name"]), esc(p["name"]), p["price"]))
+            '%s<span class="go">See it &rarr;</span></a>' % (p["id"], img, esc(PRODUCTS["kit_name"]), esc(p["name"]), price_html(p)))
 
 def product_side(pid):
     """The same product as a card in the side column (desktop), which stays in view while the guide scrolls."""
     p = PROD[pid]
     img = ('<img src="/%s" alt="%s, first page" loading="lazy">' % (p["img"], esc(p["name"]))) if p.get("img") else ""
     return ('<a class="side-prod" href="/owners-kit/#%s"><span class="eyebrow">From %s</span>%s<strong>%s</strong>'
-            '<span class="sp-row"><span class="price">$%d</span><span class="go">See what is inside &rarr;</span></span></a>'
-            % (p["id"], esc(PRODUCTS["kit_name"]), img, esc(p["short"]), p["price"]))
+            '<span class="sp-row">%s<span class="go">See what is inside &rarr;</span></span></a>'
+            % (p["id"], esc(PRODUCTS["kit_name"]), img, esc(p["short"]), price_html(p)))
 
 def kit_row():
     """Home page: the five products in one row, above the guides."""
     cards = "".join('<a class="kitcard" href="/owners-kit/#%s"><span class="ph"><img src="/%s" alt="%s" loading="lazy"></span>'
-                    '<strong>%s</strong><span class="price">$%d</span></a>' % (p["id"], p["img"], esc(p["name"]), esc(p["short"]), p["price"])
+                    '<strong>%s</strong>%s</a>' % (p["id"], p["img"], esc(p["name"]), esc(p["short"]), price_html(p))
                     for p in PRODUCTS["products"] if p.get("img") and p["status"] == "ready")
     return ('<section class="cat kitrow"><div class="cat-head"><h2><a href="/owners-kit/">%s</a></h2>'
             '<p>The checklists, schedule and cost calculator our crews work to, written for owners who run their own yacht. From $7.</p></div>'
@@ -311,8 +318,8 @@ def build_shop():
         soon = "" if p["status"] == "ready" else '<span class="soon">Coming soon</span>'
         inc = "".join("<li>%s</li>" % esc(i) for i in p["includes"])
         cards.append('<article class="shopcard%s" id="%s"><div class="shop-img">%s</div><div class="shop-txt"><h2>%s %s</h2><p class="blurb">%s</p><ul>%s</ul>'
-                     '<p class="fmt">%s</p><div class="prod-act"><span class="price">$%d</span><a class="btn" href="%s">%s</a></div></div></article>'
-                     % (" is-kit" if p["id"] == "kit" else "", p["id"], img, esc(p["name"]), soon, esc(p["blurb"]), inc, esc(p["format"]), p["price"], order_link(p), order_label(p)))
+                     '<p class="fmt">%s</p><div class="prod-act">%s<a class="btn" href="%s">%s</a></div></div></article>'
+                     % (" is-kit" if p["id"] == "kit" else "", p["id"], img, esc(p["name"]), soon, esc(p["blurb"]), inc, esc(p["format"]), price_html(p), order_link(p), order_label(p)))
     inner = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> Owner&rsquo;s Kit</div>'
              '<h1>%s</h1><p class="stand">The checklists and schedules our crews work to, written for owners who run their own yacht. Download, print, keep aboard.</p></div></section>'
              '<main class="wrap shop"><p class="shop-note">%s Prices in Australian dollars, GST included. Questions: <a href="tel:%s">%s</a>.</p>%s'
