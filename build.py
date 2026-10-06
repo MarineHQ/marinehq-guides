@@ -354,7 +354,7 @@ def build_free():
              '<div class="freetxt"><h2>What is in it</h2><ul class="freeinc">%s</ul>'
              '<div class="formbox"><div class="eyebrow">Where should we send it?</div><p>Put your email in and the download opens straight away.</p>%s'
              '<p class="fine">We will only use your email to send useful yacht-owner guides. Unsubscribe any time.</p></div>'
-             '<p class="alt">Rather talk to a person? <a href="%s">Message us on WhatsApp</a> or call <a href="tel:%s">%s</a>.</p></div></main>'
+             </div></main>'
              % (inc, FREE_FORM, WA_BIO, PHONE_H, PHONE))
     page = shell("FREE Annual Haul-Out Checklist for yacht owners | Marine HQ",
                  "A free one-page haul-out checklist from Marine HQ: the ten checks that matter when your yacht comes out of the water. Free download.",
