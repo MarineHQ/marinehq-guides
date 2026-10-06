@@ -469,7 +469,7 @@ def build_meta(guides):
     sm += ["<url><loc>%s</loc><lastmod>%s</lastmod></url>" % (u, lm.get(u, today)) for u in urls]
     sm.append("</urlset>")
     open(os.path.join(SITE, "sitemap.xml"), "w").write("\n".join(sm))
-    open(os.path.join(SITE, "robots.txt"), "w").write("User-agent: *\nAllow: /\nSitemap: %s/sitemap.xml\n" % BASE)
+    open(os.path.join(SITE, "robots.txt"), "w").write("User-agent: *\nAllow: /\nDisallow: /dl/\nSitemap: %s/sitemap.xml\n" % BASE)
     open(os.path.join(SITE, "_redirects"), "w").write("/guides/:slug /guides/:slug/ 301\n")
 
 def check(guides):
