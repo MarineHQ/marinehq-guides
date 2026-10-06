@@ -460,3 +460,11 @@ html,body{max-width:100%;overflow-x:clip}
 @media(min-width:960px){.side .side-stick{position:sticky;top:70px}.side .side-stick>*{position:static}}
 @media(min-width:960px) and (max-height:760px){.side-prod img{display:none}}
 .price s{color:var(--mute);font-size:.72em;margin-right:6px;text-decoration-thickness:1.5px}
+
+.freegrid{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:36px;align-items:start;padding-top:36px;padding-bottom:48px}
+.freeimg img{width:100%;display:block;border:1px solid var(--line-2);box-shadow:0 10px 26px rgba(26,43,92,.12)}
+.freeinc{padding-left:1.1em;margin:0 0 22px}.freeinc li{margin-bottom:8px}
+.formbox{background:#f7f9fc;border:1px solid var(--line);border-top:2px solid var(--orange);padding:20px 22px;margin:22px 0}
+.formbox p{margin:0 0 12px}.formbox .fine{font-size:.82rem;color:var(--mute);margin:12px 0 0}
+.freetxt .alt{font-size:.95rem;color:var(--mute)}
+@media(max-width:760px){.freegrid{grid-template-columns:minmax(0,1fr);gap:22px}.freeimg{max-width:240px}}

@@ -337,13 +337,48 @@ def build_shop():
     os.makedirs(os.path.join(SITE, "owners-kit"), exist_ok=True)
     write_page(os.path.join(SITE, "owners-kit", "index.html"), page)
 
-LINKS = [("Read the guides", "/", "Costs, marinas, maintenance, passages"),
+FREE_PDF = "/dl/MHQ-Annual-Haul-Out-Checklist-FREE.pdf"
+FREE_FORM = '<script id="form-script-tag-25708478" src="https://yachtsupport.systeme.io/public/remote/page/45334936e30b683521b509541ddb327b3ab87629.js"></script>'
+WA_BIO = "https://wa.me/61439748387?text=Hi%20Marine%20HQ%2C%20I%20found%20you%20on%20Instagram"
+
+def build_free():
+    inc = "".join("<li>%s</li>" % i for i in [
+        "Before she lifts: the sea-trial readings to take, and what they tell you",
+        "The first hour out of the water: blisters, damp patches, the shaft and props",
+        "Thru-hulls and seacocks, sacrificial anodes, stray-current warning signs",
+        "Antifoul: what to ask the yard before they paint",
+        "Two pages, A4, tick-box, print-ready"])
+    inner = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> Free checklist</div>'
+             '<h1>FREE Annual Haul&#8209;Out Checklist</h1><p class="stand">The checks our crews run before, during and after a yacht comes out of the water. Free, and yours to print.</p></div></section>'
+             '<main class="wrap freegrid"><a class="freeimg" href="/guides/annual-haul-out-checklist/"><img src="/assets/products/free-haul-out.jpg" alt="Marine HQ Annual Haul-Out Checklist, first page" loading="eager"></a>'
+             '<div class="freetxt"><h2>What is in it</h2><ul class="freeinc">%s</ul>'
+             '<div class="formbox"><div class="eyebrow">Where should we send it?</div><p>Put your email in and the download opens straight away.</p>%s'
+             '<p class="fine">We will only use your email to send useful yacht-owner guides. Unsubscribe any time.</p></div>'
+             '<p class="alt">Rather talk to a person? <a href="%s">Message us on WhatsApp</a> or call <a href="tel:%s">%s</a>.</p></div></main>'
+             % (inc, FREE_FORM, WA_BIO, PHONE_H, PHONE))
+    page = shell("FREE Annual Haul-Out Checklist for yacht owners | Marine HQ",
+                 "A free two-page haul-out checklist from Marine HQ: sea-trial readings, hull, running gear, thru-hulls and antifoul checks. Free download.",
+                 BASE + "/free-haul-out-checklist/", "website", "", inner)
+    os.makedirs(os.path.join(SITE, "free-haul-out-checklist", "thanks"), exist_ok=True)
+    write_page(os.path.join(SITE, "free-haul-out-checklist", "index.html"), page)
+    inner2 = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> Free checklist</div>'
+              '<h1>Your checklist is ready</h1><p class="stand">Thanks. Download it, print it, and take it to the yard.</p></div></section>'
+              '<main class="wrap freegrid"><a class="freeimg" href="%s"><img src="/assets/products/free-haul-out.jpg" alt="Marine HQ Annual Haul-Out Checklist, first page"></a>'
+              '<div class="freetxt"><div class="foot-actions"><a class="btn" href="%s" download>Download the checklist (PDF)</a></div>'
+              '<h2>Next</h2><ul class="freeinc"><li><a href="/guides/annual-haul-out-checklist/">Read the full haul-out guide</a>: what a yard period should include and cost</li>'
+              '<li><a href="/guides/antifouling-gold-coast-cost/">What antifoul costs on the Gold Coast</a></li>'
+              '<li><a href="/owners-kit/">The Yacht Owner&rsquo;s Kit</a>: the fuller haul-out checklist and more, from $7</li></ul>'
+              '<p class="alt">Questions about your own yacht? <a href="%s">Message us on WhatsApp</a> or call <a href="tel:%s">%s</a>.</p></div></main>'
+              % (FREE_PDF, FREE_PDF, WA_BIO, PHONE_H, PHONE))
+    page2 = shell("Your checklist is ready | Marine HQ", "Download your free Annual Haul-Out Checklist.", BASE + "/free-haul-out-checklist/thanks/", "website", "", inner2)
+    page2 = page2.replace("<head>", '<head>\n<meta name="robots" content="noindex">', 1)
+    write_page(os.path.join(SITE, "free-haul-out-checklist", "thanks", "index.html"), page2)
+
+LINKS = [("FREE Annual Haul-Out Checklist", "/free-haul-out-checklist/", "Free two-page PDF"),
+         ("Read the free yacht owner guides", "/", "Costs, marinas, maintenance, passages"),
+         ("Let&rsquo;s chat on WhatsApp", WA_BIO, "Usually within the hour"),
          ("The Yacht Owner&rsquo;s Kit", "/owners-kit/", "Checklists and schedules from $7"),
-         ("What does it cost to own a yacht?", "/guides/cost-of-owning-a-yacht-gold-coast/", "The Gold Coast numbers"),
-         ("Do you need full-time crew?", "/guides/do-you-need-full-time-crew/", "Driving her yourself, day crew, captains"),
-         ("MyYacht, the owner app", "/guides/myyacht-owner-app-guide/", "Screen by screen"),
          ("Marine HQ website", MAIN + "/", "Yacht management and maintenance"),
-         ("WhatsApp us", "https://wa.me/61439748387", "Usually within the hour"),
          ("Call %s" % PHONE, "tel:" + PHONE_H, "")]
 
 def build_links():
@@ -462,7 +497,7 @@ def build_hubs(guides):
         write_page(os.path.join(SITE, s, "index.html"), page)
 
 def build_meta(guides):
-    urls = ["%s/" % BASE] + ["%s/%s/" % (BASE, s) for s, _, _ in CATEGORIES] + [BASE + "/owners-kit/"] + ["%s/guides/%s/" % (BASE, g["slug"]) for g in guides]
+    urls = ["%s/" % BASE] + ["%s/%s/" % (BASE, s) for s, _, _ in CATEGORIES] + [BASE + "/owners-kit/", BASE + "/free-haul-out-checklist/"] + ["%s/guides/%s/" % (BASE, g["slug"]) for g in guides]
     lm = {("%s/guides/%s/" % (BASE, g["slug"])): g["updated"] for g in guides}
     today = datetime.date.today().isoformat()
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -512,7 +547,7 @@ def main():
     guides.sort(key=lambda g: g["updated"], reverse=True)
     os.makedirs(os.path.join(SITE, "guides"), exist_ok=True)
     for g in guides: build_guide(g, guides)
-    build_index(guides); build_hubs(guides); build_shop(); build_links(); build_meta(guides)
+    build_index(guides); build_hubs(guides); build_shop(); build_free(); build_links(); build_meta(guides)
     print("built %d guide(s) → %s" % (len(guides), SITE))
     for g in guides: print("  /guides/%s/  (%d words, %s)" % (g["slug"], g["words"], CAT_LABEL.get(g["category"], g["category"])))
     if "--check" in sys.argv: check(guides)
