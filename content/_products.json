@@ -20,7 +20,8 @@
    "buy": "https://yachtsupport.systeme.io/owner-checklists",
    "buy_planned": "https://yachtsupport.systeme.io/owner-checklists",
    "cta": "Get yours now",
-   "was": null
+   "was": 9,
+   "launch": true
   },
   {
    "id": "haul-out",
@@ -40,7 +41,8 @@
    "buy": "https://yachtsupport.systeme.io/annual-haul-out",
    "buy_planned": "https://yachtsupport.systeme.io/annual-haul-out",
    "cta": "Get the checklist",
-   "was": null
+   "was": 15,
+   "launch": true
   },
   {
    "id": "calculator",
@@ -62,7 +64,8 @@
    "buy": "https://yachtsupport.systeme.io/running-cost-calculator",
    "buy_planned": "https://yachtsupport.systeme.io/running-cost-calculator",
    "cta": "Get the calculator",
-   "was": null
+   "was": 22,
+   "launch": true
   },
   {
    "id": "programme",
@@ -82,7 +85,8 @@
    "buy": "https://yachtsupport.systeme.io/maintenance-programme",
    "buy_planned": "https://yachtsupport.systeme.io/maintenance-programme",
    "cta": "Get the programme",
-   "was": null
+   "was": 39,
+   "launch": true
   },
   {
    "id": "kit",
@@ -106,5 +110,6 @@
    "cta": "Bundle and save now",
    "was": 65
   }
- ]
+ ],
+ "launch_until": "31 December 2026"
 }
