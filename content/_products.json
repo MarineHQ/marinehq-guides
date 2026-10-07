@@ -87,7 +87,12 @@
    "buy_planned": "https://yachtsupport.systeme.io/running-cost-calculator",
    "cta": "Get the calculator",
    "was": 22,
-   "launch": true
+   "launch": true,
+   "works_in": [
+    "Excel",
+    "Google Sheets",
+    "Apple Numbers"
+   ]
   },
   {
    "id": "programme",

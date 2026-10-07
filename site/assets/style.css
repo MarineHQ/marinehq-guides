@@ -473,3 +473,9 @@ html,body{max-width:100%;overflow-x:clip}
 .launch-note{font-family:var(--label);font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin:0 0 22px}
 
 .formbox iframe{height:235px!important;min-height:235px!important}
+
+/* 'Works in' badges (calculator): icon + app name after the format line */
+.works{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin:6px 0 14px;font-size:.86rem;color:var(--navy)}
+.works .eyebrow{margin:0 2px 0 0}
+.works span:not(.eyebrow){display:inline-flex;align-items:center;gap:7px;font-weight:600}
+.works svg{width:22px;height:22px;display:block;flex:0 0 22px}

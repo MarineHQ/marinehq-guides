@@ -281,14 +281,24 @@ def order_label(p):
     if p.get("buy"): return "%s &middot; $%d" % (esc(p.get("cta", "Buy now")), p["price"])
     return ("Order by email &middot; $%d" % p["price"]) if p["status"] == "ready" else "Tell me when it is ready"
 
+WORKS_ICONS = {
+ "Excel": '<svg viewBox="0 0 22 22" aria-hidden="true"><rect x="1" y="1" width="20" height="20" rx="4" fill="#1D6F42"/><text x="11" y="16" text-anchor="middle" font-family="Arial" font-weight="800" font-size="13" fill="#fff">X</text></svg>',
+ "Google Sheets": '<svg viewBox="0 0 22 22" aria-hidden="true"><rect x="1" y="1" width="20" height="20" rx="4" fill="#21A464"/><rect x="5" y="6" width="12" height="10" rx="1" fill="none" stroke="#fff" stroke-width="1.4"/><line x1="5" y1="11" x2="17" y2="11" stroke="#fff" stroke-width="1.4"/><line x1="11" y1="6" x2="11" y2="16" stroke="#fff" stroke-width="1.4"/></svg>',
+ "Apple Numbers": '<svg viewBox="0 0 22 22" aria-hidden="true"><rect x="1" y="1" width="20" height="20" rx="4" fill="#fff" stroke="#CBD3E0"/><rect x="5" y="11" width="3" height="6" fill="#34C759"/><rect x="9.5" y="6" width="3" height="11" fill="#FFCC00"/><rect x="14" y="8.5" width="3" height="8.5" fill="#007AFF"/></svg>',
+}
+def works_html(p):
+    """'Works in' badges under the format line, for products that open in several apps (the calculator)."""
+    if not p.get("works_in"): return ""
+    return '<p class="works"><span class="eyebrow">Works in</span>%s</p>' % "".join('<span>%s%s</span>' % (WORKS_ICONS.get(w, ""), esc(w)) for w in p["works_in"])
+
 def render_product(pid):
     p = PROD[pid]
     img = ('<img src="/%s" alt="%s, first page" loading="lazy">' % (p["img"], esc(p["name"]))) if p.get("img") else '<div class="prod-ph">%s</div>' % esc(p["short"])
     soon = "" if p["status"] == "ready" else '<span class="soon">Coming soon</span>'
     return ('<aside class="prod"><a class="prod-img" href="/owners-kit/#%s">%s</a><div class="prod-txt"><span class="eyebrow">From %s %s</span>'
-            '<strong>%s</strong><p>%s</p><div class="prod-act">%s<a class="btn" href="%s">%s</a>'
+            '<strong>%s</strong><p>%s</p>%s<div class="prod-act">%s<a class="btn" href="%s">%s</a>'
             '<a class="prod-more" href="/owners-kit/#%s">What is inside</a></div></div></aside>'
-            % (p["id"], img, esc(PRODUCTS["kit_name"]), soon, esc(p["name"]), esc(p["blurb"]), price_html(p), order_link(p), order_label(p), p["id"]))
+            % (p["id"], img, esc(PRODUCTS["kit_name"]), soon, esc(p["name"]), esc(p["blurb"]), works_html(p), price_html(p), order_link(p), order_label(p), p["id"]))
 
 def product_strip(pid):
     """One slim line early in a guide, so the product is seen before the reader is most of the way down."""
@@ -322,8 +332,8 @@ def build_shop():
         soon = "" if p["status"] == "ready" else '<span class="soon">Coming soon</span>'
         inc = "".join("<li>%s</li>" % esc(i) for i in p["includes"])
         cards.append('<article class="shopcard%s" id="%s"><div class="shop-img">%s</div><div class="shop-txt"><h2>%s %s</h2><p class="blurb">%s</p><ul>%s</ul>'
-                     '<p class="fmt">%s</p><div class="prod-act">%s<a class="btn" href="%s">%s</a></div></div></article>'
-                     % (" is-kit" if p["id"] == "kit" else "", p["id"], img, esc(p["name"]), soon, esc(p["blurb"]), inc, esc(p["format"]), price_html(p), order_link(p), order_label(p)))
+                     '<p class="fmt">%s</p>%s<div class="prod-act">%s<a class="btn" href="%s">%s</a></div></div></article>'
+                     % (" is-kit" if p["id"] == "kit" else "", p["id"], img, esc(p["name"]), soon, esc(p["blurb"]), inc, esc(p["format"]), works_html(p), price_html(p), order_link(p), order_label(p)))
     inner = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> Owner&rsquo;s Kit</div>'
              '<h1>%s</h1><p class="stand">The checklists and schedules our crews work to, written for owners who run their own yacht. Download, print, keep aboard.</p></div></section>'
              '<main class="wrap shop"><p class="shop-note">%s Questions: <a href="tel:%s">%s</a>.</p><p class="launch-note">Launch prices until %s</p>%s'
