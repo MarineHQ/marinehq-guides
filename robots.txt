@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /dl/
+Disallow: /go/
 Sitemap: https://guides.marinehq.com.au/sitemap.xml
