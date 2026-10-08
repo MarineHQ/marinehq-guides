@@ -394,6 +394,22 @@ LINKS = [("FREE Annual Haul-Out Checklist", "/free-haul-out-checklist/", "Free t
          ("Marine HQ website", MAIN + "/", "Yacht management and maintenance"),
          ("Call %s" % PHONE, "tel:" + PHONE_H, "")]
 
+GO = {"haul-out": "/guides/annual-haul-out-checklist/", "antifoul": "/guides/antifouling-gold-coast-cost/",
+      "cost": "/guides/cost-of-owning-a-yacht-gold-coast/", "kit": "/owners-kit/", "free": "/free-haul-out-checklist/"}
+
+def build_go():
+    """Short links (under ~50 characters) for emails: systeme.io's plain email editor cuts typed links at about 52 characters."""
+    for slug, dest in GO.items():
+        url = BASE + dest
+        os.makedirs(os.path.join(SITE, "go", slug), exist_ok=True)
+        doc = ('<!DOCTYPE html><html lang="en-AU"><head><meta charset="utf-8"><meta name="robots" content="noindex">'
+               '<meta http-equiv="refresh" content="0; url=%s"><link rel="canonical" href="%s"><title>Marine HQ</title></head>'
+               '<body><p>Taking you to <a href="%s">%s</a></p><script>location.replace(%s)</script></body></html>' % (url, url, url, url, json.dumps(url)))
+        open(os.path.join(SITE, "go", slug, "index.html"), "w", encoding="utf-8").write(doc)
+    # short file link for the free checklist PDF
+    import shutil
+    shutil.copyfile(os.path.join(SITE, "dl", "MHQ-10-Haul-Out-Checks-FREE.pdf"), os.path.join(SITE, "dl", "haul-out-10.pdf"))
+
 def build_links():
     rows = "".join('<a class="lk" href="%s"><b>%s</b>%s</a>' % (u, t, ("<span>%s</span>" % d) if d else "") for t, u, d in LINKS)
     doc = ('<!DOCTYPE html><html lang="en-AU"><head>\n<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
@@ -517,7 +533,7 @@ def build_meta(guides):
     sm += ["<url><loc>%s</loc><lastmod>%s</lastmod></url>" % (u, lm.get(u, today)) for u in urls]
     sm.append("</urlset>")
     open(os.path.join(SITE, "sitemap.xml"), "w").write("\n".join(sm))
-    open(os.path.join(SITE, "robots.txt"), "w").write("User-agent: *\nAllow: /\nDisallow: /dl/\nSitemap: %s/sitemap.xml\n" % BASE)
+    open(os.path.join(SITE, "robots.txt"), "w").write("User-agent: *\nAllow: /\nDisallow: /dl/\nDisallow: /go/\nSitemap: %s/sitemap.xml\n" % BASE)
     open(os.path.join(SITE, "_redirects"), "w").write("/guides/:slug /guides/:slug/ 301\n")
 
 def check(guides):
@@ -560,7 +576,7 @@ def main():
     guides.sort(key=lambda g: g["updated"], reverse=True)
     os.makedirs(os.path.join(SITE, "guides"), exist_ok=True)
     for g in guides: build_guide(g, guides)
-    build_index(guides); build_hubs(guides); build_shop(); build_free(); build_links(); build_meta(guides)
+    build_index(guides); build_hubs(guides); build_shop(); build_free(); build_go(); build_links(); build_meta(guides)
     print("built %d guide(s) → %s" % (len(guides), SITE))
     for g in guides: print("  /guides/%s/  (%d words, %s)" % (g["slug"], g["words"], CAT_LABEL.get(g["category"], g["category"])))
     if "--check" in sys.argv: check(guides)
