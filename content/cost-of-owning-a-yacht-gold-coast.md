@@ -5,7 +5,7 @@
   "description": "Berth, antifoul, insurance, servicing, fuel and rego for a 40–120 ft motor yacht on the Gold Coast, with published 2026 figures and a worked example for a 60-footer.",
   "category": "costs",
   "date": "2026-09-05",
-  "updated": "2026-10-04",
+  "updated": "2026-10-10",
   "hero": "assets/photos/shoot-dock-crew.jpg", "hero_pos": "center 45%",
   "cta": "Want a budget for your yacht, line by line, before you buy or before the next yard visit? One call.",
   "faq": [
@@ -22,7 +22,7 @@
     {"q": "Is registration expensive in Queensland?",
      "a": "No. A recreational vessel over 15 m and up to 20 m costs $779.05 a year to register from 1 July 2026, up from $753.60 in 2025–26. Vessels over 20 m are $980.25. Vessels of 15 m and over need Maritime Safety Queensland to endorse any registration, transfer or change of particulars before a service centre will process it."}
   ],
-  "related": ["antifouling-gold-coast-cost", "gold-coast-marinas-compared"],
+  "related": ["antifouling-gold-coast-cost", "gold-coast-marinas-compared", "yacht-fuel-cost-gold-coast"],
   "sources": [
     {"t": "Southport Yacht Club — Marina rates as at 1 May 2026 (PDF)", "u": "https://southportyachtclub.com.au/wp-content/uploads/2026/04/NEW-Marina-Rates-as-at-1st-May-2026.pdf"},
     {"t": "Southport Yacht Club — Marina rates as at 1 May 2023 (PDF)", "u": "https://southportyachtclub.com.au/wp-content/uploads/2023/05/Copy-of-Marina-Rates-as-at-1st-May-2023.pdf"},
@@ -39,17 +39,17 @@
     {"t": "Maritime Safety Queensland — Recreational ships 15 m and over (bulletin, July 2026)", "u": "https://www.msq.qld.gov.au/-/media/TMROnline/msqinternet/msqfiles/home/publications/marineinformationbulletins/mibrecships15m.pdf"},
     {"t": "Mariner Engineering — Volvo Penta service schedule and intervals", "u": "https://www.mareng.com.au/guides/volvo-penta-service-schedule-and-intervals"},
     {"t": "RunBoats Australia — The cost of boat ownership in Australia (March 2025)", "u": "https://www.runboats.com.au/resources/buyers-guide/the-cost-of-boat-ownership-in-australia-a-breakdown/"},
-    {"t": "Royal Queensland Yacht Squadron — Fuel prices (3 September 2026)", "u": "https://www.rqys.com.au/fuel-prices/"},
-    {"t": "boatsales — Maritimo M55 review (fuel burn)", "u": "https://www.boatsales.com.au/editorial/details/2021-maritimo-m55-review-130593/"},
-    {"t": "boatsales — Riviera 5400 Sport Yacht review (fuel burn)", "u": "https://www.boatsales.com.au/editorial/details/riviera-5400-sy-review-56512/"},
-    {"t": "BoatTEST — Riviera 645 SUV (fuel burn)", "u": "https://boattest.com/boats/riviera-yachts/645-suv-2022"},
+    {"t": "Royal Queensland Yacht Squadron — Fuel prices (1 October 2026; 3 September 2026 price from the same page)", "u": "https://www.rqys.com.au/fuel-prices/"},
+    {"t": "Trade-A-Boat — Review: Sunseeker Manhattan 60 (fuel burn; load and sea state not stated)", "u": "https://www.tradeaboat.com.au/news-reviews/7443-review-sunseeker-manhattan-60"},
+    {"t": "Yachting magazine — Azimut S7 reviewed (fuel burn)", "u": "https://www.yachtingmagazine.com/yachts/azimut-s7-reviewed/"},
+    {"t": "Yachting magazine — Pershing GTX80 reviewed (fuel burn)", "u": "https://www.yachtingmagazine.com/yachts/pershing-gtx80-reviewed/"},
     {"t": "Hulls Complete Boating Services (Sydney) — Detailing rates per foot", "u": "https://www.hcbs.com.au/boat-detailing-rates.html"},
     {"t": "Neptune Oceanic — Annual cost of owning a yacht in Australia (May 2026)", "u": "https://www.neptuneoceanic.com.au/yacht-share-guide/the-annual-cost-of-owning-a-yacht-in-australia-2026-comprehensive-guide"},
     {"t": "SailTime — How much does it cost to sail in Sydney", "u": "https://www.sailtimeaustralia.com.au/blog/how-much-does-it-cost-to-sail-in-sydney"}
   ]
 }
 ---
-A 60 ft motor yacht kept on the Gold Coast costs roughly **$70,000 to $80,000 a year sitting at the dock**, and **$120,000 or more once you use her** for a hundred hours. Bigger boats, Sanctuary Cove berthing, agreed-value insurance or a big engine year push that higher. Here is where the money goes, using published 2026 rates wherever one exists.
+A 60 ft motor yacht kept on the Gold Coast costs roughly **$70,000 to $80,000 a year sitting at the dock**, and **$130,000 or more once you use her** for a hundred hours. Bigger boats, Sanctuary Cove berthing, agreed-value insurance or a big engine year push that higher. Here is where the money goes, using published 2026 rates wherever one exists.
 
 <div class="keyfacts" markdown="1"><span class="eyebrow">Key facts — 60 ft motor yacht, Gold Coast, 2026</span>
 - **Berth** — $1,650 to $2,100 a month at the published rates; more at the resort marinas
@@ -57,12 +57,12 @@ A 60 ft motor yacht kept on the Gold Coast costs roughly **$70,000 to $80,000 a 
 - **Insurance** — 1% to 3% of insured value a year, so $12,000 to $36,000 on a $1.2 million boat
 - **Servicing** — engines and generator every year, on hours or calendar, whichever comes first
 - **Registration** — $779.05 a year for a 15 to 20 m vessel (from 1 July 2026)
-- **Fuel** — about $500 an hour underway at fast cruise, at $2.84 a litre
+- **Fuel** — about $635 an hour at 20 knots, at $3.24 a litre
 </div>
 
 ## The short answer
 
-<div class="stat-row"><div class="stat"><b>$70–80k</b><span>a year at the dock, 60 ft, worked example below</span></div><div class="stat"><b>~$500/hr</b><span>fuel at fast cruise, 55–60 ft, $2.84/L</span></div><div class="stat"><b>10–15%</b><span>of vessel value a year, the old rule of thumb</span></div><div class="stat"><b>12–18 mo</b><span>between antifouls in warm Gold Coast water</span></div></div>
+<div class="stat-row"><div class="stat"><b>$70–80k</b><span>a year at the dock, 60 ft, worked example below</span></div><div class="stat"><b>~$635/hr</b><span>fuel at 20 knots, 60 ft Sunseeker, $3.24/L</span></div><div class="stat"><b>10–15%</b><span>of vessel value a year, the old rule of thumb</span></div><div class="stat"><b>12–18 mo</b><span>between antifouls in warm Gold Coast water</span></div></div>
 
 Most owners find the fixed costs are predictable and the variable ones are not. The berth, the insurance and the rego arrive on schedule. The yard visit, the engine service that turns into an injector job, and the fuel bill after a good month on the water are what move the total.
 
@@ -129,18 +129,20 @@ Vessels of 15 m and over have one extra step: any new registration, transfer or 
 
 ## Fuel: the cost of actually using her
 
-Marina diesel in south-east Queensland was **$2.79 to $2.84 a litre** at the Royal Queensland Yacht Squadron on 3 September 2026, the nearest published pump price to the Gold Coast. Southport Yacht Club gives Gold Members 6 cents a litre off at its 24-hour fuel wharf, and Sanctuary Cove offers bulk pricing on fills over 1,000 litres. Prices moved sharply in late August 2026, so date any figure you rely on.
+Marina diesel in south-east Queensland was **$3.19 to $3.24 a litre** at the Royal Queensland Yacht Squadron on 1 October 2026, the nearest published pump price to the Gold Coast. That is about 14% more than the $2.79 to $2.84 the same club listed on 3 September. Southport Yacht Club gives Gold Members 6 cents a litre off at its 24-hour fuel wharf, and Sanctuary Cove offers bulk pricing on fills over 1,000 litres. Date any figure you rely on.
 
-What a motor yacht burns at cruise, from factory and press sea trials:
+What a luxury motor yacht burns, from published sea trials:
 
-| Yacht | Engines | Burn at cruise | Fast cruise |
-|---|---|---|---|
-| Maritimo M55 | Twin Volvo D13-800 | 33 L/h at 10 kn | 176 L/h at 1,900 rpm; 201 L/h at 23 kn |
-| Riviera 5400 Sport Yacht | Volvo IPS950 | | 180 L/h at 23 kn |
-| Riviera 6000 Sport Yacht | Volvo IPS950 | 187 L/h at 22 kn | 286 L/h at 31 kn |
-| Riviera 645 SUV | Twin MAN V12 1,550 hp | 305 L/h at 23 kn | 401 L/h at 28 kn |
+| Yacht | Engines | Speed | Burn | Cost an hour at $3.24 |
+|---|---|---|---|---|
+| Sunseeker Manhattan 60 (64 ft) | Twin MAN V8-900, 900 hp | 20.0 knots | 196 L/h | $635 |
+| | | 23.6 knots | 256 L/h | $829 |
+| Azimut S7 (71 ft) | Three Volvo Penta D13 IPS1050 | 24.8 knots | 245 L/h | $794 |
+| | | 28.9 knots | 326 L/h | $1,056 |
+| Pershing GTX80 | Three Volvo Penta D13 IPS1350 | 10 knots | 68 L/h | $221 |
+| | | 28 knots | 439 L/h | $1,423 |
 
-At 180 litres an hour and $2.84 a litre, a 55 to 60 ft yacht costs **about $510 an hour underway** at fast cruise. A hundred hours a year is $51,000, and the generator, running at anchor and overnight, is on top. Drop to displacement speed and the same M55 burns 33 litres an hour; the difference between 10 knots and 23 knots is roughly $420 an hour.
+At 196 litres an hour and $3.24 a litre, a 60 ft Sunseeker costs **about $635 an hour underway** at its best cruise of 20 knots, and $829 an hour at 23.6 knots. A hundred hours at 20 knots is $63,504, and the generator, running at anchor and overnight, is on top. Speed moves the bill more than anything else: the Pershing costs $221 an hour at 10 knots and $1,423 at 28. Our guide to [yacht fuel cost](/guides/yacht-fuel-cost-gold-coast/) sets out the burn, cost per mile and a full-tank price for each boat.
 
 ## Keeping her clean
 
@@ -148,7 +150,7 @@ Every Gold Coast detailer quotes on request; none publishes a price list. The ne
 
 ## A worked example: 60 ft, about $1.2 million
 
-Every figure below comes from a published source above, or is flagged as an allowance. Berth is Southport Yacht Club's 12-month Gold Member rate for a 59 ft single. Insurance is 1.5% of a $1.2 million insured value. Fuel is 100 hours at 180 litres an hour and $2.84 a litre.
+Every figure below comes from a published source above, or is flagged as an allowance. Berth is Southport Yacht Club's 12-month Gold Member rate for a 59 ft single. Insurance is 1.5% of a $1.2 million insured value. Fuel is 100 hours at 196 litres an hour (a Sunseeker Manhattan 60 at its best cruise of 20 knots) and $3.24 a litre.
 
 | Line | A year | Basis |
 |---|---|---|
@@ -162,10 +164,10 @@ Every figure below comes from a published source above, or is flagged as an allo
 | Registration | $779 | Queensland, 15 to 20 m, from 1 July 2026 |
 | Safety gear, flares, EPIRB, extinguishers | $1,000 | Allowance |
 | **At the dock** | **$71,390** | |
-| Fuel, 100 hours | $51,120 | 180 L/h at $2.84 |
-| **Used 100 hours a year** | **$122,510** | |
+| Fuel, 100 hours | $63,504 | 196 L/h at $3.24, Sunseeker Manhattan 60 at 20 knots |
+| **Used 100 hours a year** | **$134,894** | |
 
-That is a used boat in a member berth with a quiet engine year. Move her to a resort marina, insure at the top of the range or hit a 1,000-hour service and you are past $150,000 without trying. It is also why the 10% rule tends to hold: on a new $2.2 million Maritimo M55 or Riviera 6000, 10% is $220,000, and a well-used boat of that size can spend it.
+That is a used boat in a member berth with a quiet engine year. Move her to a resort marina, insure at the top of the range or hit a 1,000-hour service and you are past $150,000 without trying. It is also why the 10% rule tends to hold: on a new $2.2 million yacht of this size, 10% is $220,000, and a well-used boat of that size can spend it.
 
 {{product:calculator}}
 
