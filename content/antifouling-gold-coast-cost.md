@@ -5,7 +5,7 @@
   "description": "Per-foot yard packages, hardstand rates, paint prices, Propspeed and anodes, how often to do it in Gold Coast water, and a worked example for a 60 ft motor yacht.",
   "category": "maintenance",
   "date": "2026-09-05",
-  "updated": "2026-10-04",
+  "updated": "2026-10-10",
   "hero": "assets/photos/shoot-hull-polish-2.jpg", "hero_pos": "center 45%",
   "cta": "Yard visit coming up? We will scope it, quote it and stand on the hardstand while it is done.",
   "faq": [
@@ -49,7 +49,7 @@
     {"t": "Queensland Government — Marine pests", "u": "https://www.qld.gov.au/environment/coasts-waterways/marine-pests"},
     {"t": "Maritime Executive — IMO study on fuel cost of fouling", "u": "https://www.maritime-executive.com/article/imo-study-shows-higher-than-expected-fuel-cost-from-fouling"},
     {"t": "KTH Royal Institute of Technology — Ship sliming study (January 2025)", "u": "https://www.kth.se/en/om/nyheter/centrala-nyheter/study-on-ship-sliming-suggests-way-to-reduce-costs-in-ocean-transport-1.1380442"},
-    {"t": "Maritimo — M60 specifications", "u": "https://www.maritimo.com.au/model/maritimo-m60/"},
+    {"t": "Trade-A-Boat — Review: Sunseeker Manhattan 60 (19.60 m length, 5 m beam)", "u": "https://www.tradeaboat.com.au/news-reviews/7443-review-sunseeker-manhattan-60"},
     {"t": "Sanctuary Cove International Boat Show — dates", "u": "https://sanctuarycoveboatshow.com.au/"}
   ]
 }
@@ -115,7 +115,7 @@ A "from $X a foot" quote is a paint quote. Ask in writing whether it includes th
 | Jotun SeaForce Active | Self-polishing, commercial grade | | $320 to $360 per 5 L |
 | International Trilux 33 | Copper-free for aluminium hulls, up to 18 months | 9 m²/L, 3 coats | from $154 per 750 mL |
 
-How much: wetted area is roughly length times beam times 0.85. A Maritimo M60 at 18.53 m by 5.23 m is about 82 m². With Micron Extra 2 by roller at 9 m² a litre, two coats and a stripe coat is about **20 litres, two 10 L tins, $1,696**. By spray the coverage halves and the litres double. With Micron One at 5.4 m² a litre it is about 30 litres, three tins, $1,745. Spraying costs more paint, not less; it buys a better finish.
+How much: wetted area is roughly length times beam times 0.85. A Sunseeker Manhattan 60 at 19.60 m by 5.0 m is about 83 m². With Micron Extra 2 by roller at 9 m² a litre, two coats and a stripe coat is about **20 litres, two 10 L tins, $1,696**. By spray the coverage halves and the litres double. With Micron One at 5.4 m² a litre it is about 31 litres, so three to four 10 L tins, about $1,750 to $2,330. Spraying costs more paint, not less; it buys a better finish.
 
 <div class="callout" markdown="1"><span class="eyebrow">Hard or soft?</span>
 Ablative or self-polishing paints wear away as the boat moves and suit boats that are used. Hard antifouls need scrubbing and suit boats that sit. For a motor yacht that goes out, ablative. For an aluminium hull, copper-free, always.</div>
@@ -124,7 +124,7 @@ Ablative or self-polishing paints wear away as the boat moves and suit boats tha
 
 The local applicators say once a year in Gold Coast water. Nautilus, the insurer, says every 12 to 18 months regardless of size. The Boat Works says six to fifteen months. Brisbane yards put frequently used powerboats at six to twelve months and only dry-stored boats at 18 to 24. The national biofouling guidelines add that coatings should be renewed towards the shorter end of their rated life, and that you should keep the paint invoices and slipway receipts.
 
-The reason to keep to it is fuel. An IMO study found slime as thin as half a millimetre over half the hull adds 20% to 25% to fuel burn, and a light layer of barnacles up to 55%. A 2025 KTH study measured slime alone raising the power needed by up to 18%. Those are ship figures, but the physics is the same on a 60-footer burning 180 litres an hour. A season on a fouled hull can cost more in diesel than the antifoul did.
+The reason to keep to it is fuel. An IMO study found slime as thin as half a millimetre over half the hull adds 20% to 25% to fuel burn, and a light layer of barnacles up to 55%. A 2025 KTH study measured slime alone raising the power needed by up to 18%. Those are ship figures, but the physics is the same on a 60 ft Sunseeker burning 196 litres an hour at 20 knots. A season on a fouled hull can cost more in diesel than the antifoul did.
 
 ## The rules
 

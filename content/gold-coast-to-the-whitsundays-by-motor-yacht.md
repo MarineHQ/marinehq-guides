@@ -5,7 +5,7 @@
   "description": "About 650 nautical miles, three days fast or a fortnight slow. The legs, the Wide Bay Bar and the Great Sandy Strait, fuel stops, Whitsundays marinas and their rates, the Marine Park mooring rules, the season, and what to do before you leave.",
   "category": "cruising",
   "date": "2026-09-06",
-  "updated": "2026-10-04",
+  "updated": "2026-10-10",
   "hero": "assets/photos/shoot-at-helm.jpg", "hero_pos": "center 60%",
   "cta": "Whitsundays this season? We prepare the boat, plan the bars and tides, and can deliver her north so you fly in to a yacht on a mooring.",
   "faq": [
@@ -24,6 +24,7 @@
   ],
   "related": ["gold-coast-to-sydney-by-motor-yacht", "annual-haul-out-checklist", "cost-of-owning-a-yacht-gold-coast"],
   "sources": [
+    {"t": "Trade-A-Boat — Review: Sunseeker Manhattan 60 (fuel burn, 19.60 m length, 5 m beam; load and sea state not stated)", "u": "https://www.tradeaboat.com.au/news-reviews/7443-review-sunseeker-manhattan-60"},
     {"t": "SailCorp — Gold Coast to Hamilton Island mile-builder (650 nm track)", "u": "https://www.sailcorp.com.au/course/gold-coast-to-hamilton-island/"},
     {"t": "Coral Sea Marina — Cruise the Whitsundays: where, when and how", "u": "https://www.coralseamarina.com/marina-news/cruise-the-whitsundays-the-definitive-where-when-and-how/"},
     {"t": "savvy navvy — Gold Coast to Mooloolaba", "u": "https://www.savvy-navvy.com/trips/gold-coast-qld-au-mooloolaba-qld-au"},
@@ -137,7 +138,7 @@ No marina on the route publishes a diesel price online; ring ahead the day befor
 | Coral Sea Marina, Airlie | booked between 8am and 4.30pm; 24-hour card bowser after hours | Commercial traffic has priority at the fuel wharf |
 | Hamilton Island | 24/7 wharf between F and G arms, low and high flow | Vessels to 30 m; call the office first |
 
-A boat burning 180 litres an hour at cruise uses somewhere around 6,000 litres on the way up. Check the range on the longest leg you intend to run, Rosslyn Bay to Mackay if you do it in one, with a third in reserve.
+A Sunseeker Manhattan 60 burns about 196 litres an hour at 20 knots, so the 32 hours of running on the way up is around 6,300 litres. Our [yacht fuel cost guide](/guides/yacht-fuel-cost-gold-coast/) puts a dollar figure on each hour. Check the range on the longest leg you intend to run, Rosslyn Bay to Mackay if you do it in one, with a third in reserve.
 
 ## Where to berth in the Whitsundays
 

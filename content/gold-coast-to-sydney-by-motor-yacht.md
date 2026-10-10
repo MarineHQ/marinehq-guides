@@ -5,7 +5,7 @@
   "description": "About 470 nautical miles, three to six days. The legs, the all-weather harbours and the bar entrances, the East Australian Current, fuel and berths in Sydney, the NSW rules, and whether to run her yourself or send a delivery skipper.",
   "category": "cruising",
   "date": "2026-09-06",
-  "updated": "2026-10-04",
+  "updated": "2026-10-10",
   "hero": "assets/photos/shoot-heading-out.jpg", "hero_pos": "center 45%",
   "cta": "Heading south? We plan the passage, prepare the boat, and can put a delivery skipper and crew aboard so she is waiting for you in Sydney.",
   "faq": [
@@ -24,6 +24,7 @@
   ],
   "related": ["gold-coast-to-the-whitsundays-by-motor-yacht", "cost-of-owning-a-yacht-gold-coast", "annual-haul-out-checklist"],
   "sources": [
+    {"t": "Trade-A-Boat — Review: Sunseeker Manhattan 60 (fuel burn, 19.60 m length, 5 m beam; load and sea state not stated)", "u": "https://www.tradeaboat.com.au/news-reviews/7443-review-sunseeker-manhattan-60"},
     {"t": "SailCorp — Sydney to Gold Coast passage course (leg distances)", "u": "https://www.sailcorp.com.au/course/sydney-to-gold-coast/"},
     {"t": "Noonsite — Newcastle and Port Stephens", "u": "https://www.noonsite.com/place/australia/new-south-wales/newcastle-port-stephens/"},
     {"t": "Sailboat Liveaboard — NSW coastal navigation guide", "u": "https://www.sailboatliveaboard.com/New-South-Wales-Coastal-Navigation-Guide.html"},
@@ -137,7 +138,7 @@ Marina diesel prices along the way, as published:
 | Rose Bay Marina, RMYC Point Piper | price on the day | Rose Bay has a fuel dock and free pump-out; Point Piper fuels 7.30am to 3.30pm |
 | Coffs Harbour | no diesel berth for a large yacht | The new Transport for NSW facility is unleaded only, vessels to 12 m |
 
-Nelson Bay's d'Albora fuel wharf runs 24/7 too, price in the app. Plan Coffs as an overnight stop, not a fuel stop, and top up at Newcastle or Port Stephens if you need it before Sydney. A boat burning 180 litres an hour at cruise will use around 4,000 to 5,000 litres on the run; check the range calculation against the longest leg with a third in reserve.
+Nelson Bay's d'Albora fuel wharf runs 24/7 too, price in the app. Plan Coffs as an overnight stop, not a fuel stop, and top up at Newcastle or Port Stephens if you need it before Sydney. A Sunseeker Manhattan 60 burns about 196 litres an hour at 20 knots, so 21 to 26 hours of running is around 4,100 to 5,100 litres; check the range calculation against the longest leg with a third in reserve. Our [yacht fuel cost guide](/guides/yacht-fuel-cost-gold-coast/) puts a dollar figure on each hour.
 
 ## Where to berth in Sydney
 

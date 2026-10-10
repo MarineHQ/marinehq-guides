@@ -5,7 +5,7 @@
   "description": "The four questions that decide length, what each ten feet buys you in cabins and tankage, how every running cost scales with size, the Gold Coast depth and marina limits, the insurers' ten-foot rule, and new-boat price bands with dates.",
   "category": "buying",
   "date": "2026-09-11",
-  "updated": "2026-10-04",
+  "updated": "2026-10-10",
   "hero": "assets/photos/shoot-underway-2.jpg", "hero_pos": "center 55%",
   "cta": "Torn between two sizes? Bring us the shortlist. We will tell you what each one costs to run here and which one you will actually use.",
   "faq": [
@@ -14,7 +14,7 @@
     {"q": "What size boat do I need for a family of four?",
      "a": "Sleeping four comfortably with guests needs three cabins and two heads, which starts around 50 ft in the Australian production boats: Maritimo M50 has two staterooms, the Riviera 5400, Princess F55 and Maritimo M55 have three. Four cabins plus a crew cabin start at about 65 to 68 ft."},
     {"q": "How much more does ten extra feet cost to run?",
-     "a": "More than ten feet's worth. At Southport Yacht Club a 59 ft single berth is $19,311 a year and a 73 ft is $29,308, member rates, May 2026. Fuel at fast cruise goes from about 180 litres an hour on a 55-footer to 280 on a 68. Antifoul is quoted above 50 ft, insurance follows the sum insured, and above about 70 ft you are budgeting for crew. The 10% rule of thumb holds well for new owner-operated boats and understates the cost of older or larger ones."},
+     "a": "More than ten feet's worth. At Southport Yacht Club a 59 ft single berth is $19,311 a year and a 73 ft is $29,308, member rates, May 2026. Fuel at around 20 knots goes from about 167 litres an hour on a 54 ft Sunseeker Predator 50 to about 274 on a 66 ft Princess F65. Antifoul is quoted above 50 ft, insurance follows the sum insured, and above about 70 ft you are budgeting for crew. The 10% rule of thumb holds well for new owner-operated boats and understates the cost of older or larger ones."},
     {"q": "Is a 60 ft boat too big for a first boat?",
      "a": "Not by law, but insurers want to see experience on a boat no more than about ten feet shorter than the one you are insuring. Jumping from a 30-footer to a 60 usually brings a condition that a professional captain signs you off, sometimes after weeks aboard. Owners who have done it advise stepping up in stages, or chartering the size first."},
     {"q": "Which sizes hold their value best?",
@@ -24,6 +24,13 @@
   ],
   "related": ["cost-of-owning-a-yacht-gold-coast", "do-you-need-full-time-crew", "gold-coast-marinas-compared", "sanctuary-cove-boat-show-guide"],
   "sources": [
+    {"t": "Trade-A-Boat — Review: Sunseeker Manhattan 60 (fuel burn, 19.60 m length, 5 m beam; load and sea state not stated)", "u": "https://www.tradeaboat.com.au/news-reviews/7443-review-sunseeker-manhattan-60"},
+    {"t": "MBY — Sunseeker Predator 50 (fuel burn; speed for the 167 L/h figure not stated)", "u": "https://www.mby.com/reviews/sportscruisers/sunseeker-predator-50"},
+    {"t": "Barche Magazine — Princess F55 sea trial (September 2018; run in a metre of chop)", "u": "https://www.barchemagazine.com/en/princess-f55-eng/"},
+    {"t": "MBY — Princess F65 sea trial (fuel burn; speed for the 274 L/h figure not stated)", "u": "https://www.mby.com/video/princess-f65-sea-trial-review-flybridge-125305"},
+    {"t": "Yachting magazine — Azimut S7 reviewed (fuel burn)", "u": "https://www.yachtingmagazine.com/yachts/azimut-s7-reviewed/"},
+    {"t": "Yachting magazine — Pershing GTX80 reviewed (fuel burn)", "u": "https://www.yachtingmagazine.com/yachts/pershing-gtx80-reviewed/"},
+    {"t": "YachtBuyer — Sunseeker 76 Yacht engine options (builder's figures)", "u": "https://www.yachtbuyer.com/en-gb/sunseeker/new/76-yacht/engines"},
     {"t": "YachtBuyer — Buying the right boat size (August 2026)", "u": "https://www.yachtbuyer.com/en/advice/buying-the-right-boat-size-key-factors-to-consider"},
     {"t": "YachtBuyer — How much does a new yacht cost to run (the 10% rule)", "u": "https://www.yachtbuyer.com/en/advice/how-much-does-a-new-yacht-cost-to-run"},
     {"t": "YachtBuyer — What size tender do I need (September 2026)", "u": "https://www.yachtbuyer.com/en-gb/advice/what-size-tender-do-i-need"},
@@ -105,14 +112,14 @@ Two things move with length that buyers underestimate. **The tender** grows with
 
 Every line scales with length, and some scale faster than length.
 
-| At | Berth, SYC member, a year | Fuel burn at cruise, from sea trials | Antifoul | Crew |
+| At | Berth, SYC member, a year | Fuel burn at cruise, from sea trials and builder's figures | Antifoul | Crew |
 |---|---|---|---|---|
-| 49 ft | $10,230 | Maritimo M50: 210 L/h at 18.7 knots | GCCM package from $89.50 a foot to 50 ft, about $4,400 | Owner |
-| 55 ft | $16,087 (59 ft double) | Riviera 5400: 132 L/h at 16 knots, 186 at 24; Maritimo M55: 176 L/h at cruise | Quote only above 50 ft | Owner |
-| 60 ft | $19,311 (59 ft single) | Grand Banks 60: 86 L/h at 15 knots, 228 at 25 | Quote; allow around $10,000 all in | Owner or day crew |
-| 65 ft | $23,954 (66 ft) | Palm Beach 65: 165 L/h at 25 knots; Riviera 645: 276 L/h at 22 | Quote | Owner with help |
-| 68 to 73 ft | $29,308 (73 ft) | Riviera 6800: 282 L/h at 27.7 knots | Quote | Captain likely |
-| 82 ft | $38,226 | Twin 1,500 hp class: 300 to 400 L/h at cruise | Quote | Captain and crew |
+| 49 ft | $10,230 | Not published for a luxury boat this size; see the 55 ft row | GCCM package from $89.50 a foot to 50 ft, about $4,400 | Owner |
+| 55 ft | $16,087 (59 ft double) | Princess F55 (58 ft): about 215 L/h at 23 to 24 knots; Sunseeker Predator 50 (54 ft): 167 L/h at 20 knots | Quote only above 50 ft | Owner |
+| 60 ft | $19,311 (59 ft single) | Sunseeker Manhattan 60 (64 ft): 196 L/h at 20 knots, 256 at 23.6; Grand Banks 60: 86 L/h at 15 knots, 228 at 25 | Quote; allow around $10,000 all in | Owner or day crew |
+| 65 ft | $23,954 (66 ft) | Princess F65 (66 ft): 274 L/h at 21 knots; Palm Beach 65: 165 L/h at 25 knots | Quote | Owner with help |
+| 68 to 73 ft | $29,308 (73 ft) | Azimut S7 (71 ft): 245 L/h at 24.8 knots, 326 at 28.9 | Quote | Captain likely |
+| 82 ft | $38,226 | Sunseeker 76 Yacht (76 ft, builder's figures): 290 L/h at 23 knots; Pershing GTX80: 439 L/h at 28 knots; nothing we trust is published above 80 ft | Quote | Captain and crew |
 
 **From 80 to 120 ft** the numbers stop being published and the rules change. Southport quotes berths over 82 ft on application; GCCM's 2022 schedule had 91–100 ft at $5,000 a month and 101–110 ft at $6,000. Published guidance is that a crew member is recommended from about 79 ft and a professional crew above about 98 ft, and the Crew Pacific guide puts a captain on a 100 to 120 ft yacht at $10,000 to $14,000 a month including super. At this size the question is less which boat than who runs her, which is our crew guide.
 
