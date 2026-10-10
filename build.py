@@ -385,6 +385,8 @@ def build_free():
               % (FREE_PDF, FREE_PDF, WA_BIO, PHONE_H, PHONE))
     page2 = shell("Your checklist is ready | Marine HQ", "Download your free Annual Haul-Out Checklist.", BASE + "/free-haul-out-checklist/thanks/", "website", "", inner2)
     page2 = page2.replace("<head>", '<head>\n<meta name="robots" content="noindex">', 1)
+    # GA4 lead event: fires once the thank-you page loads (gtag is only present on production builds)
+    page2 = page2.replace("</body>", "<script>if(window.gtag){gtag('event','generate_lead',{lead_source:'free_haul_out_checklist'});}</script>\n</body>", 1)
     write_page(os.path.join(SITE, "free-haul-out-checklist", "thanks", "index.html"), page2)
 
 LINKS = [("FREE Annual Haul-Out Checklist", "/free-haul-out-checklist/", "Free two-page PDF"),
