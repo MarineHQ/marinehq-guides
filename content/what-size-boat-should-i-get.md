@@ -12,18 +12,19 @@
     {"q": "What size motor yacht suits a couple on the Gold Coast?",
      "a": "For a couple who day-boat and do weekends aboard, 50 to 60 ft is the sweet spot: three cabins, a proper galley, 3,000 to 4,500 litres of fuel, and still owner-operated. Owners' forums put 60 to 65 ft as the comfortable top for two people and 70 to 75 ft as the stretch, where insurers start asking about a captain."},
     {"q": "What size boat do I need for a family of four?",
-     "a": "Sleeping four comfortably with guests needs three cabins and two heads, which starts around 50 ft in the Australian production boats: Maritimo M50 has two staterooms, the Riviera 5400, Princess F55 and Maritimo M55 have three. Four cabins plus a crew cabin start at about 65 to 68 ft."},
+     "a": "Sleeping four comfortably with guests needs three cabins and two heads, which starts around 55 to 60 ft in the luxury production boats: the Sunseeker Predator 50 has two cabins, while the Princess F55 and Sunseeker Manhattan 60 have three, each with a crew cabin. Four cabins start at about 65 ft: the Princess F65 has four, and the Azimut S7 has four staterooms plus a crew cabin."},
     {"q": "How much more does ten extra feet cost to run?",
      "a": "More than ten feet's worth. At Southport Yacht Club a 59 ft single berth is $19,311 a year and a 73 ft is $29,308, member rates, May 2026. Fuel at around 20 knots goes from about 167 litres an hour on a 54 ft Sunseeker Predator 50 to about 274 on a 66 ft Princess F65. Antifoul is quoted above 50 ft, insurance follows the sum insured, and above about 70 ft you are budgeting for crew. The 10% rule of thumb holds well for new owner-operated boats and understates the cost of older or larger ones."},
     {"q": "Is a 60 ft boat too big for a first boat?",
      "a": "Not by law, but insurers want to see experience on a boat no more than about ten feet shorter than the one you are insuring. Jumping from a 30-footer to a 60 usually brings a condition that a professional captain signs you off, sometimes after weeks aboard. Owners who have done it advise stepping up in stages, or chartering the size first."},
     {"q": "Which sizes hold their value best?",
-     "a": "Boats lose roughly 10 to 20% in year one, 30 to 40% by year three and 40 to 50% by year five, then flatten, so a three to five year old boat has taken the big hit. In Australia the luxury segment gained share in late 2025, Riviera and Sunseeker among them, and brokers say the strongest demand sits in the 30 to 70 ft power range. A clean, well-maintained boat with records sells in almost any market."},
+     "a": "Boats lose roughly 10 to 20% in year one, 30 to 40% by year three and 40 to 50% by year five, then flatten, so a three to five year old boat has taken the big hit. In Australia the luxury segment gained share in late 2025, and brokers say the strongest demand sits in the 30 to 70 ft power range. A clean, well-maintained boat with records sells in almost any market."},
     {"q": "Can I take a 50-footer to the Whitsundays?",
-     "a": "Yes, comfortably. The usual track is 50 to 60 nm hops with a 650 nm total, and a Riviera 5400 carries 3,000 litres for 354 nm at 24 knots or 854 nm at displacement speed. What matters more than length is tankage, range at the speed you will actually run, and a hull that is happy in a following sea. Our Whitsundays guide has the passage."}
+     "a": "Yes, comfortably. The usual track is 50 to 60 nm hops with a 650 nm total, and a Princess F65 carries 4,100 litres for about 252 nm at 21 knots. What matters more than length is tankage, range at the speed you will actually run, and a hull that is happy in a following sea. Our Whitsundays guide has the passage."}
   ],
   "related": ["cost-of-owning-a-yacht-gold-coast", "do-you-need-full-time-crew", "gold-coast-marinas-compared", "sanctuary-cove-boat-show-guide"],
   "sources": [
+    {"t": "YachtBuyer — Sunseeker 76 Yacht specifications (length, beam, cabins, tanks)", "u": "https://www.yachtbuyer.com/en-gb/sunseeker/new/76-yacht"},
     {"t": "Trade-A-Boat — Review: Sunseeker Manhattan 60 (fuel burn, 19.60 m length, 5 m beam; load and sea state not stated)", "u": "https://www.tradeaboat.com.au/news-reviews/7443-review-sunseeker-manhattan-60"},
     {"t": "MBY — Sunseeker Predator 50 (fuel burn; speed for the 167 L/h figure not stated)", "u": "https://www.mby.com/reviews/sportscruisers/sunseeker-predator-50"},
     {"t": "Barche Magazine — Princess F55 sea trial (September 2018; run in a metre of chop)", "u": "https://www.barchemagazine.com/en/princess-f55-eng/"},
@@ -53,17 +54,9 @@
     {"t": "Seatech Marine — Guidelines for superyachts on the Gold Coast", "u": "https://seatechmarine.com.au/blogs/guidelines-for-superyachts-on-the-gold-coast/"},
     {"t": "AHI Marine — How to navigate the Coomera River", "u": "https://www.ahimarine.com.au/article/how-to-navigate-coomera-river"},
     {"t": "boatsales — Coomera River speed limits", "u": "https://www.boatsales.com.au/editorial/details/coomera-river-lower-speed-limits-come-into-force-119931/"},
-    {"t": "boatsales — Maritimo M50 review (October 2025)", "u": "https://www.boatsales.com.au/editorial/details/maritimo-m50-2025-review-150576/"},
-    {"t": "Powerboat Magazine — Riviera 5400 Sport Yacht", "u": "https://powerboatmagazine.co.nz/riviera-5400-sy/"},
     {"t": "boatsales — Princess F55 review (May 2023)", "u": "https://www.boatsales.com.au/editorial/details/princess-f55-2023-review-140866/"},
-    {"t": "Trade-a-Boat — Maritimo M55", "u": "https://www.tradeaboat.com.au/news-reviews/12364-maritimo-m55"},
-    {"t": "Maritimo — M60", "u": "https://www.maritimo.com.au/model/maritimo-m60/"},
-    {"t": "Maritimo — M75 in the global 70-foot market (March 2026)", "u": "https://www.maritimo.com.au/maritimo-75-standing-apart-in-the-global-70-foot-market/"},
     {"t": "boatsales — Grand Banks 60 review", "u": "https://www.boatsales.com.au/editorial/details/grand-banks-60-review-110620/"},
     {"t": "Powerboat Magazine — Palm Beach 65", "u": "https://powerboatmagazine.co.nz/palm-beach-65/"},
-    {"t": "Powerboat Magazine — Riviera 645 SUV", "u": "https://powerboatmagazine.co.nz/riviera-645-suv/"},
-    {"t": "boatsales — Riviera 6800 Sport Yacht review (October 2024)", "u": "https://www.boatsales.com.au/editorial/details/riviera-6800-sport-yacht-platinum-edition-2024-review-147751/"},
-    {"t": "Club Marine — Riviera 6800 boat test (August 2024)", "u": "https://www.clubmarine.com.au/explore-boating/articles/2024-08-riviera-6800-sport-yacht-boat-test.html"},
     {"t": "Marine Business News — Q4 2025 Australian marine market report", "u": "https://www.marinebusinessnews.com.au/2026/02/q4-2025-marine-market-report-reveals-luxury-yacht-segment-gains-ground-as-performance-boats-experience-dramatic-volatility/"},
     {"t": "Latitude Yacht Brokerage — The power yacht brokerage market heading into 2026", "u": "https://www.latitudeyacht.com/the-power-yacht-brokerage-market-in-2025-what-buyers-and-sellers-need-to-know-heading-into-2026/"},
     {"t": "Seakeeper — Sizing guide", "u": "https://www.seakeeper.com/sizing-guide/"},
@@ -77,7 +70,7 @@ The honest answer is that length is the last thing to decide, not the first. Fou
 <div class="keyfacts" markdown="1"><span class="eyebrow">Key facts</span>
 - **The four questions** — use, people aboard overnight, where she lives, who drives
 - **The couple's ceiling** — 60 to 65 ft comfortable, 70 to 75 ft the stretch, above 75 ft almost always crewed
-- **Three cabins** — from about 50 ft in Australian production boats; four cabins plus crew from about 65 to 68 ft
+- **Three cabins** — from about 55 ft in the luxury production boats; four cabins from about 65 ft
 - **Berth by length** — Southport Yacht Club member rate: 49 ft $10,230 a year, 59 ft $16,087, 66 ft $23,954, 73 ft $29,308, 82 ft $38,226
 - **The insurers' ten-foot rule** — experience on a boat within about ten feet of the one you are buying, or a captain signs you off
 - **Running costs** — 10 to 15% of value a year is the Australian brokers' rule of thumb
@@ -94,17 +87,20 @@ Boat Gold Coast's advice is the least glamorous and the most useful: sit down wi
 
 ## What each ten feet buys you
 
-The Australian production boats make the bands easy to see. Volume grows with the cube of length, so a 60-footer is not a fifth bigger than a 50; owners who have done it describe the 50 as three times the boat.
+The luxury production boats make the bands easy to see. Volume grows with the cube of length, so a 60-footer is not a fifth bigger than a 50; owners who have done it describe the 50 as three times the boat.
 
-| Band | Cabins and heads | Beam | Fuel and water | Examples, with date of the figures | Who runs her |
+| Length | Yacht | Cabins | Beam | Fuel and water | Who runs her |
 |---|---|---|---|---|---|
-| 45 to 50 ft | 2 cabins, 2 heads | about 5.2 m | 2,100 to 3,700 L / 620 to 750 L | Riviera 4600 (2,100 L); Maritimo M50, 2 staterooms, 3,700 L (2025) | Owner, easily |
-| 50 to 55 ft | 3 cabins, 2 heads | 4.9 to 5.2 m | 2,750 to 4,550 L / 530 to 800 L | Riviera 5400, 3 cabins, 3,000 L; Princess F55, sleeps 6; Maritimo M55, 4,550 L | Owner |
-| 60 ft | 3 cabins, 2 ensuites | 5.2 to 5.9 m | 4,550 to 7,000 L / 700 to 1,200 L | Maritimo M60, 3.2 m tender garage; Grand Banks 60, 7,000 L and 2,000 nm at 10 knots | Owner, or day crew |
-| 65 to 68 ft | 4 cabins, or 3 plus crew | 5.5 to 5.9 m | 4,500 to 6,500 L / 750 to 1,100 L | Riviera 645 SUV, 4 cabins; Palm Beach 65, 6,000 L; Riviera 6800, 4 cabins plus crew cabin | Owner with help, or captain |
-| 75 ft | 4 cabins plus utility or crew cabin | 6.0 m | 10,000 L / 1,400 L | Maritimo M75, about 400 nm at 24 knots, thrusters, joystick, gyro | Captain, or a very experienced owner |
+| 54 ft | Sunseeker Predator 50 | 2 cabins, room for a tender behind the transom | 4.48 m | 1,800 L / 430 L | Owner, easily |
+| 58 ft | Princess F55 | 3 cabins plus a crew cabin, 2 bathrooms | 4.87 m | 2,750 L / 608 L | Owner |
+| 64 ft | Sunseeker Manhattan 60 | 3 en suite cabins plus crew quarters | 5.0 m | 3,000 L / 700 L | Owner, or day crew |
+| 66 ft | Princess F65 | 4 cabins | 5.10 m | 4,100 L / not stated | Owner with help, or captain |
+| 71 ft | Azimut S7 | 4 staterooms plus a crew cabin | not stated | about 3,800 L / not stated | Captain, or a very experienced owner |
+| 77 ft | Sunseeker 76 Yacht | 4 cabins plus a crew cabin | 5.95 m | 6,000 L / 1,400 L | Captain |
 
-Two things move with length that buyers underestimate. **The tender** grows with the boat: a swim-platform tender is about 3 m on a 12 to 15 m yacht and 3.5 m on a 20 to 25 m yacht, and a garage on a 65 to 68 ft boat swallows a 3.7 m RIB. **The systems** grow with it: air conditioning on a boat this size means a generator, 17.5 kW is the base spec on the M50, and the gyro that stops her rolling at anchor is a Seakeeper 10 on a 50 to 60 ft boat, list price about US$127,000 before installation, and a Seakeeper 18 at 60 to 75 ft.
+Lengths are each builder's or reviewer's length overall (the 76 Yacht's 23.6 m includes the pulpit). The Azimut S7's tank is 1,004 US gallons in Yachting magazine's review, converted here. Where a review did not state a figure, the table says so.
+
+Two things move with length that buyers underestimate. **The tender** grows with the boat: a swim-platform tender is about 3 m on a 12 to 15 m yacht and 3.5 m on a 20 to 25 m yacht, and the Predator 50 has room for a Williams 325 behind the transom, the Azimut S7 carries its tender in a garage under the sun pad, and the Pershing GTX80's hydraulic platform takes a Williams 345. **The systems** grow with it: air conditioning on a boat this size means a generator, and the gyro that stops her rolling at anchor is a Seakeeper 10 on a 50 to 60 ft boat, list price about US$127,000 before installation, and a Seakeeper 18 at 60 to 75 ft.
 
 <figure><img src="/assets/photos/shoot-berthing-aerial.jpg" alt="Aerial view of a motor yacht backing into a marina berth between two other yachts" loading="lazy"><figcaption><b>Use decides length</b> — a boat for the Broadwater and a boat for the Whitsundays are different boats, and so are the berths they fit.</figcaption></figure>
 
@@ -143,22 +139,24 @@ Owners who have made the jump say the same thing on every forum: step up in stag
 
 ## Hull type and range
 
-A planing hull gets you to Moreton Bay for lunch; a displacement hull gets you to the Whitsundays on a third of the fuel. Full-displacement boats cruise at 6 to 9 knots, semi-displacement at 10 to 16 and beyond with power, and planing boats' running costs are commonly 50 to 150% higher than a displacement boat of the same length. The Grand Banks 60 shows the trade: 2,000 nm at 10 knots, 636 nm at 25. The Riviera 5400 does 854 nm at displacement speed and 354 at 24 knots. If the plan is a season north, tankage and range at the speed you will actually run matter more than the length.
+A planing hull gets you to Moreton Bay for lunch; a displacement hull gets you to the Whitsundays on a third of the fuel. Full-displacement boats cruise at 6 to 9 knots, semi-displacement at 10 to 16 and beyond with power, and planing boats' running costs are commonly 50 to 150% higher than a displacement boat of the same length. The Grand Banks 60 shows the trade: 2,000 nm at 10 knots, 636 nm at 25. A Princess F65 carries 4,100 litres for about 252 nm at 21 knots, and Yachting magazine's Pershing GTX80 test gives 300 nm at 28 knots, with nearly double that at slow cruise. If the plan is a season north, tankage and range at the speed you will actually run matter more than the length.
 
 ## What it costs to buy
 
-New-boat prices in Australia, from published tests with their dates, so you can see the bands:
+Published new-boat prices from tests and reviews, in the currency and year each was quoted, so you can see the bands. We found no published Australian price for the Azimut S7, the Pershing GTX80 or the Sunseeker 76 Yacht; ask the dealer.
 
 | Boat | Length | Published price | When |
 |---|---|---|---|
-| Maritimo M55 | 55 ft | from $2.167 million | 2021 launch |
-| Maritimo M50 | 50 ft | from $2.77 million | October 2025 |
-| Princess F55 | 55 ft | $3.49 million base, $3.79 million as tested | May 2023 |
-| Palm Beach 65 | 65 ft | about $4.2 million as tested | 2018 |
+| Sunseeker Predator 50 | 54 ft | from £810,000 including VAT (UK) | review published March 2019 |
+| Princess F55 | 58 ft | $3.49 million base, $3.79 million as tested | May 2023 |
+| Sunseeker Manhattan 60 | 64 ft | about $3 million, depending on options | Trade-A-Boat review, undated |
 | Grand Banks 60 | 60 ft | $4.13 million base, $4.5 million as tested | 2018 |
-| Riviera 6800 Sport Yacht | 68 ft | from $4.9 million | October 2024 |
+| Palm Beach 65 | 65 ft | about $4.2 million as tested | 2018 |
+| Princess F65 | 66 ft | £3.3 million as tested including VAT (UK) | review published March 2023 |
 
-Depreciation runs roughly 10 to 20% in the first year, 30 to 40% by year three and 40 to 50% by year five, then flattens. That is the case for a three to five year old boat: the big hit is taken, the warranty may still have life, and the survey tells you what you are buying. Riviera is widely noted for holding its price, and the Australian luxury segment gained share in late 2025 while trailer boats fell. Brokers put the deepest demand in the 30 to 70 ft power range, so a well-kept boat in this band is also the easiest to sell when you move up.
+The UK prices are in pounds and include VAT, so they are a guide to the band, not an Australian price. The Manhattan 60 review gives no currency or date for its figure.
+
+Depreciation runs roughly 10 to 20% in the first year, 30 to 40% by year three and 40 to 50% by year five, then flattens. That is the case for a three to five year old boat: the big hit is taken, the warranty may still have life, and the survey tells you what you are buying. The Australian luxury segment gained share in late 2025 while trailer boats fell. Brokers put the deepest demand in the 30 to 70 ft power range, so a well-kept boat in this band is also the easiest to sell when you move up.
 
 Two schools of thought on the first boat, and both are right for someone. "Buy your second boat first" skips the starter boat you will outgrow in a year. "Start small" makes sure you like it before you commit. The compromise most experienced owners land on is a boat one size below the dream, run for two seasons, with the records kept so she sells well.
 
