@@ -24,6 +24,10 @@
   ],
   "related": ["cost-of-owning-a-yacht-gold-coast", "do-you-need-full-time-crew", "gold-coast-marinas-compared", "sanctuary-cove-boat-show-guide"],
   "sources": [
+    {"t": "boatsales — Sunseeker Predator 75 listings, Australia (asking prices, October 2026)", "u": "https://www.boatsales.com.au/boats/sunseeker/predator-75/"},
+    {"t": "Boatsonline — Sunseeker Predator 75 listings, Australia (asking prices, October 2026)", "u": "https://www.boatsonline.com.au/boats-for-sale/sunseeker/?keywords=Predator+75"},
+    {"t": "YachtBuyer — Sunseeker 76 Yacht for sale (asking price range and average, October 2026)", "u": "https://www.yachtbuyer.com/en-us/sunseeker/for-sale/76-yacht"},
+    {"t": "ilodka — Azimut S7 (price from, 2023 premiere)", "u": "https://ilodka.com/en/models/azimut-s7/"},
     {"t": "YachtBuyer — Sunseeker 76 Yacht specifications (length, beam, cabins, tanks)", "u": "https://www.yachtbuyer.com/en-gb/sunseeker/new/76-yacht"},
     {"t": "Trade-A-Boat — Review: Sunseeker Manhattan 60 (fuel burn, 19.60 m length, 5 m beam; load and sea state not stated)", "u": "https://www.tradeaboat.com.au/news-reviews/7443-review-sunseeker-manhattan-60"},
     {"t": "MBY — Sunseeker Predator 50 (fuel burn; speed for the 167 L/h figure not stated)", "u": "https://www.mby.com/reviews/sportscruisers/sunseeker-predator-50"},
@@ -143,10 +147,13 @@ A planing hull gets you to Moreton Bay for lunch; a displacement hull gets you t
 
 ## What it costs to buy
 
-Published new-boat prices from tests and reviews, in the currency and year each was quoted, so you can see the bands. We found no published Australian price for the Azimut S7, the Pershing GTX80 or the Sunseeker 76 Yacht; ask the dealer.
+Published prices from tests, reviews and listing sites, in the currency and year each was quoted, so you can see the bands. The Sunseeker Predator 75 and 76 Yacht rows are dealer asking prices, which move, so each carries its date.
 
 | Boat | Length | Published price | When |
 |---|---|---|---|
+| Sunseeker Predator 75 | 75 ft | $7.99 million (2025 boat, NSW dealer) to $8.4 million (2026 boat), new, asking | Australian listing sites, October 2026 |
+| Sunseeker 76 Yacht | 77 ft | used, asking: US$2.4 million to US$4.9 million, average US$3.9 million | YachtBuyer listings, October 2026 |
+| Azimut S7 | 71 ft | from €2.75 million, the price given for the 2023 premiere (not a current offer) | ilodka, 2023 premiere |
 | Sunseeker Predator 50 | 54 ft | from £810,000 including VAT (UK) | review published March 2019 |
 | Princess F55 | 58 ft | $3.49 million base, $3.79 million as tested | May 2023 |
 | Sunseeker Manhattan 60 | 64 ft | about $3 million, depending on options | Trade-A-Boat review, undated |
@@ -154,7 +161,7 @@ Published new-boat prices from tests and reviews, in the currency and year each 
 | Palm Beach 65 | 65 ft | about $4.2 million as tested | 2018 |
 | Princess F65 | 66 ft | £3.3 million as tested including VAT (UK) | review published March 2023 |
 
-The UK prices are in pounds and include VAT, so they are a guide to the band, not an Australian price. The Manhattan 60 review gives no currency or date for its figure.
+The UK prices are in pounds and include VAT, so they are a guide to the band, not an Australian price. The Manhattan 60 review gives no currency or date for its figure, and the 76 Yacht figures are US-dollar asking prices from listings worldwide, mostly boats between six and nine years old.
 
 Depreciation runs roughly 10 to 20% in the first year, 30 to 40% by year three and 40 to 50% by year five, then flattens. That is the case for a three to five year old boat: the big hit is taken, the warranty may still have life, and the survey tells you what you are buying. The Australian luxury segment gained share in late 2025 while trailer boats fell. Brokers put the deepest demand in the 30 to 70 ft power range, so a well-kept boat in this band is also the easiest to sell when you move up.
 
