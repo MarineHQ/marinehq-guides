@@ -22,7 +22,7 @@
     {"q": "What actually walks out the door when a captain leaves?",
      "a": "The service history, the known faults and their workarounds, the contractor contacts, the passwords, the way she likes to be docked, and the outstanding defects list. Industry turnover runs 20 to 40% a year and a 2023 survey found 40% of captains planning to look for a new boat. The fix is a record that lives with the boat, not in the captain's head."}
   ],
-  "related": ["cost-of-owning-a-yacht-gold-coast", "annual-haul-out-checklist", "detailing-and-ceramic-coating-gold-coast"],
+  "related": ["how-to-hire-yacht-crew-gold-coast", "cost-of-owning-a-yacht-gold-coast", "annual-haul-out-checklist"],
   "sources": [
     {"t": "Queensland Government — Recreational marine licences", "u": "https://www.qld.gov.au/transport/boating/licences/recreational"},
     {"t": "Maritime Safety Queensland — Boating safety improvements fact sheet (12 m limit removed 2013, PDF)", "u": "https://www.msq.qld.gov.au/-/media/TMROnline/msqinternet/msqfiles/home/about%20us/msq%20headlines/boating%20safety%20improvements/boating_improvements_factsheet.pdf"},
