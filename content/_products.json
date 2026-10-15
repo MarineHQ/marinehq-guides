@@ -135,6 +135,26 @@
    "cta": "Get the dashboards"
   },
   {
+   "id": "pre-purchase-checklist",
+   "name": "Pre-Purchase Inspection Checklist",
+   "short": "Pre-Purchase Checklist",
+   "price": 12,
+   "status": "soon",
+   "img": "assets/products/launch-sea-trial.jpg",
+   "blurb": "What to look at before you pay for a survey, the red flags that end a deal, and the questions to put to the seller, the surveyor and the engineer.",
+   "includes": [
+    "Paperwork: registration, ownership, finance owing, certificate of currency, survey and service history",
+    "Hull and deck, underwater, engines and generators, electrics and systems, stabilisers",
+    "Red flags that mean walk away",
+    "Sea trial notes: what to watch, listen for and record",
+    "What to ask the surveyor and the engineer, and what a survey does not cover"
+   ],
+   "format": "PDF, A4, print-ready (DRAFT, not yet built)",
+   "buy": "",
+   "cta": "Tell me when it is ready",
+   "draft": true
+  },
+  {
    "id": "kit",
    "name": "The Yacht Owner's Kit",
    "short": "The Yacht Owner's Kit",

@@ -57,6 +57,8 @@ The IMO's guidelines for voyage planning, Resolution A.893(21), break the job in
 
 <ol class="steps"><li><b>Appraisal.</b> Gather everything: charts, pilot books, weather patterns for the season, port and entry information, the boat's limits, the crew's experience.</li><li><b>Planning.</b> Draw the route and the alternatives. Work out distances, speeds, fuel, tides, daylight arrivals and ports of refuge.</li><li><b>Execution.</b> Brief the crew, check the latest weather, confirm the boat is ready, and leave on the plan, not on the day you hoped for.</li><li><b>Monitoring.</b> Check position, fuel and weather against the plan every watch, and change the plan early when they drift apart.</li></ol>
 
+<figure><img src="/assets/figures/passage-plot.svg" alt="An illustrative plotted passage: numbered waypoints, course and distance on each leg, a bar entrance, a no-go area, the current and an escape route to a port of refuge" loading="lazy"><figcaption><b>What a plotted passage looks like</b> — waypoints, course and distance for each leg, the current, the area to avoid and the way out. An illustration, not a real chart.</figcaption></figure>
+
 ## How to make a passage plan, step by step
 
 Twelve things to settle before you leave any port. This is the appraisal and planning stages in the order we work through them.
@@ -93,6 +95,8 @@ Every country has its own rules for arrival: clearance, customs, immigration, bi
 
 Count the people, the qualifications and the rest. A passage plan should say who keeps which watch, who is the second person who can run the boat, and when the skipper actually sleeps. Tired crews make the mistakes that end passages. Cowes Harbour's passage-planning notice lists the condition of the crew alongside weather and tide as something to plan for.
 
+<figure><img src="/assets/photos/shoot-at-helm.jpg" alt="A Marine HQ crew member at the helm of a motor yacht" loading="lazy"><figcaption><b>Crew and watches</b> — who is at the helm, who relieves them and when the skipper sleeps belong in the plan.</figcaption></figure>
+
 ### 9. Safety gear and drills
 
 Lifejackets, liferaft, EPIRB or PLB, flares, fire gear, bilge pumps, medical kit and spares are all checked against the length and remoteness of the trip, not a minimum. Brief the crew on where things are and who does what in a man-overboard, a fire and a flooding. Insurers often care about all of it.
@@ -111,6 +115,8 @@ Write down what you will do if the weather window shuts, if a mechanical fault a
 
 <div class="callout" markdown="1"><span class="eyebrow">Worth knowing</span>
 Planning is not a one-off document. The monitoring stage means comparing position, fuel and weather with the plan every watch and updating it when they diverge. The best plans on paper are the ones that get changed early.</div>
+
+<figure><img src="/assets/photos/shoot-letting-go.jpg" alt="A crew member slipping a dock line as the yacht prepares to leave" loading="lazy"><figcaption><b>Execution</b> — the lines come off on the plan, not on the day you hoped for.</figcaption></figure>
 
 {{cta}}
 
@@ -133,6 +139,8 @@ Copy these headings into a document or a notebook. One row per leg, plus the who
 | If it goes wrong | Decision points, diversion options, who to call |
 
 ## Passage plan example: Gold Coast to Sydney
+
+{{map:gold-coast-to-sydney}}
 
 This is a short worked example in the same headings. The figures come from our [Gold Coast to Sydney guide](/guides/gold-coast-to-sydney-by-motor-yacht/), which has the sources.
 

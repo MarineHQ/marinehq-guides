@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" font-family="Helvetica, Arial, sans-serif">
+<defs>
+<pattern id="sh" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#1a3b70" stroke-width="1" opacity=".35"/></pattern>
+<marker id="ar" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#1a3b70"/></marker>
+</defs>
+<rect width="1000" height="620" fill="#f4f8fc"/>
+<g stroke="#1a3b70" stroke-opacity=".12" stroke-width="1">
+<path d="M0 100H1000M0 200H1000M0 300H1000M0 400H1000M0 500H1000M100 0V620M200 0V620M300 0V620M400 0V620M500 0V620M600 0V620M700 0V620M800 0V620M900 0V620"/></g>
+<path d="M0 0H330C320 70 300 120 270 170C240 230 250 290 215 350C190 400 170 470 140 530C125 565 100 590 70 620H0Z" fill="#e9e3d6" stroke="#1a3b70" stroke-width="1.5"/>
+<path d="M270 170C290 160 310 165 322 178" fill="none" stroke="#1a3b70" stroke-width="1.2"/>
+<path d="M215 350L170 345 175 372 218 372" fill="#f4f8fc" stroke="#1a3b70" stroke-width="1.2"/>
+<path d="M345 40C352 90 345 120 322 178" fill="none" stroke="#1a3b70" stroke-width="1" stroke-dasharray="2 4" opacity=".6"/>
+<path d="M170 372C160 420 150 470 120 520" fill="none" stroke="#1a3b70" stroke-dasharray="2 5" opacity=".6"/>
+<path d="M245 215C285 235 300 270 262 300C232 320 255 340 215 350Z" fill="url(#sh)" stroke="#1a3b70" stroke-width="1" stroke-opacity=".5"/>
+<text x="268" y="268" font-size="13" fill="#1a3b70" opacity=".8" transform="rotate(-62 268 268)">shoal</text>
+<circle cx="640" cy="205" r="62" fill="#fff4ea" stroke="#fb7414" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="640" y="200" font-size="14" text-anchor="middle" fill="#1a3b70" font-weight="700">NO-GO</text>
+<text x="640" y="218" font-size="13" text-anchor="middle" fill="#1a3b70">reef / wreck, keep clear</text>
+<g stroke="#1a3b70" fill="none">
+<path d="M148 485L150 372" stroke-width="0"/>
+</g>
+<polyline points="196,372 330,372 470,300 610,330 720,455 860,540" fill="none" stroke="#1a3b70" stroke-width="2.5" stroke-dasharray="14 8"/>
+<polyline points="470,300 560,150 760,70" fill="none" stroke="#fb7414" stroke-width="2" stroke-dasharray="3 6"/>
+<g fill="#fff" stroke="#1a3b70" stroke-width="2.5">
+<circle cx="196" cy="372" r="11"/><circle cx="330" cy="372" r="11"/><circle cx="470" cy="300" r="11"/><circle cx="610" cy="330" r="11"/><circle cx="720" cy="455" r="11"/><circle cx="860" cy="540" r="11"/></g>
+<g font-size="13" font-weight="700" fill="#1a3b70" text-anchor="middle">
+<text x="196" y="377">1</text><text x="330" y="377">2</text><text x="470" y="305">3</text><text x="610" y="335">4</text><text x="720" y="460">5</text><text x="860" y="545">6</text></g>
+<g font-size="13" fill="#1a3b70">
+<text x="140" y="404" text-anchor="middle" font-weight="700">Start: harbour</text>
+<text x="140" y="420" text-anchor="middle">leave on the flood</text>
+<text x="262" y="394" transform="rotate(0)">bar entrance</text>
+<text x="262" y="362" text-anchor="middle">090° · 6 nm</text><text x="392" y="334" text-anchor="middle" transform="rotate(-27 392 334)">058° · 31 nm</text>
+<text x="545" y="298" text-anchor="middle" transform="rotate(14 545 298)">118° · 22 nm</text>
+<text x="690" y="378" text-anchor="middle" transform="rotate(52 690 378)">145° · 28 nm</text>
+<text x="800" y="480" text-anchor="middle" transform="rotate(32 800 480)">130° · 24 nm</text>
+<text x="860" y="582" text-anchor="middle" font-weight="700">Arrive: daylight</text>
+<text x="860" y="598" text-anchor="middle">with margin</text>
+<text x="640" y="48" text-anchor="middle">Port of refuge, 22 nm from waypoint 3</text>
+</g>
+<g transform="translate(760 70)"><circle r="9" fill="#fff" stroke="#fb7414" stroke-width="2"/><text y="4" font-size="11" text-anchor="middle" font-weight="700" fill="#1a3b70">R</text></g>
+<g stroke="#1a3b70" stroke-width="1.5" fill="none" marker-end="url(#ar)">
+<path d="M420 470L520 510"/><path d="M450 440L550 480"/></g>
+<text x="420" y="500" font-size="13" fill="#1a3b70" transform="rotate(22 420 500)">current 2 kn (set 120°)</text>
+<g transform="translate(900 90)" stroke="#1a3b70" fill="none"><circle r="44" stroke-opacity=".5"/><path d="M0 -40L7 0 0 40 -7 0Z" fill="#1a3b70"/><path d="M-40 0L0 -7 40 0 0 7Z" stroke-opacity=".5"/><text y="-50" font-size="13" text-anchor="middle" fill="#1a3b70" stroke="none" font-weight="700">N</text></g>
+<g transform="translate(40 40)"><rect width="270" height="108" fill="#fff" stroke="#1a3b70" stroke-opacity=".5"/>
+<text x="14" y="24" font-size="12" font-weight="700" fill="#1a3b70" letter-spacing="1.5">PASSAGE PLOT, ILLUSTRATION</text>
+<line x1="14" y1="42" x2="54" y2="42" stroke="#1a3b70" stroke-width="2.5" stroke-dasharray="14 8"/><text x="64" y="46" font-size="12" fill="#1a3b70">planned track, numbered waypoints</text>
+<line x1="14" y1="62" x2="54" y2="62" stroke="#fb7414" stroke-width="2" stroke-dasharray="3 6"/><text x="64" y="66" font-size="12" fill="#1a3b70">escape route to refuge</text>
+<circle cx="34" cy="82" r="9" fill="#fff4ea" stroke="#fb7414" stroke-dasharray="3 3"/><text x="64" y="86" font-size="12" fill="#1a3b70">area to avoid</text>
+<text x="14" y="102" font-size="10" fill="#1a3b70" opacity=".75">Not a real chart. Not for navigation.</text></g>
+</svg>
