@@ -156,6 +156,46 @@
    "buy_planned": "https://yachtsupport.systeme.io/owners-kit",
    "cta": "Bundle and save now",
    "was": 77
+  },
+  {
+   "id": "crew-hiring-pack",
+   "name": "Crew Hiring Pack",
+   "short": "Crew Hiring Pack",
+   "price": 39,
+   "status": "ready",
+   "line": "crew",
+   "img": "assets/products/crew-hiring-pack.jpg",
+   "blurb": "Everything an owner or captain needs to hire yacht crew in Australia: the brief, screening, interview questions by role, reference and certificate checks, the paperwork and the first-month handover.",
+   "includes": [
+    "The brief: write the job before you speak to anyone",
+    "Interview questions for captains, engineers, deckhands and stewards/chefs",
+    "Reference-call script and a certificate check by role",
+    "Offer paperwork checklist and a year-one cost sheet",
+    "First-week handover list and 30, 60 and 90-day reviews"
+   ],
+   "format": "PDF, 6 pages, A4, print-ready",
+   "buy": "",
+   "cta": "Get the pack"
+  },
+  {
+   "id": "crew-starter-kit",
+   "name": "Yacht Crew Starter Kit",
+   "short": "Yacht Crew Starter Kit",
+   "price": 19,
+   "status": "ready",
+   "line": "crew",
+   "img": "assets/products/crew-starter-kit.jpg",
+   "blurb": "For anyone starting out on yachts in Australia: what to do before you spend a dollar, a one-page yacht CV guide, messages that get a reply, interview questions and a job-hunt tracker.",
+   "includes": [
+    "A start-up checklist and cost sheet: medical, STCW, courses",
+    "What goes on a yacht CV, and how to make it work",
+    "Four ready-to-send messages: captain, daywork, follow-up, reference",
+    "Interview questions to expect and to ask",
+    "A job-hunt tracker and a certificate expiry tracker"
+   ],
+   "format": "PDF, 5 pages, A4, print-ready",
+   "buy": "",
+   "cta": "Get the kit"
   }
  ],
  "launch_until": "31 December 2026"

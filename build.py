@@ -257,6 +257,10 @@ def shell(title, desc, canon, ogtype, jsonld, inner):
 PRODUCTS = json.load(open(os.path.join(CONTENT, "_products.json"), encoding="utf-8"))
 PROD = {p["id"]: p for p in PRODUCTS["products"]}
 
+def plabel(p):
+    """Eyebrow label: the Owner's Kit, or 'Marine HQ crew documents' for the crew line."""
+    return "Marine HQ crew documents" if p.get("line") == "crew" else PRODUCTS["kit_name"]
+
 def order_link(p):
     if p.get("buy"): return p["buy"]
     ready = p["status"] == "ready"
@@ -298,14 +302,14 @@ def render_product(pid):
     return ('<aside class="prod"><a class="prod-img" href="/owners-kit/#%s">%s</a><div class="prod-txt"><span class="eyebrow">From %s %s</span>'
             '<strong>%s</strong><p>%s</p>%s<div class="prod-act">%s<a class="btn" href="%s">%s</a>'
             '<a class="prod-more" href="/owners-kit/#%s">What is inside</a></div></div></aside>'
-            % (p["id"], img, esc(PRODUCTS["kit_name"]), soon, esc(p["name"]), esc(p["blurb"]), works_html(p), price_html(p), order_link(p), order_label(p), p["id"]))
+            % (p["id"], img, esc(plabel(p)), soon, esc(p["name"]), esc(p["blurb"]), works_html(p), price_html(p), order_link(p), order_label(p), p["id"]))
 
 def product_strip(pid):
     """One slim line early in a guide, so the product is seen before the reader is most of the way down."""
     p = PROD[pid]
     img = ('<img src="/%s" alt="" loading="lazy">' % p["img"]) if p.get("img") else ""
     return ('<a class="pstrip" href="/owners-kit/#%s">%s<span class="t"><span class="eyebrow">From %s</span><strong>%s</strong></span>'
-            '%s<span class="go">See it &rarr;</span></a>' % (p["id"], img, esc(PRODUCTS["kit_name"]), esc(p["name"]), price_html(p)))
+            '%s<span class="go">See it &rarr;</span></a>' % (p["id"], img, esc(plabel(p)), esc(p["name"]), price_html(p)))
 
 def product_side(pid):
     """The same product as a card in the side column (desktop), which stays in view while the guide scrolls."""
@@ -313,13 +317,13 @@ def product_side(pid):
     img = ('<img src="/%s" alt="%s, first page" loading="lazy">' % (p["img"], esc(p["name"]))) if p.get("img") else ""
     return ('<a class="side-prod" href="/owners-kit/#%s"><span class="eyebrow">From %s</span>%s<strong>%s</strong>'
             '<span class="sp-row">%s<span class="go">See what is inside &rarr;</span></span></a>'
-            % (p["id"], esc(PRODUCTS["kit_name"]), img, esc(p["short"]), price_html(p)))
+            % (p["id"], esc(plabel(p)), img, esc(p["short"]), price_html(p)))
 
 def kit_row():
     """Home page: the five products in one row, above the guides."""
     cards = "".join('<a class="kitcard" href="/owners-kit/#%s"><span class="ph"><img src="/%s" alt="%s" loading="lazy"></span>'
                     '<strong>%s</strong>%s</a>' % (p["id"], p["img"], esc(p["name"]), esc(p["short"]), price_html(p))
-                    for p in PRODUCTS["products"] if p.get("img") and p["status"] == "ready")
+                    for p in PRODUCTS["products"] if p.get("img") and p["status"] == "ready" and p.get("line") != "crew")
     return ('<section class="cat kitrow"><div class="cat-head"><h2><a href="/owners-kit/">%s</a></h2>'
             '<p>The checklists, schedule and cost calculator our crews work to, written for owners who run their own yacht. From $7.</p></div>'
             '<div class="kitgrid">%s</div><a class="kit-all" href="/owners-kit/">See everything in the kit &rarr;</a></section>'
@@ -327,7 +331,11 @@ def kit_row():
 
 def build_shop():
     cards = []
+    crew_head = False
     for p in PRODUCTS["products"]:
+        if p.get("line") == "crew" and not crew_head:
+            crew_head = True
+            cards.append('<div class="shop-sub"><span class="eyebrow">Crew documents</span><h2>Hiring crew, and starting out in yachting</h2><p>Two documents written from the same crew guides as this site, for owners who hire and for people who want to work on yachts in Australia.</p></div>')
         img = ('<img src="/%s" alt="%s, first page" loading="lazy">' % (p["img"], esc(p["name"]))) if p.get("img") else '<div class="prod-ph">%s</div>' % esc(p["short"])
         soon = "" if p["status"] == "ready" else '<span class="soon">Coming soon</span>'
         inc = "".join("<li>%s</li>" % esc(i) for i in p["includes"])

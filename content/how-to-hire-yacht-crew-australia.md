@@ -115,6 +115,8 @@ The fee models published by one industry guide are worth knowing. Permanent plac
 <div class="callout" markdown="1"><span class="eyebrow">Before you sign</span>
 Ask for the fee schedule, the guarantee period and what happens if the candidate leaves in week ten, in writing. "We will look after you" is not a guarantee.</div>
 
+{{product:crew-hiring-pack}}
+
 ## Doing it yourself
 
 You can hire without an agency. Then the work is yours: screen CVs, interview, call at least two previous captains or owners, prepare the employment agreement, run payroll and superannuation, arrange leave and insurance, and arrange a trial period. The trap is the first month. A new captain who arrives to find no maintenance schedule, no vendor list and no history will spend three weeks learning the boat from scratch, and an unhappy first month is how a placement fails.

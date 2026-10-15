@@ -82,6 +82,8 @@ Published pay is thin, so here is what there is, with dates.
 
 Yachts commonly pay for food, uniforms and travel to the boat, and health insurance after a 30 to 90-day trial. Four weeks' paid holiday and a five-and-a-half or six-day week are described as normal. Private yachts generally pay a higher base than charter yachts because there are no charter tips.
 
+{{product:crew-starter-kit}}
+
 ## How people actually get their first boat
 
 Daywork is how most people start. A captain or head of department tries you for a few days, and if you are good, somebody remembers. Denison's guide says the same: temporary work can lead to a full-time role. Turn up early, do the unglamorous job properly, and ask what to do next. After that:
