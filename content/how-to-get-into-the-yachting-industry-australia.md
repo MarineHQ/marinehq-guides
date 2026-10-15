@@ -6,7 +6,7 @@
   "category": "ownership",
   "date": "2026-10-15",
   "updated": "2026-10-15",
-  "hero": "assets/photos/shoot-making-ready.jpg", "hero_pos": "center 60%",
+  "hero": "assets/photos/shoot-marina-aerial-2.jpg", "hero_pos": "center 55%",
   "cta": "Starting out, or already qualified and looking for your next yacht? Send us your CV, your certificates and the dates you are free.",
   "faq": [
     {"q": "Do I need any experience to work on a yacht?",

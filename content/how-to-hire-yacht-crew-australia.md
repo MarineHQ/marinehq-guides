@@ -6,7 +6,7 @@
   "category": "ownership",
   "date": "2026-10-15",
   "updated": "2026-10-15",
-  "hero": "assets/photos/shoot-dock-crew.jpg", "hero_pos": "center 40%",
+  "hero": "assets/photos/shoot-engine-room.jpg", "hero_pos": "center 72%",
   "cta": "Need a captain, engineer, deckhand or stewardess, or a few days of relief cover? Marine HQ places crew on yachts across Australia. Tell us the role, the boat and the dates.",
   "faq": [
     {"q": "How much does a crew agency charge to place a captain or deckhand?",
