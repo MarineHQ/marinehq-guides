@@ -24,7 +24,7 @@
     {"q": "Can I hire a foreign crew member?",
      "a": "They need a visa that lets them work in Australia. The Maritime Crew visa (subclass 988) is aimed at crew of commercial ships and the Home Affairs form says crew of yachts do not normally qualify, so a yacht crew member usually needs a different visa. Get a registered migration agent's advice before an offer is made, not after."}
   ],
-  "related": ["do-you-need-full-time-crew", "cost-of-owning-a-yacht-gold-coast", "yacht-sops-standard-operating-procedures"],
+  "related": ["how-to-get-into-the-yachting-industry-australia", "do-you-need-full-time-crew", "cost-of-owning-a-yacht-gold-coast", "yacht-sops-standard-operating-procedures"],
   "sources": [
     {"t": "YachtBuyer — Yacht crew recruitment agencies (fee models, guarantees, process)", "u": "https://yachtbuyer.com/en/advice/yacht-crew-recruitment-agencies"},
     {"t": "Crew Pacific — Crew salary guidelines, AUD (PDF, March 2022)", "u": "https://crewpacific.com.au/wp-content/uploads/2022/03/CREW-SALARY-GUIDELINES-AUD.pdf"},
@@ -154,4 +154,4 @@ For work on the water in between, our team covers relief and delivery skipping, 
 
 ## If you are looking for yacht work
 
-If you are a captain, engineer, deckhand or stewardess looking for work anywhere in Australia, send us your CV, your certificates, your sea time and the dates you are available. We cannot promise a job, but we will talk to you. The best things you can have ready are current certificates and medical, two references from previous yachts, and a clear idea of the kind of boat and programme you want.
+If you are a captain, engineer, deckhand or stewardess looking for work anywhere in Australia, see [how to get into the yachting industry](/guides/how-to-get-into-the-yachting-industry-australia/) and send us your CV, your certificates, your sea time and the dates you are available. We cannot promise a job, but we will talk to you. The best things you can have ready are current certificates and medical, two references from previous yachts, and a clear idea of the kind of boat and programme you want.
