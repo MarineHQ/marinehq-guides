@@ -1,13 +1,13 @@
 ---json
 {
-  "title": "How to hire yacht crew on the Gold Coast: roles, pay, agency fees and the paperwork",
-  "slug": "how-to-hire-yacht-crew-gold-coast",
-  "description": "Who to hire for a 40–120 ft motor yacht, what captains, engineers, deckhands and stewardesses are paid, what crew agencies charge, and the checks to make before anyone steps aboard.",
+  "title": "How to hire yacht crew in Australia: roles, pay, agency fees and the paperwork",
+  "slug": "how-to-hire-yacht-crew-australia",
+  "description": "Who to hire for a 40–120 ft motor yacht in Australia, what captains, engineers, deckhands and stewardesses are paid, what crew agencies charge, and the checks to make before anyone steps aboard.",
   "category": "ownership",
   "date": "2026-10-15",
   "updated": "2026-10-15",
   "hero": "assets/photos/shoot-dock-crew.jpg", "hero_pos": "center 40%",
-  "cta": "Looking for a captain, engineer, deckhand or stewardess, or for a few days of relief cover? Tell us the role, the boat and the dates and we will tell you how we can help.",
+  "cta": "Need a captain, engineer, deckhand or stewardess, or a few days of relief cover? Marine HQ places crew on yachts across Australia. Tell us the role, the boat and the dates.",
   "faq": [
     {"q": "How much does a crew agency charge to place a captain or deckhand?",
      "a": "There is no standard rate. Published examples run from 8% to 10% of annual salary for a permanent placement, or 75% to 100% of one month's salary. Seasonal placements are quoted at 70% to 80% of a gross month, and temporary work at 25% to 30% of the crew member's daily pay. The fee is normally paid by the yacht, not the crew member. Ask for the fee schedule and the replacement guarantee in writing before you sign a letter of engagement."},
@@ -18,7 +18,7 @@
     {"q": "What qualifications does a captain need?",
      "a": "It depends on how the yacht is used. A private yacht used only for recreation has no certificate requirement for paid crew, though your insurer will ask about experience. If she is chartered or hired out she is a domestic commercial vessel, and the master of a yacht under 24 m needs an AMSA Master less than 24 metres certificate or similar. Look for a captain with the certificate anyway; it is the best evidence of tested sea time."},
     {"q": "What does day crew cost?",
-     "a": "A Gold Coast listing for a temporary deckhand on a 30 m-plus private motor yacht was $400 a day. Crew Pacific's guide puts freelance deckhands and mates at $150 to $500 a day, freelance captains at $350 to $500 and freelance engineers at $300 to $500, depending on experience."},
+     "a": "A Gold Coast listing (Queensland) for a temporary deckhand on a 30 m-plus private motor yacht was $400 a day. Crew Pacific's guide puts freelance deckhands and mates at $150 to $500 a day, freelance captains at $350 to $500 and freelance engineers at $300 to $500, depending on experience."},
     {"q": "Do I need a Queensland labour hire licence to supply crew, or to use a crew supplier?",
      "a": "A business that supplies workers to do work for another business, under that business's direction, is a labour hire provider and must be licensed in Queensland. Anyone who uses a labour hire provider must use a licensed one. A recruiter who only introduces you to a person you then employ yourself is doing something different. If a firm is sending you its own staff by the day, ask whether it is licensed; the public register takes a minute to search."},
     {"q": "Can I hire a foreign crew member?",
@@ -41,7 +41,7 @@
   ]
 }
 ---
-Hiring yacht crew is a people decision with a paperwork tail. The usual routes are an agency, which typically charges roughly 8% to 10% of a year's salary for a permanent placement; a job board and your own screening; or a management company that does it for you. Pay runs from about $150 to $500 a day for freelance crew, to $10,000 to $14,000 a month for a captain on a 100 to 120 ft yacht, including super. This guide sets out who you actually need, what they cost, what an agency does for its fee, and the checks to make before anyone steps aboard.
+Hiring yacht crew in Australia is a people decision with a paperwork tail. The usual routes are an agency, which typically charges roughly 8% to 10% of a year's salary for a permanent placement; a job board and your own screening; or a management company that does it for you. Pay runs from about $150 to $500 a day for freelance crew, to $10,000 to $14,000 a month for a captain on a 100 to 120 ft yacht, including super. This guide sets out who you actually need, what they cost, what an agency does for its fee, and the checks to make before anyone steps aboard.
 
 <div class="keyfacts" markdown="1"><span class="eyebrow">Key facts</span>
 - **Agency fee, permanent** — 8% to 10% of annual salary, or 75% to 100% of a month's pay, depending on the agency
@@ -87,9 +87,9 @@ There is no single Australian pay survey for yacht crew, so any number needs a d
 
 **Freelance and delivery work (per day, Crew Pacific).** Captain $350–$500; engineer $300–$500; deckhand or mate $150–$500; chef $200–$500; steward/ess $150–$500, "pending experience". The guide also says it is standard for the yacht to provide return fares to the vessel, food, uniforms and transport, that health insurance is usually provided after a 30 to 90-day evaluation period, that four weeks' paid holiday is normal, and that private yachts generally pay a higher base because there are no charter tips.
 
-**Smaller boats, live examples.** Published pay for a 40 to 80 ft private yacht is scarce. A Gold Coast listing for a temporary deckhand on a 30 m-plus private motor yacht was $400 a day. A year-round Gold Coast interior manager role for a yacht-share company, advertised on 12 May 2023, was $68,000 plus super, about 40 hours a week and four weeks' paid leave. The listing has expired; treat it as a dated example, not a current rate.
+**Smaller boats, live examples.** Published pay for a 40 to 80 ft private yacht is scarce. A Gold Coast listing (Queensland) for a temporary deckhand on a 30 m-plus private motor yacht was $400 a day. A year-round Gold Coast (Queensland) interior manager role for a yacht-share company, advertised on 12 May 2023, was $68,000 plus super, about 40 hours a week and four weeks' paid leave. The listing has expired; treat it as a dated example, not a current rate.
 
-The 2022 table is four years old. Check it against what your own market is telling you.
+The 2022 table is four years old. Check it against what your own market is telling you; pay varies by port and by season.
 
 ## The real cost of a full-time hire
 
@@ -133,7 +133,7 @@ If you manage the boat through a management company, the manager usually handles
 
 **Visas.** Foreign crew need permission to work in Australia. The Maritime Crew visa is aimed at commercial ships and the Home Affairs form says crew of yachts do not normally qualify, so ask a registered migration agent before you make an offer.
 
-**Labour hire.** Queensland requires a labour hire licence for anyone who supplies workers to work for another business, and it is an offence to use a provider that does not hold one. A recruiter introducing someone you employ is a different thing; a firm sending you its own staff by the day is labour hire. Ask for the licence number and check the register.
+**Labour hire.** Queensland requires a labour hire licence (other states have their own rules, so check where the yacht is based) for anyone who supplies workers to work for another business, and it is an offence to use a provider that does not hold one. A recruiter introducing someone you employ is a different thing; a firm sending you its own staff by the day is labour hire. Ask for the licence number and check the register.
 
 ## References and the first month
 
@@ -141,10 +141,17 @@ References first, on the phone. Call the last two captains or owners, and ask th
 
 The first month is the probation. Agree it in writing, set a handover list (open defects, logs, contacts, safety gear, passwords) and walk the boat together. A good handover is a week of overlap with the last captain; if that is not possible, have a handover record that stays with the boat. See [full-time crew](/guides/do-you-need-full-time-crew/) for what leaves when a captain does.
 
-## What we do
+## Marine HQ crew placement
 
-Marine HQ looks after motor yachts of 40 to 120 ft from The Boat Works and Gold Coast City Marina & Shipyard in Coomera. We provide relief and delivery skippers, crew for wash-downs and day work, and a maintenance team behind whoever is at the helm. If you need crew, whether it is a captain, an engineer, a deckhand or a stewardess, or cover for a few days, call 0439 748 387 or email yachtsupport@marinehq.com.au with the role, the boat and the dates, and we will tell you plainly how we can help and what it will cost.
+Marine HQ places crew on motor yachts across Australia: captains, engineers, mates, deckhands, stewards and stewardesses, for permanent roles, seasons, deliveries and short relief cover. We are a yacht management company first, so we place people who will be working on boats like yours, and we know what a good handover looks like.
+
+- **You tell us the boat and the job.** Size, programme, home port, how often she is used, whether she charters and who is already aboard.
+- **We find and check the people.** Certificates, medical, sea time and references, before a CV reaches you.
+- **We shortlist and introduce.** You meet the people we would put on the boat ourselves.
+- **We help with the start.** A written agreement, a handover list and a check-in once they are aboard.
+
+For work on the water in between, our team covers relief and delivery skipping, wash-downs, day work and maintenance, from our bases at The Boat Works and Gold Coast City Marina & Shipyard in Coomera, Queensland. Call 0439 748 387 or email yachtsupport@marinehq.com.au with the role, the boat and the dates and we will tell you how we can help and what it will cost.
 
 ## If you are looking for yacht work
 
-We get a steady stream of enquiries about yacht crew, so if you are a captain, engineer, deckhand or stewardess looking for work, send us your CV, your certificates, your sea time and the dates you are available. We cannot promise a job, but we will talk to you. The best things you can have ready are current certificates and medical, two references from previous yachts, and a clear idea of the kind of boat and programme you want.
+If you are a captain, engineer, deckhand or stewardess looking for work anywhere in Australia, send us your CV, your certificates, your sea time and the dates you are available. We cannot promise a job, but we will talk to you. The best things you can have ready are current certificates and medical, two references from previous yachts, and a clear idea of the kind of boat and programme you want.
