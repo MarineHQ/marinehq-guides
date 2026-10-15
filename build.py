@@ -359,6 +359,21 @@ def build_shop():
     os.makedirs(os.path.join(SITE, "owners-kit"), exist_ok=True)
     write_page(os.path.join(SITE, "owners-kit", "index.html"), page)
 
+def build_thanks():
+    """After-payment pages for the Stripe Payment Links (crew products): /thanks/<id>/ with the download. noindex, not in the sitemap."""
+    for pid, fname in (("crew-hiring-pack", "MHQ-Crew-Hiring-Pack.pdf"), ("crew-starter-kit", "MHQ-Yacht-Crew-Starter-Kit.pdf")):
+        p = PROD[pid]
+        inner = ('<section class="hero small"><div class="wrap"><h1>Thank you. Your %s is ready.</h1>'
+                 '<p class="stand">Download it below, print it and keep it. A receipt is on its way to your email.</p></div></section>'
+                 '<main class="wrap shop"><div class="foot-actions"><a class="btn" href="/dl/472187/%s" download>Download the PDF</a></div>'
+                 '<p class="shop-note">Save the file somewhere you can find it again. If anything does not open, email <a href="mailto:%s">%s</a> or call <a href="tel:%s">%s</a> and we will sort it the same day.</p>'
+                 '<p class="shop-note">Looking for crew, or for your next yacht? <a href="mailto:%s?subject=Crew%%20enquiry">Tell us the role, the boat and the dates.</a></p></main>'
+                 % (esc(p["name"]), fname, EMAIL, EMAIL, PHONE_H, PHONE, EMAIL))
+        page = shell("Thank you | Marine HQ", "Your download.", BASE + "/thanks/%s/" % pid, "website", "", inner)
+        page = page.replace("<head>", '<head>\n<meta name="robots" content="noindex,nofollow">', 1)
+        os.makedirs(os.path.join(SITE, "thanks", pid), exist_ok=True)
+        write_page(os.path.join(SITE, "thanks", pid, "index.html"), page)
+
 FREE_PDF = "/dl/MHQ-10-Haul-Out-Checks-FREE.pdf"
 FREE_FORM = '<script id="form-script-tag-25708478" src="https://yachtsupport.systeme.io/public/remote/page/45334936e30b683521b509541ddb327b3ab87629.js"></script>'
 WA_BIO = "https://wa.me/61439748387?text=Hi%20Marine%20HQ%2C%20I%20found%20you%20on%20Instagram"
@@ -543,7 +558,7 @@ def build_meta(guides):
     sm += ["<url><loc>%s</loc><lastmod>%s</lastmod></url>" % (u, lm.get(u, today)) for u in urls]
     sm.append("</urlset>")
     open(os.path.join(SITE, "sitemap.xml"), "w").write("\n".join(sm))
-    open(os.path.join(SITE, "robots.txt"), "w").write("User-agent: *\nAllow: /\nDisallow: /dl/\nDisallow: /go/\nSitemap: %s/sitemap.xml\n" % BASE)
+    open(os.path.join(SITE, "robots.txt"), "w").write("User-agent: *\nAllow: /\nDisallow: /dl/\nDisallow: /thanks/\nDisallow: /go/\nSitemap: %s/sitemap.xml\n" % BASE)
     open(os.path.join(SITE, "_redirects"), "w").write("/guides/:slug /guides/:slug/ 301\n")
 
 def check(guides):
@@ -586,7 +601,7 @@ def main():
     guides.sort(key=lambda g: g["updated"], reverse=True)
     os.makedirs(os.path.join(SITE, "guides"), exist_ok=True)
     for g in guides: build_guide(g, guides)
-    build_index(guides); build_hubs(guides); build_shop(); build_free(); build_go(); build_links(); build_meta(guides)
+    build_index(guides); build_hubs(guides); build_shop(); build_thanks(); build_free(); build_go(); build_links(); build_meta(guides)
     print("built %d guide(s) → %s" % (len(guides), SITE))
     for g in guides: print("  /guides/%s/  (%d words, %s)" % (g["slug"], g["words"], CAT_LABEL.get(g["category"], g["category"])))
     if "--check" in sys.argv: check(guides)
