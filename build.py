@@ -97,11 +97,11 @@ __JSONLD__
     <nav class="mh-nav" aria-label="Marine HQ">__MAINNAV__</nav>
     <div class="mh-cta"><a class="mh-phone" href="tel:__PHONE_H__">0439 748 387</a><a class="mh-contact" href="__MAIN__/contact">Contact us</a></div>
     <details class="mh-menu"><summary aria-label="Menu"><i></i><i></i><i></i></summary>
-      <div class="mh-drawer">__MAINNAV__<div class="mh-drawer-sub"><span>Guides by topic</span>__NAV__<a href="/owners-kit/">Owner&rsquo;s Kit</a></div><a class="mh-phone" href="tel:__PHONE_H__">Call 0439 748 387</a></div>
+      <div class="mh-drawer">__MAINNAV__<div class="mh-drawer-sub"><span>Guides by topic</span>__NAV__<a href="/crew/">Crew placement</a><a href="/owners-kit/">Owner&rsquo;s Kit</a></div><a class="mh-phone" href="tel:__PHONE_H__">Call 0439 748 387</a></div>
     </details>
   </div>
 </header>
-<nav class="sub" aria-label="Guide sections"><div class="wrap sub-bar"><a class="sub-home" href="/">All guides</a>__NAV__<a class="sub-kit" href="/owners-kit/">Owner&rsquo;s Kit</a></div></nav>
+<nav class="sub" aria-label="Guide sections"><div class="wrap sub-bar"><a class="sub-home" href="/">All guides</a>__NAV__<a class="sub-kit" href="/crew/">Crew placement</a><a class="sub-kit" href="/owners-kit/">Owner&rsquo;s Kit</a></div></nav>
 '''
 
 FOOT = '''
@@ -249,7 +249,7 @@ def shell(title, desc, canon, ogtype, jsonld, inner):
                 .replace("__OGTYPE__", ogtype).replace("__BASE__", BASE).replace("__V__", v)
                 .replace("__JSONLD__", jsonld).replace("__MAINNAV__", main_nav_html()).replace("__NAV__", nav_html()).replace("__MAIN__", MAIN)
                 .replace("__PHONE_H__", PHONE_H))
-    foot = (FOOT.replace("__FOOTNAV__", nav_html() + '<a href="/owners-kit/">Owner&rsquo;s Kit</a><a href="%s">Marine HQ home</a><a href="%s/contact">Contact</a>' % (MAIN, MAIN))
+    foot = (FOOT.replace("__FOOTNAV__", nav_html() + '<a href="/crew/">Crew placement</a><a href="/owners-kit/">Owner&rsquo;s Kit</a><a href="%s">Marine HQ home</a><a href="%s/contact">Contact</a>' % (MAIN, MAIN))
                 .replace("__YEAR__", str(datetime.date.today().year)).replace("__ABN__", ABN)
                 .replace("__PHONE_H__", PHONE_H).replace("__PHONE__", PHONE).replace("__EMAIL__", EMAIL).replace("__MAIN__", MAIN))
     return page + inner + foot
@@ -359,6 +359,33 @@ def build_shop():
     os.makedirs(os.path.join(SITE, "owners-kit"), exist_ok=True)
     write_page(os.path.join(SITE, "owners-kit", "index.html"), page)
 
+CREW_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSe_rfRTPSsm-Xd5MFaZYx9pCNVsvkIeXZveDmQXO5ZgIG_pRw/viewform"
+
+def build_crew():
+    """/crew/ : Marine HQ crew placement. Owners who need crew, and crew who want work (the register form)."""
+    from urllib.parse import quote
+    need_mail = "mailto:%s?subject=%s&amp;body=%s" % (EMAIL, quote("Crew enquiry"), quote("Hi Marine HQ, I am looking for crew.\n\nRole:\nBoat (make, length, home port):\nPermanent, seasonal, relief or delivery:\nStart date:\n\nMy name and number:\n"))
+    inner = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> Crew placement</div>'
+             '<h1>Yacht crew placement across Australia</h1>'
+             '<p class="stand">Captains, engineers, mates, deckhands, stewards and chefs for motor yachts, for permanent roles, seasons, deliveries and day work. For owners who need crew, and for crew who want a boat.</p></div></section>'
+             '<main class="wrap shop"><div class="crew-two">'
+             '<section class="crew-card"><span class="eyebrow">Owners, captains and managers</span><h2>I need crew</h2>'
+             '<p>Tell us the boat, the role and the dates. We find and check the people, introduce you to a shortlist and help with the start. We are a yacht management company first, so we place people who will work on boats like yours.</p>'
+             '<ul><li>Permanent roles, seasons, relief cover and deliveries</li><li>Certificates, medical, sea time and references checked before a CV reaches you</li><li>A written agreement, a handover list and a check-in once they are aboard</li></ul>'
+             '<div class="foot-actions"><a class="btn" href="%s">Tell us what you need</a><a class="btn ghost" href="/guides/how-to-hire-yacht-crew-australia/">Read the hiring guide</a></div>'
+             '<p class="crew-note">Or call <a href="tel:%s">%s</a>. Hiring yourself? The <a href="/owners-kit/#crew-hiring-pack">Crew Hiring Pack</a> has the interview questions, reference checks and paperwork.</p></section>'
+             '<section class="crew-card"><span class="eyebrow">Captains, engineers, deck and interior crew</span><h2>I am looking for yacht work</h2>'
+             '<p>Join the Marine HQ crew register. Tell us your certificates, your experience and when you are free, and we will call when a role or a few days of work comes up that fits.</p>'
+             '<ul><li>Takes about five minutes</li><li>Your details stay with us and are only passed on when we are considering you for a role</li><li>Starting out? Read how to get your first yacht job</li></ul>'
+             '<div class="foot-actions"><a class="btn" href="%s">Join the crew register</a><a class="btn ghost" href="/guides/how-to-get-into-the-yachting-industry-australia/">How to get into yachting</a></div>'
+             '<p class="crew-note">Not ready? The <a href="/owners-kit/#crew-starter-kit">Yacht Crew Starter Kit</a> has the CV guide, messages and a job tracker.</p></section>'
+             '</div></main>' % (need_mail, PHONE_H, PHONE, CREW_FORM))
+    page = shell("Yacht crew placement in Australia | Marine HQ",
+                 "Marine HQ places captains, engineers, mates, deckhands, stewards and chefs on motor yachts across Australia. Owners: tell us what you need. Crew: join the register.",
+                 BASE + "/crew/", "website", "", inner)
+    os.makedirs(os.path.join(SITE, "crew"), exist_ok=True)
+    write_page(os.path.join(SITE, "crew", "index.html"), page)
+
 def build_thanks():
     """After-payment pages for the Stripe Payment Links (crew products): /thanks/<id>/ with the download. noindex, not in the sitemap."""
     for pid, fname in (("crew-hiring-pack", "MHQ-Crew-Hiring-Pack.pdf"), ("crew-starter-kit", "MHQ-Yacht-Crew-Starter-Kit.pdf")):
@@ -415,6 +442,7 @@ def build_free():
 LINKS = [("FREE Annual Haul-Out Checklist", "/free-haul-out-checklist/", "Free two-page PDF"),
          ("Read the free yacht owner guides", "/", "Costs, marinas, maintenance, passages"),
          ("Let&rsquo;s chat on WhatsApp", WA_BIO, "Usually within the hour"),
+         ("Yacht crew: hire or get hired", "/crew/", "Crew placement across Australia"),
          ("The Yacht Owner&rsquo;s Kit", "/owners-kit/", "Checklists and schedules from $7"),
          ("Marine HQ website", MAIN + "/", "Yacht management and maintenance"),
          ("Call %s" % PHONE, "tel:" + PHONE_H, "")]
@@ -551,7 +579,7 @@ def build_hubs(guides):
         write_page(os.path.join(SITE, s, "index.html"), page)
 
 def build_meta(guides):
-    urls = ["%s/" % BASE] + ["%s/%s/" % (BASE, s) for s, _, _ in CATEGORIES] + [BASE + "/owners-kit/", BASE + "/free-haul-out-checklist/"] + ["%s/guides/%s/" % (BASE, g["slug"]) for g in guides]
+    urls = ["%s/" % BASE] + ["%s/%s/" % (BASE, s) for s, _, _ in CATEGORIES] + [BASE + "/owners-kit/", BASE + "/crew/", BASE + "/free-haul-out-checklist/"] + ["%s/guides/%s/" % (BASE, g["slug"]) for g in guides]
     lm = {("%s/guides/%s/" % (BASE, g["slug"])): g["updated"] for g in guides}
     today = datetime.date.today().isoformat()
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -601,7 +629,7 @@ def main():
     guides.sort(key=lambda g: g["updated"], reverse=True)
     os.makedirs(os.path.join(SITE, "guides"), exist_ok=True)
     for g in guides: build_guide(g, guides)
-    build_index(guides); build_hubs(guides); build_shop(); build_thanks(); build_free(); build_go(); build_links(); build_meta(guides)
+    build_index(guides); build_hubs(guides); build_shop(); build_crew(); build_thanks(); build_free(); build_go(); build_links(); build_meta(guides)
     print("built %d guide(s) → %s" % (len(guides), SITE))
     for g in guides: print("  /guides/%s/  (%d words, %s)" % (g["slug"], g["words"], CAT_LABEL.get(g["category"], g["category"])))
     if "--check" in sys.argv: check(guides)

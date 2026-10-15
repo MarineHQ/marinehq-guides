@@ -484,3 +484,14 @@ html,body{max-width:100%;overflow-x:clip}
 .shop-sub{margin:48px 0 8px;padding-top:26px;border-top:1px solid #dfe5ee}
 .shop-sub h2{font-family:var(--serif);font-weight:500;font-size:1.8rem;margin:6px 0 8px;color:var(--navy)}
 .shop-sub p{color:#4a5670;max-width:720px;margin:0}
+
+/* crew placement page */
+.sub-bar a.sub-kit + a.sub-kit{margin-left:0;border-left:0}
+.crew-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin:8px 0 36px}
+.crew-card{background:#fff;border:1px solid #dfe5ee;border-top:2px solid var(--orange);border-radius:var(--r);padding:30px 28px 26px;min-width:0}
+.crew-card h2{font-family:var(--serif);font-weight:500;font-size:1.9rem;margin:8px 0 12px;color:var(--navy)}
+.crew-card p{color:#33415a;margin:0 0 14px}
+.crew-card ul{margin:0 0 18px;padding-left:1.1em;color:#33415a}
+.crew-card li{margin:6px 0}
+.crew-card .crew-note{font-size:.95rem;color:#4a5670;margin:16px 0 0}
+@media (max-width:820px){.crew-two{grid-template-columns:minmax(0,1fr)}}

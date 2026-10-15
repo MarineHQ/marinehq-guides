@@ -107,4 +107,4 @@ Marine HQ places crew on motor yachts across Australia and looks after yachts da
 - where you are based and the dates you are free
 - two references, if you have them
 
-Email yachtsupport@marinehq.com.au or call 0439 748 387. We cannot promise a job, but we will read what you send and tell you plainly where you stand. If you are an owner looking for crew instead, see [how to hire yacht crew in Australia](/guides/how-to-hire-yacht-crew-australia/).
+The quickest way is to join our crew register on the [crew placement page](/crew/), which takes about five minutes. You can also email yachtsupport@marinehq.com.au or call 0439 748 387. We cannot promise a job, but we will read what you send and tell you plainly where you stand. If you are an owner looking for crew instead, see [how to hire yacht crew in Australia](/guides/how-to-hire-yacht-crew-australia/).

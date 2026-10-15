@@ -152,7 +152,7 @@ Marine HQ places crew on motor yachts across Australia: captains, engineers, mat
 - **We shortlist and introduce.** You meet the people we would put on the boat ourselves.
 - **We help with the start.** A written agreement, a handover list and a check-in once they are aboard.
 
-For work on the water in between, our team covers relief and delivery skipping, wash-downs, day work and maintenance, from our bases at The Boat Works and Gold Coast City Marina & Shipyard in Coomera, Queensland. Call 0439 748 387 or email yachtsupport@marinehq.com.au with the role, the boat and the dates and we will tell you how we can help and what it will cost.
+For work on the water in between, our team covers relief and delivery skipping, wash-downs, day work and maintenance, from our bases at The Boat Works and Gold Coast City Marina & Shipyard in Coomera, Queensland. Tell us the role, the boat and the dates on our [crew placement page](/crew/), or call 0439 748 387 or email yachtsupport@marinehq.com.au, and we will tell you how we can help and what it will cost.
 
 ## If you are looking for yacht work
 
