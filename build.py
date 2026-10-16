@@ -543,6 +543,15 @@ INDEX = '''
     <div class="eyebrow">Marine HQ Guides &middot; Gold Coast</div>
     <h1>Straight answers on owning a yacht on the Gold Coast.</h1>
     <p class="stand">Costs, marinas, maintenance and the paperwork &mdash; written by the team that runs motor yachts here every day, with the numbers shown and the sources named.</p>
+    <div class="sp" id="sp" role="search">
+      <div class="sp-tabs" id="sp-tabs" role="tablist" aria-label="Narrow the search">__SPTABS__</div>
+      <form class="sp-form" id="sp-form" action="#" autocomplete="off">
+        <label class="sp-lab" for="sp-q">What do you want to know?</label>
+        <div class="sp-row"><input id="sp-q" type="search" placeholder="e.g. antifoul cost, sea trial, crew, marina fees" aria-controls="sp-out"><button type="submit">Search</button></div>
+      </form>
+      <div class="sp-out" id="sp-out" aria-live="polite"></div>
+      <noscript><p class="sp-ns">Search needs JavaScript. Browse the sections below instead.</p></noscript>
+    </div>
   </div>
   <video class="hero-vid" data-auto autoplay muted loop playsinline preload="metadata" poster="/assets/photos/shoot-marina-aerial-2.jpg"><source src="/assets/video/marina-aerial.mp4" type="video/mp4"></video>
 </section>
@@ -550,7 +559,39 @@ INDEX = '''
 __KIT__
 __SECTIONS__
 </main>
+<script src="/assets/search.js" defer></script>
 '''
+
+def search_tabs():
+    """Quick-pick chips above the search box: All, one per guide section, and the Owner's Kit."""
+    tabs = [("all", "All")] + [(sl, l) for sl, l, _ in CATEGORIES if True] + [("kit", "Owner\u2019s Kit")]
+    return "".join('<button type="button" role="tab" class="sp-tab%s" data-cat="%s" aria-selected="%s">%s</button>'
+                   % (" on" if i == 0 else "", c, "true" if i == 0 else "false", esc(l)) for i, (c, l) in enumerate(tabs))
+
+def strip_html(t):
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", t or "")).strip()
+
+def build_search_index(guides):
+    """site/assets/search.json: one entry per guide and per product, searched in the browser (search.js).
+    Links carry PREFIX so the GitHub Pages review build still works."""
+    items = []
+    for g in guides:
+        heads = " ".join(re.findall(r"^##+\s+(.+)$", g["_body"], re.M))
+        faqs = " ".join(f["q"] for f in g.get("faq", []))
+        items.append({"t": g["title"], "d": g["description"], "u": "%s/guides/%s/" % (PREFIX, g["slug"]),
+                      "c": g["category"], "k": CAT_LABEL.get(g["category"], g["category"]),
+                      "m": "%d min read" % g["mins"], "x": strip_html(heads + " " + faqs + " " + MD.reset().convert(g["_body"]))[:14000]})
+    for p in PRODUCTS["products"]:
+        soon = p.get("status") == "soon"
+        items.append({"t": p["name"], "d": p["blurb"], "u": "%s/owners-kit/#%s" % (PREFIX, p["id"]), "c": "kit",
+                      "k": "Owner\u2019s Kit", "m": "Coming soon" if soon else "$%s" % p["price"],
+                      "x": strip_html(" ".join(p.get("includes", [])))[:600]})
+    items.append({"t": "Free Annual Haul-Out Checklist", "d": "A free two-page PDF of what should happen while she is out of the water.",
+                  "u": PREFIX + "/free-haul-out-checklist/", "c": "kit", "k": "Owner\u2019s Kit", "m": "Free", "x": "haul out hardstand shipyard checklist free pdf"})
+    items.append({"t": "Crew placement", "d": "Owners who need crew, and crew who want work.", "u": PREFIX + "/crew/",
+                  "c": "ownership", "k": "Ownership", "m": "", "x": "captain deckhand engineer stewardess relief skipper hire crew register"})
+    os.makedirs(os.path.join(SITE, "assets"), exist_ok=True)
+    open(os.path.join(SITE, "assets", "search.json"), "w", encoding="utf-8").write(json.dumps(items, ensure_ascii=False, separators=(",", ":")))
 
 def build_index(guides):
     secs = []
@@ -564,7 +605,7 @@ def build_index(guides):
          "publisher": {"@type": "Organization", "name": ORG, "url": MAIN}})
     page = shell("Marine HQ Guides — owning a yacht on the Gold Coast",
                  "Costs, marinas, maintenance and the paperwork of owning a motor yacht on the Gold Coast. Plain answers with the numbers shown.",
-                 BASE + "/", "website", jl, INDEX.replace("__KIT__", kit_row()).replace("__SECTIONS__", "\n".join(secs)))
+                 BASE + "/", "website", jl, INDEX.replace("__KIT__", kit_row()).replace("__SPTABS__", search_tabs()).replace("__SECTIONS__", "\n".join(secs)))
     write_page(os.path.join(SITE, "index.html"), page)
 
 def build_hubs(guides):
@@ -629,7 +670,7 @@ def main():
     guides.sort(key=lambda g: g["updated"], reverse=True)
     os.makedirs(os.path.join(SITE, "guides"), exist_ok=True)
     for g in guides: build_guide(g, guides)
-    build_index(guides); build_hubs(guides); build_shop(); build_crew(); build_thanks(); build_free(); build_go(); build_links(); build_meta(guides)
+    build_search_index(guides); build_index(guides); build_hubs(guides); build_shop(); build_crew(); build_thanks(); build_free(); build_go(); build_links(); build_meta(guides)
     print("built %d guide(s) → %s" % (len(guides), SITE))
     for g in guides: print("  /guides/%s/  (%d words, %s)" % (g["slug"], g["words"], CAT_LABEL.get(g["category"], g["category"])))
     if "--check" in sys.argv: check(guides)
