@@ -98,11 +98,11 @@ __JSONLD__
     <nav class="mh-nav" aria-label="Marine HQ">__MAINNAV__</nav>
     <div class="mh-cta"><a class="mh-phone" href="tel:__PHONE_H__">0439 748 387</a><a class="mh-contact" href="__MAIN__/contact">Contact us</a></div>
     <details class="mh-menu"><summary aria-label="Menu"><i></i><i></i><i></i></summary>
-      <div class="mh-drawer">__MAINNAV__<div class="mh-drawer-sub"><span>Guides by topic</span>__NAV__<a href="/crew/">Crew placement</a><a href="/jobs/">Yacht Crew Jobs</a><a href="/owners-kit/">Owner&rsquo;s Kit</a></div><a class="mh-phone" href="tel:__PHONE_H__">Call 0439 748 387</a></div>
+      <div class="mh-drawer">__MAINNAV__<div class="mh-drawer-sub"><span>Guides by topic</span>__NAV__<a href="/crew/">Crew placement</a><a href="/jobs/">Jobs Board</a><a href="/owners-kit/">Owner&rsquo;s Kit</a></div><a class="mh-phone" href="tel:__PHONE_H__">Call 0439 748 387</a></div>
     </details>
   </div>
 </header>
-<nav class="sub" aria-label="Guide sections"><div class="wrap sub-bar"><a class="sub-home" href="/">All guides</a>__NAV__<a class="sub-kit" href="/crew/">Crew placement</a><a class="sub-kit" href="/jobs/">Yacht Crew Jobs</a><a class="sub-kit" href="/owners-kit/">Owner&rsquo;s Kit</a></div></nav>
+<nav class="sub" aria-label="Guide sections"><div class="wrap sub-bar"><a class="sub-home" href="/">All guides</a>__NAV__<a class="sub-kit" href="/crew/">Crew placement</a><a class="sub-kit" href="/jobs/">Jobs Board</a><a class="sub-kit" href="/owners-kit/">Owner&rsquo;s Kit</a></div></nav>
 '''
 
 FOOT = '''
@@ -250,7 +250,7 @@ def shell(title, desc, canon, ogtype, jsonld, inner):
                 .replace("__OGTYPE__", ogtype).replace("__BASE__", BASE).replace("__V__", v)
                 .replace("__JSONLD__", jsonld).replace("__MAINNAV__", main_nav_html()).replace("__NAV__", nav_html()).replace("__MAIN__", MAIN)
                 .replace("__PHONE_H__", PHONE_H))
-    foot = (FOOT.replace("__FOOTNAV__", nav_html() + '<a href="/crew/">Crew placement</a><a href="/jobs/">Yacht Crew Jobs</a><a href="/owners-kit/">Owner&rsquo;s Kit</a><a href="%s">Marine HQ home</a><a href="%s/contact">Contact</a>' % (MAIN, MAIN))
+    foot = (FOOT.replace("__FOOTNAV__", nav_html() + '<a href="/crew/">Crew placement</a><a href="/jobs/">Jobs Board</a><a href="/owners-kit/">Owner&rsquo;s Kit</a><a href="%s">Marine HQ home</a><a href="%s/contact">Contact</a>' % (MAIN, MAIN))
                 .replace("__YEAR__", str(datetime.date.today().year)).replace("__ABN__", ABN)
                 .replace("__PHONE_H__", PHONE_H).replace("__PHONE__", PHONE).replace("__EMAIL__", EMAIL).replace("__MAIN__", MAIN))
     return page + inner + foot
@@ -388,26 +388,30 @@ def build_crew():
     write_page(os.path.join(SITE, "crew", "index.html"), page)
 
 def build_jobs():
-    """/jobs/ : jobs notice board. Roles live in content/_jobs.json; open ones are listed, apply = email crew@."""
+    """/jobs/ : Marine HQ Jobs Board. Roles live in content/_jobs.json. Each role has a code (MHQ-JB-nnn) that goes in the application email subject."""
     from urllib.parse import quote
     jobs = json.load(open(os.path.join(CONTENT, "_jobs.json"), encoding="utf-8"))["jobs"]
     live = [j for j in jobs if j.get("status") == "open"]
-    cards = []
-    for j in live:
-        mail = "mailto:%s?subject=%s&amp;body=%s" % (JOBS_EMAIL, quote("Job enquiry: " + j["title"]), quote("Hi Marine HQ, I would like to be considered for: %s.\n\nName:\nMobile:\nTickets and certificates held:\nSea time / commercial experience:\nAvailability:\n" % j["title"]))
-        cards.append('<section class="crew-card job" id="%s"><span class="eyebrow">%s &middot; %s</span><h2>%s</h2><p>%s</p><ul>%s</ul>'
-                     '<div class="foot-actions"><a class="btn" href="%s">Register your interest</a></div>'
-                     '<p class="crew-note">Posted %s. Or email <a href="mailto:%s">%s</a>.</p></section>'
-                     % (j["id"], esc(j["location"]), esc(j["type"]), esc(j["title"]), esc(j["summary"]),
-                        "".join("<li>%s</li>" % esc(n) for n in j["needs"]), mail, nice_date(j["posted"]), JOBS_EMAIL, JOBS_EMAIL))
-    body = "".join(cards) if cards else '<section class="crew-card"><h2>No roles open right now</h2><p>Join the crew register and we will call when something fits.</p></section>'
-    inner = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> Yacht Crewing</div>'
-             '<h1>Marine HQ Yacht Crewing</h1>'
-             '<p class="stand">The yacht crew jobs board. Skipper, deckhand and day work that has come to us, casual and ongoing, so you can be called on when a job lands.</p></div></section>'
-             '<main class="wrap shop"><div class="jobs-list">%s</div>'
-             '<p class="crew-note jobs-foot">Not seeing the right role? <a href="/crew/">Join the Marine HQ crew register</a> and we will call when something fits.</p></main>' % body)
-    page = shell("Yacht crew jobs: skippers and deckhands | Marine HQ Yacht Crewing",
-                 "Current skipper, crew and day work from Marine HQ. Commercial skippers wanted in Sydney, casual and ongoing. Email crew@marinehq.com.au.",
+    def mail(j):
+        return "mailto:%s?subject=%s&amp;body=%s" % (JOBS_EMAIL, quote("%s - %s - Application" % (j["code"], j["position"])),
+            quote("Hi Marine HQ, I would like to apply for %s (%s), %s.\n\nName:\nMobile:\nTickets and certificates held:\nSea time / commercial experience:\nAvailability:\n\nCV attached.\n" % (j["position"], j["code"], j["location"])))
+    rows = "".join('<tr><td data-l="Code"><strong>%s</strong></td><td data-l="Position"><a href="#%s">%s</a></td><td data-l="Location">%s</td><td data-l="Type">%s</td><td data-l="Start">%s</td><td data-l="Apply"><a class="btn" href="%s">Apply</a></td></tr>'
+                   % (j["code"], j["id"], esc(j["position"]), esc(j["location"]), esc(j["type"]), esc(j["start"]), mail(j)) for j in live)
+    table = ('<table class="jobs-table"><thead><tr><th>Code</th><th>Position</th><th>Location</th><th>Type</th><th>Start</th><th></th></tr></thead><tbody>%s</tbody></table>' % rows) if rows else '<p>No roles open right now.</p>'
+    details = "".join('<section class="crew-card job" id="%s"><span class="eyebrow">%s &middot; %s</span><h2>%s</h2><p>%s</p><p><strong>What we are looking for</strong></p><ul>%s</ul>'
+                      '<div class="foot-actions"><a class="btn" href="%s">Apply for %s</a></div></section>'
+                      % (j["id"], j["code"], esc(j["location"]), esc(j["title"]), esc(j["summary"]),
+                         "".join("<li>%s</li>" % esc(n) for n in j["needs"]), mail(j), j["code"]) for j in live)
+    how = ('<section class="crew-card"><h2>How to apply</h2><ol><li>Email <a href="mailto:%s">%s</a> with your CV attached.</li>'
+           '<li><strong>Put the job code in the subject line</strong>, for example <em>MHQ-JB-001 - Commercial Skipper - Your Name</em>. The Apply buttons do this for you.</li>'
+           '<li>Include your mobile, tickets held and when you are available.</li></ol>'
+           '<p class="crew-note">Applying for more than one role? Send one email per code. Not seeing the right role? <a href="/crew/">Join the Marine HQ crew register</a> and we will call when something fits.</p></section>' % (JOBS_EMAIL, JOBS_EMAIL))
+    inner = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> Jobs Board</div>'
+             '<h1>Marine HQ Jobs Board</h1>'
+             '<p class="stand">Yacht crewing work that has come to us: skippers, deckhands and day work, casual and ongoing, so you can be called on when a job lands.</p></div></section>'
+             '<main class="wrap shop">%s<div class="jobs-list">%s%s</div></main>' % (table, details, how))
+    page = shell("Jobs Board: yacht crew jobs | Marine HQ",
+                 "Marine HQ Jobs Board. Commercial skippers and deckhands wanted in Sydney, casual and ongoing. Apply with your CV to crew@marinehq.com.au quoting the job code.",
                  BASE + "/jobs/", "website", "", inner)
     os.makedirs(os.path.join(SITE, "jobs"), exist_ok=True)
     write_page(os.path.join(SITE, "jobs", "index.html"), page)

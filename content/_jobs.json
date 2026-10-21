@@ -13,7 +13,10 @@
         "Able to take short-notice work, ideally with 24-hour turnaround",
         "Happy to be a preferred skipper or a back-up who learns the boat",
         "Professional, presentable and good with guests"
-      ]
+      ],
+      "code": "MHQ-JB-001",
+      "position": "Commercial Skipper",
+      "start": "Early Nov 2026"
     },
     {
       "id": "sydney-deckhands",
@@ -28,7 +31,10 @@
         "Current first aid and relevant sea safety certificates",
         "Able to take short-notice work, ideally with 24-hour turnaround",
         "Professional, presentable and good with guests"
-      ]
+      ],
+      "code": "MHQ-JB-002",
+      "position": "Deckhand",
+      "start": "Early Nov 2026"
     }
   ]
 }
