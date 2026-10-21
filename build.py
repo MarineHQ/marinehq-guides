@@ -444,10 +444,10 @@ def build_jobs():
 def build_apply():
     """/apply/?job=MHQ-JB-001 : application form. Posts to the applicants Apps Script (name, contact, location, availability, CV, notes)."""
     jobs = json.load(open(os.path.join(CONTENT, "_jobs.json"), encoding="utf-8"))["jobs"]
-    jl = json.dumps({j["code"]: {"position": j["position"], "location": j["location"], "title": j["title"]} for j in jobs if j.get("status") == "open"})
+    jl = json.dumps({j["code"]: {"position": j["position"], "location": j["location"], "title": j["title"], "type": j["type"], "start": j["start"], "summary": j["summary"], "needs": j["needs"]} for j in jobs if j.get("status") == "open"})
     inner = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> <a href="/jobs/">Jobs Board</a> <span>&rsaquo;</span> Apply</div>'
       '<h1>Apply to Marine HQ</h1><p class="stand" id="aFor">Tell us a little about you and upload your CV.</p></div></section>'
-      '<main class="wrap shop"><div class="crew-card apply-card" id="aCard">'
+      '<main class="wrap shop"><div class="crew-card apply-role" id="aRole" hidden></div><div class="crew-card apply-card" id="aCard">'
       '<form id="aForm" novalidate>'
       '<div class="a-job" id="aJob" hidden></div>'
       '<label>Job<select id="aSel" name="job"><option value="GENERAL">General interest, keep me on your crew list</option></select></label>'
@@ -468,6 +468,8 @@ def build_apply():
       '<script>(function(){var API="%s",JOBS=%s,q=new URLSearchParams(location.search).get("job"),sel=document.getElementById("aSel");'
       'Object.keys(JOBS).forEach(function(c){var o=document.createElement("option");o.value=c;o.textContent=c+" - "+JOBS[c].title;sel.appendChild(o)});'
       'if(q&&JOBS[q.toUpperCase()]){sel.value=q.toUpperCase();var b=document.getElementById("aJob");b.hidden=false;b.innerHTML="<span>"+sel.value+"</span> "+JOBS[sel.value].title;document.getElementById("aFor").textContent="Applying for "+JOBS[sel.value].position+", "+JOBS[sel.value].location+"."}'
+      'function showRole(c){var r=document.getElementById("aRole"),J=JOBS[c];if(!J){r.hidden=true;return}r.hidden=false;r.innerHTML="";var e=function(t,x,cl){var n=document.createElement(t);if(cl)n.className=cl;n.textContent=x;return n};r.appendChild(e("span",c+" \\u00b7 "+J.location,"eyebrow"));r.appendChild(e("h2",J.title));var d=document.createElement("dl");d.className="job-facts";[["Location",J.location],["Position",J.position],["Type",J.type],["Start",J.start]].forEach(function(p){var w=document.createElement("div");w.appendChild(e("dt",p[0]));w.appendChild(e("dd",p[1]));d.appendChild(w)});r.appendChild(d);r.appendChild(e("p",J.summary));var s=e("p","");s.innerHTML="<strong>What we are looking for</strong>";r.appendChild(s);var u=document.createElement("ul");(J.needs||[]).forEach(function(n){u.appendChild(e("li",n))});r.appendChild(u)}'
+      'sel.onchange=function(){showRole(sel.value)};showRole(sel.value);'
       'var f=document.getElementById("aForm"),err=document.getElementById("aErr"),btn=document.getElementById("aBtn");'
       'function fail(m){err.textContent=m;err.hidden=false;btn.disabled=false;btn.textContent="Send my application"}'
       'f.addEventListener("submit",function(ev){ev.preventDefault();err.hidden=true;var fd=new FormData(f),file=document.getElementById("aCv").files[0];'
