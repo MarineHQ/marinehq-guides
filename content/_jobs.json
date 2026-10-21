@@ -16,7 +16,8 @@
       ],
       "code": "MHQ-JB-001",
       "position": "Commercial Skipper",
-      "start": "Early Nov 2026"
+      "start": "Early Nov 2026",
+      "family": "Skipper"
     },
     {
       "id": "sydney-deckhands",
@@ -34,7 +35,122 @@
       ],
       "code": "MHQ-JB-002",
       "position": "Deckhand",
-      "start": "Early Nov 2026"
+      "start": "Early Nov 2026",
+      "family": "Deckhand"
+    },
+    {
+      "id": "sydney-stewards",
+      "code": "MHQ-JB-003",
+      "title": "Stewards, Sydney Harbour",
+      "location": "Sydney, NSW",
+      "position": "Steward",
+      "family": "Steward",
+      "type": "Casual and ongoing",
+      "posted": "2026-10-21",
+      "status": "open",
+      "start": "Early Nov 2026",
+      "summary": "We are also looking for stewards in Sydney to look after guests on event and private charter blocks aboard the commercial passenger vessel, working alongside the skipper and deckhand. Casual and as needed, with more work expected over summer.",
+      "needs": [
+        "Hospitality or yacht interior experience, with a polished and friendly manner",
+        "Current RSA and first aid (or willing to obtain)",
+        "Able to take short-notice work, ideally with 24-hour turnaround",
+        "Presentable, reliable and calm under pressure"
+      ]
+    },
+    {
+      "id": "gc-stewards",
+      "code": "MHQ-JB-004",
+      "title": "Stewards, Gold Coast",
+      "location": "Gold Coast, QLD",
+      "position": "Steward",
+      "family": "Steward",
+      "type": "Casual and ongoing",
+      "posted": "2026-10-21",
+      "status": "open",
+      "start": "As needed",
+      "summary": "We need stewards on the Gold Coast for owner trips, guest days and charters aboard the motor yachts we look after: guest service, interior care, provisioning and keeping the boat guest-ready. You would work on the motor yachts we look after on the Gold Coast, typically 40 to 120 ft, mostly berthed in Coomera and the surrounding marinas.",
+      "needs": [
+        "Yacht interior or hospitality experience preferred; keen newcomers considered",
+        "Current first aid; RSA an advantage",
+        "Flexible and available at short notice",
+        "Presentable, discreet and detail-minded"
+      ]
+    },
+    {
+      "id": "gc-delivery-skippers",
+      "code": "MHQ-JB-005",
+      "title": "Delivery Skippers, Gold Coast",
+      "location": "Gold Coast, QLD",
+      "position": "Delivery Skipper",
+      "family": "Skipper",
+      "type": "Casual and ongoing",
+      "posted": "2026-10-21",
+      "status": "open",
+      "start": "As needed",
+      "summary": "We run crewed deliveries for owners and need skippers we can call on: east coast passages such as Gold Coast to Sydney and the Whitsundays, and occasionally further afield in the Pacific. Passages run with a crew of three, and you would lead the passage plan and the crew. Vessels are typically 40 to 120 ft motor yachts.",
+      "needs": [
+        "Current commercial skipper qualification suitable for the vessel and passage",
+        "Offshore and multi-day passage experience on motor yachts",
+        "Comfortable with passage planning, weather routing and running a small crew",
+        "Available at short notice for several days at a time"
+      ]
+    },
+    {
+      "id": "gc-shore-deckhands",
+      "code": "MHQ-JB-006",
+      "title": "Shore-based Deckhands, Gold Coast",
+      "location": "Gold Coast, QLD",
+      "position": "Shore-based Deckhand",
+      "family": "Deckhand",
+      "type": "Casual and ongoing",
+      "posted": "2026-10-21",
+      "status": "open",
+      "start": "As needed",
+      "summary": "Shore-based deckhands keep our managed yachts in top condition at the berth: washdowns, deck and exterior care, lines and fenders, maintenance tasks from the worklist, yard-period support and helping move vessels around the marina. You would work on the motor yachts we look after on the Gold Coast, typically 40 to 120 ft, mostly berthed in Coomera and the surrounding marinas.",
+      "needs": [
+        "Deck or marine trade experience preferred; keen newcomers with the right attitude considered",
+        "Own transport to Coomera and surrounding marinas",
+        "Reliable, hardworking and happy to follow a worklist",
+        "Current first aid or willing to obtain"
+      ]
+    },
+    {
+      "id": "gc-detailers",
+      "code": "MHQ-JB-007",
+      "title": "Detailers, Gold Coast",
+      "location": "Gold Coast, QLD",
+      "position": "Detailer",
+      "family": "Detailer",
+      "type": "Casual and ongoing",
+      "posted": "2026-10-21",
+      "status": "open",
+      "start": "As needed",
+      "summary": "We are looking for marine detailers to join the team caring for our managed yachts: washdowns, gelcoat and polish, stainless and teak care, canvas and clears, and coating work as booked. You would use our washdown routine and record your work and photos on each job. You would work on the motor yachts we look after on the Gold Coast, typically 40 to 120 ft, mostly berthed in Coomera and the surrounding marinas.",
+      "needs": [
+        "Marine or automotive detailing experience; polishing and coating experience a plus",
+        "Attention to detail and pride in finish",
+        "Own transport and basic tools",
+        "Comfortable working on large vessels, at the berth and during yard periods"
+      ]
+    },
+    {
+      "id": "gc-shore-skippers",
+      "code": "MHQ-JB-008",
+      "title": "Shore-based Skippers, Gold Coast",
+      "location": "Gold Coast, QLD",
+      "position": "Shore-based Skipper",
+      "family": "Skipper",
+      "type": "Casual and ongoing",
+      "posted": "2026-10-21",
+      "status": "open",
+      "start": "As needed",
+      "summary": "Shore-based skippers look after our managed yachts when they are not on a long passage: moving vessels between berths, shipyards and the hardstand, sea trials and engine runs, and relief cover when an owner's captain is away. You would work on the motor yachts we look after on the Gold Coast, typically 40 to 120 ft, mostly berthed in Coomera and the surrounding marinas.",
+      "needs": [
+        "Current skipper qualification suitable for motor yachts to 120 ft",
+        "Confident handling large vessels in marinas and rivers around Coomera and the Broadwater",
+        "Comfortable with sea trials and basic engine and systems checks",
+        "Professional, reliable and good with owners and yard staff"
+      ]
     }
   ]
 }

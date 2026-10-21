@@ -399,9 +399,9 @@ def build_jobs():
                       '<dl class="job-facts"><div><dt>Location</dt><dd>%s</dd></div><div><dt>Position</dt><dd>%s</dd></div><div><dt>Type</dt><dd>%s</dd></div><div><dt>Start</dt><dd>%s</dd></div></dl>'
                       '<p>%s</p><p><strong>What we are looking for</strong></p><ul>%s</ul>'
                       '<div class="foot-actions"><a class="btn" href="%s">Apply for %s</a></div></section>'
-                      % (j["id"], esc(j["location"]), esc(j["position"]), j["code"], esc(j["title"]), esc(j["location"]), esc(j["position"]), esc(j["type"]), esc(j["start"]), esc(j["summary"]),
+                      % (j["id"], esc(j["location"]), esc(j.get("family", j["position"])), j["code"], esc(j["title"]), esc(j["location"]), esc(j["position"]), esc(j["type"]), esc(j["start"]), esc(j["summary"]),
                          "".join("<li>%s</li>" % esc(n) for n in j["needs"]), mail(j), j["code"]) for j in live)
-    locs = sorted({j["location"] for j in live}); poss = sorted({j["position"] for j in live})
+    locs = sorted({j["location"] for j in live}); poss = sorted({j.get("family", j["position"]) for j in live})
     opt = lambda xs: "".join('<option value="%s">%s</option>' % (esc(x), esc(x)) for x in xs)
     filt = ('<div class="jobs-filter" id="jobsFilter" hidden><label>Location<select id="fLoc"><option value="">All locations</option>%s</select></label>'
             '<label>Position<select id="fPos"><option value="">All positions</option>%s</select></label>'
@@ -414,10 +414,14 @@ def build_jobs():
            '<li><strong>Put the job code in the subject line</strong>, for example <em>MHQ-JB-001 - Commercial Skipper - Your Name</em>. The Apply buttons do this for you.</li>'
            '<li>Include your mobile, tickets held and when you are available.</li></ol>'
            '<p class="crew-note">Applying for more than one role? Send one email per code. Not seeing the right role? <a href="/crew/">Join the Marine HQ crew register</a> and we will call when something fits.</p></section>' % (JOBS_EMAIL, JOBS_EMAIL))
+    about = ('<section class="crew-card"><span class="eyebrow">About Marine HQ</span><h2>Who you would be working for</h2>'
+             '<p>Marine HQ looks after motor yachts for their owners. We are based at The Boat Works in Coomera on the Gold Coast and work across the Gold Coast, Sydney and the Whitsundays. We manage and maintain yachts from 40 to 120 ft, supply crew and relief skippers, run deliveries, and give owners the MyYacht app so every job, photo and document is in one place.</p>'
+             '<p>We are a small, hands-on team. When work lands we need good people we can call on, so register your interest even if the timing is not right yet and we will keep you on the list.</p>'
+             '<p class="crew-note"><a href="%s/about-us">More about Marine HQ</a> &middot; <a href="/crew/">Join the crew register</a></p></section>' % MAIN)
     inner = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> Jobs Board</div>'
              '<h1>Marine HQ Jobs Board</h1>'
              '<p class="stand">Yacht crewing work that has come to us: skippers, deckhands and day work, casual and ongoing, so you can be called on when a job lands.</p></div></section>'
-             '<main class="wrap shop">%s<div class="jobs-list">%s%s</div></main>' % (filt, details, how))
+             '<main class="wrap shop">%s<div class="jobs-list">%s%s</div></main>' % (filt, details, how + about))
     page = shell("Jobs Board: yacht crew jobs | Marine HQ",
                  "Marine HQ Jobs Board. Commercial skippers and deckhands wanted in Sydney, casual and ongoing. Apply with your CV to crew@marinehq.com.au quoting the job code.",
                  BASE + "/jobs/", "website", "", inner)
