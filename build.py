@@ -395,12 +395,21 @@ def build_jobs():
     def mail(j):
         return "mailto:%s?subject=%s&amp;body=%s" % (JOBS_EMAIL, quote("%s - %s - Application" % (j["code"], j["position"])),
             quote("Hi Marine HQ, I would like to apply for %s (%s), %s.\n\nName:\nMobile:\nTickets and certificates held:\nSea time / commercial experience:\nAvailability:\n\nCV attached.\n" % (j["position"], j["code"], j["location"])))
-    details = "".join('<section class="crew-card job" id="%s"><div class="job-head"><span class="job-code">%s</span><h2>%s</h2></div>'
+    details = "".join('<section class="crew-card job" id="%s" data-loc="%s" data-pos="%s"><div class="job-head"><span class="job-code">%s</span><h2>%s</h2></div>'
                       '<dl class="job-facts"><div><dt>Location</dt><dd>%s</dd></div><div><dt>Position</dt><dd>%s</dd></div><div><dt>Type</dt><dd>%s</dd></div><div><dt>Start</dt><dd>%s</dd></div></dl>'
                       '<p>%s</p><p><strong>What we are looking for</strong></p><ul>%s</ul>'
                       '<div class="foot-actions"><a class="btn" href="%s">Apply for %s</a></div></section>'
-                      % (j["id"], j["code"], esc(j["title"]), esc(j["location"]), esc(j["position"]), esc(j["type"]), esc(j["start"]), esc(j["summary"]),
+                      % (j["id"], esc(j["location"]), esc(j["position"]), j["code"], esc(j["title"]), esc(j["location"]), esc(j["position"]), esc(j["type"]), esc(j["start"]), esc(j["summary"]),
                          "".join("<li>%s</li>" % esc(n) for n in j["needs"]), mail(j), j["code"]) for j in live)
+    locs = sorted({j["location"] for j in live}); poss = sorted({j["position"] for j in live})
+    opt = lambda xs: "".join('<option value="%s">%s</option>' % (esc(x), esc(x)) for x in xs)
+    filt = ('<div class="jobs-filter" id="jobsFilter" hidden><label>Location<select id="fLoc"><option value="">All locations</option>%s</select></label>'
+            '<label>Position<select id="fPos"><option value="">All positions</option>%s</select></label>'
+            '<span class="jobs-count" id="fCount" aria-live="polite"></span></div>'
+            '<p class="jobs-none" id="fNone" hidden>No jobs match that selection. <a href="/crew/">Join the crew register</a> and we will call when one comes up.</p>'
+            '<script>document.addEventListener("DOMContentLoaded",function(){var f=document.getElementById("jobsFilter");if(!f)return;f.hidden=false;var L=document.getElementById("fLoc"),P=document.getElementById("fPos"),C=document.getElementById("fCount"),N=document.getElementById("fNone"),J=[].slice.call(document.querySelectorAll(".job"));'
+            'function go(){var n=0;J.forEach(function(e){var ok=(!L.value||e.dataset.loc===L.value)&&(!P.value||e.dataset.pos===P.value);e.hidden=!ok;if(ok)n++});C.textContent=n+(n===1?" job":" jobs");N.hidden=n>0}'
+            'L.onchange=P.onchange=go;go()});</script>' % (opt(locs), opt(poss)))
     how = ('<section class="crew-card"><h2>How to apply</h2><ol><li>Email <a href="mailto:%s">%s</a> with your CV attached.</li>'
            '<li><strong>Put the job code in the subject line</strong>, for example <em>MHQ-JB-001 - Commercial Skipper - Your Name</em>. The Apply buttons do this for you.</li>'
            '<li>Include your mobile, tickets held and when you are available.</li></ol>'
@@ -408,7 +417,7 @@ def build_jobs():
     inner = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> Jobs Board</div>'
              '<h1>Marine HQ Jobs Board</h1>'
              '<p class="stand">Yacht crewing work that has come to us: skippers, deckhands and day work, casual and ongoing, so you can be called on when a job lands.</p></div></section>'
-             '<main class="wrap shop"><div class="jobs-list">%s%s</div></main>' % (details, how))
+             '<main class="wrap shop">%s<div class="jobs-list">%s%s</div></main>' % (filt, details, how))
     page = shell("Jobs Board: yacht crew jobs | Marine HQ",
                  "Marine HQ Jobs Board. Commercial skippers and deckhands wanted in Sydney, casual and ongoing. Apply with your CV to crew@marinehq.com.au quoting the job code.",
                  BASE + "/jobs/", "website", "", inner)
