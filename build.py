@@ -36,6 +36,7 @@ PHONE   = "0439 748 387"
 PHONE_H = "+61439748387"
 EMAIL   = "yachtsupport@marinehq.com.au"
 JOBS_EMAIL = "crew@marinehq.com.au"
+APPLY_API = "https://script.google.com/macros/s/AKfycbxHJfMaCMMxG1k1a1I5WlM5dBeq4nD1q4jr-ad5cw8MTM8_5QuDi4qFpf3SjN9MyBEB/exec"   # Apps Script web app /exec URL for the applicants backend (set after deploy)
 ABN     = "ABN 38 661 097 221"
 ORG     = "Marine HQ"
 
@@ -400,7 +401,7 @@ def build_jobs():
                       '<p>%s</p><p><strong>What we are looking for</strong></p><ul>%s</ul>'
                       '<div class="foot-actions"><a class="btn" href="%s">Apply for %s</a></div></section>'
                       % (j["id"], esc(j["location"]), esc(j.get("family", j["position"])), j["code"], esc(j["title"]), esc(j["location"]), esc(j["position"]), esc(j["type"]), esc(j["start"]), esc(j["summary"]),
-                         "".join("<li>%s</li>" % esc(n) for n in j["needs"]), mail(j), j["code"]) for j in live)
+                         "".join("<li>%s</li>" % esc(n) for n in j["needs"]), "/apply/?job=" + j["code"], j["code"]) for j in live)
     locs = sorted({j["location"] for j in live}); poss = sorted({j.get("family", j["position"]) for j in live})
     opt = lambda xs: "".join('<option value="%s">%s</option>' % (esc(x), esc(x)) for x in xs)
     filt = ('<div class="jobs-filter" id="jobsFilter" hidden><label>Location<select id="fLoc"><option value="">All locations</option>%s</select></label>'
@@ -411,8 +412,8 @@ def build_jobs():
             'function go(){var n=0;J.forEach(function(e){var ok=(!L.value||e.dataset.loc===L.value)&&(!P.value||e.dataset.pos===P.value);e.hidden=!ok;if(ok)n++});C.textContent=n+(n===1?" job":" jobs");N.hidden=n>0}'
             'L.onchange=P.onchange=go;go()});</script>' % (opt(locs), opt(poss)))
     how = ('<section class="crew-card"><h2>How to apply</h2><ol><li>Email <a href="mailto:%s">%s</a> with your CV attached.</li>'
-           '<li><strong>Put the job code in the subject line</strong>, for example <em>MHQ-JB-001 - Commercial Skipper - Your Name</em>. The Apply buttons do this for you.</li>'
-           '<li>Include your mobile, tickets held and when you are available.</li></ol>'
+           '<li>If you email instead, <strong>put the job code in the subject line</strong>, for example <em>MHQ-JB-001 - Commercial Skipper - Your Name</em>.</li>'
+           '<li>We will confirm by email and call if there is a fit.</li></ol>'
            '<p class="crew-note">Applying for more than one role? Send one email per code. Not seeing the right role? <a href="/crew/">Join the Marine HQ crew register</a> and we will call when something fits.</p></section>' % (JOBS_EMAIL, JOBS_EMAIL))
     about = ('<section class="crew-card"><span class="eyebrow">About Marine HQ</span><h2>Who you would be working for</h2>'
              '<p>Marine HQ looks after motor yachts for their owners. We are based at The Boat Works in Coomera on the Gold Coast and work across the Gold Coast, Sydney and the Whitsundays. We manage and maintain yachts from 40 to 120 ft, supply crew and relief skippers, run deliveries, and give owners the MyYacht app so every job, photo and document is in one place.</p>'
@@ -427,6 +428,50 @@ def build_jobs():
                  BASE + "/jobs/", "website", "", inner)
     os.makedirs(os.path.join(SITE, "jobs"), exist_ok=True)
     write_page(os.path.join(SITE, "jobs", "index.html"), page)
+
+def build_apply():
+    """/apply/?job=MHQ-JB-001 : application form. Posts to the applicants Apps Script (name, contact, location, availability, CV, notes)."""
+    jobs = json.load(open(os.path.join(CONTENT, "_jobs.json"), encoding="utf-8"))["jobs"]
+    jl = json.dumps({j["code"]: {"position": j["position"], "location": j["location"], "title": j["title"]} for j in jobs if j.get("status") == "open"})
+    inner = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> <a href="/jobs/">Jobs Board</a> <span>&rsaquo;</span> Apply</div>'
+      '<h1>Apply to Marine HQ</h1><p class="stand" id="aFor">Tell us a little about you and upload your CV.</p></div></section>'
+      '<main class="wrap shop"><div class="crew-card apply-card" id="aCard">'
+      '<form id="aForm" novalidate>'
+      '<div class="a-job" id="aJob" hidden></div>'
+      '<label>Job<select id="aSel" name="job"><option value="GENERAL">General interest, keep me on your crew list</option></select></label>'
+      '<div class="a-grid"><label>Full name *<input name="name" required autocomplete="name"></label>'
+      '<label>Mobile *<input name="mobile" required type="tel" autocomplete="tel"></label>'
+      '<label>Email *<input name="email" required type="email" autocomplete="email"></label>'
+      '<label>Where are you based? *<input name="based" required placeholder="Suburb or town, state"></label></div>'
+      '<label>When are you available? *<input name="availability" required placeholder="e.g. from 5 November, weekends, short notice any day"></label>'
+      '<label>Tickets and certificates<input name="tickets" placeholder="e.g. Master up to 24 m, Coxswain, First Aid, RSA, MSIC"></label>'
+      '<label>Upload your CV (PDF or Word, up to 5 MB) *<input id="aCv" type="file" accept=".pdf,.doc,.docx,application/pdf" required></label>'
+      '<label>Anything else you would like to add<textarea name="notes" rows="4" placeholder="Boats you have worked on, why you are a good fit, questions for us"></textarea></label>'
+      '<input class="a-hp" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true">'
+      '<p class="a-note">We keep your details only to contact you about work. Ask us any time and we will remove them.</p>'
+      '<div class="foot-actions"><button class="btn" type="submit" id="aBtn">Send my application</button></div>'
+      '<p class="a-err" id="aErr" role="alert" hidden></p></form>'
+      '<div class="a-ok" id="aOk" hidden><span class="eyebrow">Application received</span><h2>Thank you</h2>'
+      '<p id="aOkMsg"></p><p class="crew-note"><a href="/jobs/">Back to the Jobs Board</a></p></div></div></main>'
+      '<script>(function(){var API="%s",JOBS=%s,q=new URLSearchParams(location.search).get("job"),sel=document.getElementById("aSel");'
+      'Object.keys(JOBS).forEach(function(c){var o=document.createElement("option");o.value=c;o.textContent=c+" - "+JOBS[c].title;sel.appendChild(o)});'
+      'if(q&&JOBS[q.toUpperCase()]){sel.value=q.toUpperCase();var b=document.getElementById("aJob");b.hidden=false;b.innerHTML="<span>"+sel.value+"</span> "+JOBS[sel.value].title;document.getElementById("aFor").textContent="Applying for "+JOBS[sel.value].position+", "+JOBS[sel.value].location+"."}'
+      'var f=document.getElementById("aForm"),err=document.getElementById("aErr"),btn=document.getElementById("aBtn");'
+      'function fail(m){err.textContent=m;err.hidden=false;btn.disabled=false;btn.textContent="Send my application"}'
+      'f.addEventListener("submit",function(ev){ev.preventDefault();err.hidden=true;var fd=new FormData(f),file=document.getElementById("aCv").files[0];'
+      'var need=["name","mobile","email","based","availability"];for(var i=0;i<need.length;i++){if(!String(fd.get(need[i])||"").trim())return fail("Please fill in all the fields marked *.")}'
+      'if(!file)return fail("Please upload your CV.");if(!/\.(pdf|docx?)$/i.test(file.name))return fail("Please upload your CV as a PDF or Word document.");if(file.size>5*1024*1024)return fail("That CV is over 5 MB. Please upload a smaller file.");'
+      'btn.disabled=true;btn.textContent="Sending...";var r=new FileReader();r.onerror=function(){fail("Could not read that file. Please try another.")};'
+      'r.onload=function(){var j=sel.value,p={job:j,position:(JOBS[j]||{}).position||"",location:(JOBS[j]||{}).location||"",hp:fd.get("hp"),cvName:file.name,cvType:file.type,cvB64:String(r.result).split(",")[1]};'
+      'need.concat(["tickets","notes"]).forEach(function(k){p[k]=fd.get(k)});'
+      'fetch(API,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(p)}).then(function(x){return x.json()}).then(function(x){'
+      'if(!x.ok)return fail(x.error||"Something went wrong.");f.hidden=true;document.getElementById("aOkMsg").textContent="Your reference is "+x.id+". We have emailed you a confirmation and will be in touch if there is a fit.";document.getElementById("aOk").hidden=false;window.scrollTo(0,0)})'
+      '.catch(function(){fail("We could not send that just now. Please email your CV to %s with the job code in the subject.")})};r.readAsDataURL(file)})})();</script>'
+      % (APPLY_API, jl, JOBS_EMAIL))
+    page = shell("Apply | Marine HQ Jobs Board", "Apply for a Marine HQ job: tell us about you and upload your CV.", BASE + "/apply/", "website", "", inner)
+    page = page.replace("<head>", '<head>\n<meta name="robots" content="noindex">', 1) if "noindex" not in page else page
+    os.makedirs(os.path.join(SITE, "apply"), exist_ok=True)
+    write_page(os.path.join(SITE, "apply", "index.html"), page)
 
 def build_thanks():
     """After-payment pages for the Stripe Payment Links (crew products): /thanks/<id>/ with the download. noindex, not in the sitemap."""
@@ -712,7 +757,7 @@ def main():
     guides.sort(key=lambda g: g["updated"], reverse=True)
     os.makedirs(os.path.join(SITE, "guides"), exist_ok=True)
     for g in guides: build_guide(g, guides)
-    build_search_index(guides); build_index(guides); build_hubs(guides); build_shop(); build_crew(); build_jobs(); build_thanks(); build_free(); build_go(); build_links(); build_meta(guides)
+    build_search_index(guides); build_index(guides); build_hubs(guides); build_shop(); build_crew(); build_jobs(); build_apply(); build_thanks(); build_free(); build_go(); build_links(); build_meta(guides)
     print("built %d guide(s) → %s" % (len(guides), SITE))
     for g in guides: print("  /guides/%s/  (%d words, %s)" % (g["slug"], g["words"], CAT_LABEL.get(g["category"], g["category"])))
     if "--check" in sys.argv: check(guides)
