@@ -420,11 +420,11 @@ def build_jobs():
              '<p>We are a small, hands-on team. When work lands we need good people we can call on, so register your interest even if the timing is not right yet and we will keep you on the list.</p>'
              '<p class="crew-note"><a href="%s/about-us">More about Marine HQ</a> &middot; <a href="/crew/">Join the crew register</a></p></section>' % MAIN)
     inner = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> Jobs Board</div>'
-             '<h1>Marine HQ Jobs Board</h1>'
+             '<h1>Marine HQ Crew Jobs Board</h1>'
              '<p class="stand">Yacht crewing work that has come to us: skippers, deckhands and day work, casual and ongoing, so you can be called on when a job lands.</p></div></section>'
              '<main class="wrap shop">%s<div class="jobs-list">%s%s</div></main>' % (filt, details, how + about))
-    page = shell("Jobs Board: yacht crew jobs | Marine HQ",
-                 "Marine HQ Jobs Board. Commercial skippers and deckhands wanted in Sydney, casual and ongoing. Apply with your CV to crew@marinehq.com.au quoting the job code.",
+    page = shell("Crew Jobs Board: yacht crew jobs | Marine HQ",
+                 "Marine HQ Crew Jobs Board. Commercial skippers and deckhands wanted in Sydney, casual and ongoing. Apply with your CV to crew@marinehq.com.au quoting the job code.",
                  BASE + "/jobs/", "website", "", inner)
     os.makedirs(os.path.join(SITE, "jobs"), exist_ok=True)
     write_page(os.path.join(SITE, "jobs", "index.html"), page)
@@ -468,7 +468,7 @@ def build_apply():
       'if(!x.ok)return fail(x.error||"Something went wrong.");f.hidden=true;document.getElementById("aOkMsg").textContent="Your reference is "+x.id+". We have emailed you a confirmation and will be in touch if there is a fit.";document.getElementById("aOk").hidden=false;window.scrollTo(0,0)})'
       '.catch(function(){fail("We could not send that just now. Please email your CV to %s with the job code in the subject.")})};r.readAsDataURL(file)})})();</script>'
       % (APPLY_API, jl, JOBS_EMAIL))
-    page = shell("Apply | Marine HQ Jobs Board", "Apply for a Marine HQ job: tell us about you and upload your CV.", BASE + "/apply/", "website", "", inner)
+    page = shell("Apply | Marine HQ Crew Jobs Board", "Apply for a Marine HQ job: tell us about you and upload your CV.", BASE + "/apply/", "website", "", inner)
     page = page.replace("<head>", '<head>\n<meta name="robots" content="noindex">', 1) if "noindex" not in page else page
     os.makedirs(os.path.join(SITE, "apply"), exist_ok=True)
     write_page(os.path.join(SITE, "apply", "index.html"), page)
