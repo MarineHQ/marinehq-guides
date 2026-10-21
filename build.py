@@ -36,6 +36,10 @@ PHONE   = "0439 748 387"
 PHONE_H = "+61439748387"
 EMAIL   = "yachtsupport@marinehq.com.au"
 JOBS_EMAIL = "crew@marinehq.com.au"
+JOBS_LIVE = False                                      # --jobs-live: jobs.marinehq.com.au is live; /jobs/ and /apply/ here become redirects
+JOBSITE = False                                        # --jobs-site: build the standalone jobs.marinehq.com.au site
+JOBS_DOMAIN = "https://jobsboard.marinehq.com.au"
+GUIDES_DOMAIN = "https://guides.marinehq.com.au"
 APPLY_API = "https://script.google.com/macros/s/AKfycbxHJfMaCMMxG1k1a1I5WlM5dBeq4nD1q4jr-ad5cw8MTM8_5QuDi4qFpf3SjN9MyBEB/exec"   # Apps Script web app /exec URL for the applicants backend (set after deploy)
 ABN     = "ABN 38 661 097 221"
 ORG     = "Marine HQ"
@@ -240,6 +244,14 @@ MAIN_NAV = [("Yacht Management", "/yacht-management-coomera"), ("Yacht Maintenan
             ("Services", "/services"), ("Guides", None), ("Contact", "/contact"), ("About", "/about-us")]   # same order as marinehq.com.au
 
 def main_nav_html():
+    if JOBSITE:
+        out = []
+        for l, u in MAIN_NAV:
+            if u is None:
+                out.append('<a href="%s/">Guides</a><a class="on" href="/">Jobs Board</a>' % GUIDES_DOMAIN)
+            else:
+                out.append('<a href="%s%s">%s</a>' % (MAIN, u, l))
+        return "".join(out)
     return "".join('<a class="on" href="/">%s</a>' % l if u is None else '<a href="%s%s">%s</a>' % (MAIN, u, l) for l, u in MAIN_NAV)
 
 def nav_html():
@@ -465,13 +477,68 @@ def build_apply():
       'r.onload=function(){var j=sel.value,p={job:j,position:(JOBS[j]||{}).position||"",location:(JOBS[j]||{}).location||"",hp:fd.get("hp"),cvName:file.name,cvType:file.type,cvB64:String(r.result).split(",")[1]};'
       'need.concat(["tickets","notes"]).forEach(function(k){p[k]=fd.get(k)});'
       'fetch(API,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(p)}).then(function(x){return x.json()}).then(function(x){'
-      'if(!x.ok)return fail(x.error||"Something went wrong.");f.hidden=true;document.getElementById("aOkMsg").textContent="Your reference is "+x.id+". We have emailed you a confirmation and will be in touch if there is a fit.";document.getElementById("aOk").hidden=false;window.scrollTo(0,0)})'
+      'if(!x.ok)return fail(x.error||"Something went wrong.");try{if(window.gtag)gtag("event","job_application",{job_code:j,job_position:(JOBS[j]||{}).position||"",job_location:(JOBS[j]||{}).location||""})}catch(e){}f.hidden=true;document.getElementById("aOkMsg").textContent="Your reference is "+x.id+". We have emailed you a confirmation and will be in touch if there is a fit.";document.getElementById("aOk").hidden=false;window.scrollTo(0,0)})'
       '.catch(function(){fail("We could not send that just now. Please email your CV to %s with the job code in the subject.")})};r.readAsDataURL(file)})})();</script>'
       % (APPLY_API, jl, JOBS_EMAIL))
     page = shell("Apply | Marine HQ Crew Jobs Board", "Apply for a Marine HQ job: tell us about you and upload your CV.", BASE + "/apply/", "website", "", inner)
     page = page.replace("<head>", '<head>\n<meta name="robots" content="noindex">', 1) if "noindex" not in page else page
     os.makedirs(os.path.join(SITE, "apply"), exist_ok=True)
     write_page(os.path.join(SITE, "apply", "index.html"), page)
+
+def build_job_pages():
+    """One page per open job: /<slug>/ with Google JobPosting structured data."""
+    jobs = [j for j in json.load(open(os.path.join(CONTENT, "_jobs.json"), encoding="utf-8"))["jobs"] if j.get("status") == "open"]
+    for j in jobs:
+        slug = job_slug(j); city, _, state = [x.strip() for x in (j["location"] + ",").split(",")][:3]
+        posted = datetime.date.fromisoformat(j["posted"]); valid = (posted + datetime.timedelta(days=120)).isoformat()
+        desc = "<p>%s</p><p>What we are looking for:</p><ul>%s</ul>" % (esc(j["summary"]), "".join("<li>%s</li>" % esc(n) for n in j["needs"]))
+        ld = {"@context": "https://schema.org/", "@type": "JobPosting", "title": j["title"], "description": desc,
+              "identifier": {"@type": "PropertyValue", "name": "Marine HQ", "value": j["code"]},
+              "datePosted": j["posted"], "validThrough": valid, "employmentType": ["CONTRACTOR", "PART_TIME"],
+              "hiringOrganization": {"@type": "Organization", "name": "Marine HQ", "sameAs": MAIN, "logo": BASE + "/assets/logo_navy.png"},
+              "jobLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "addressLocality": city, "addressRegion": state, "addressCountry": "AU"}},
+              "directApply": True}
+        jsonld = '<script type="application/ld+json">%s</script>' % json.dumps(ld)
+        inner = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> <a href="/jobs/">Jobs Board</a> <span>&rsaquo;</span> %s</div>'
+                 '<h1>%s</h1><p class="stand">%s &middot; %s &middot; Start: %s</p></div></section>'
+                 '<main class="wrap shop"><div class="jobs-list"><section class="crew-card job"><div class="job-head"><span class="job-code">%s</span><h2>About the role</h2></div>'
+                 '<dl class="job-facts"><div><dt>Location</dt><dd>%s</dd></div><div><dt>Position</dt><dd>%s</dd></div><div><dt>Type</dt><dd>%s</dd></div><div><dt>Start</dt><dd>%s</dd></div></dl>'
+                 '<p>%s</p><p><strong>What we are looking for</strong></p><ul>%s</ul>'
+                 '<div class="foot-actions"><a class="btn" href="/apply/?job=%s">Apply for %s</a></div>'
+                 '<p class="crew-note"><a href="/jobs/">&larr; All jobs</a></p></section>'
+                 '<section class="crew-card"><span class="eyebrow">About Marine HQ</span><h2>Who you would be working for</h2>'
+                 '<p>Marine HQ looks after motor yachts for their owners. We are based at The Boat Works in Coomera on the Gold Coast and work across the Gold Coast, Sydney and the Whitsundays, managing and maintaining yachts from 40 to 120 ft, supplying crew and relief skippers, and running deliveries.</p></section></div></main>'
+                 % (esc(j["title"]), esc(j["title"]), esc(j["location"]), esc(j["type"]), esc(j["start"]), j["code"], esc(j["location"]), esc(j["position"]), esc(j["type"]), esc(j["start"]),
+                    esc(j["summary"]), "".join("<li>%s</li>" % esc(n) for n in j["needs"]), j["code"], j["code"]))
+        page = shell("%s | Marine HQ" % j["title"], "%s: %s, %s. %s Apply online with your CV." % (j["code"], j["position"], j["location"], j["type"]), "%s/%s/" % (BASE, slug), "website", jsonld, inner)
+        os.makedirs(os.path.join(SITE, slug), exist_ok=True)
+        write_page(os.path.join(SITE, slug, "index.html"), page)
+    return [job_slug(j) for j in jobs]
+
+def build_jobs_site(out):
+    """Standalone site for jobs.marinehq.com.au: board at /, /apply/, one page per job, sitemap, CNAME."""
+    global JOBSITE, BASE, SITE
+    import shutil
+    old_site = SITE
+    tmp = os.path.join(ROOT, "_jobs_tmp"); shutil.rmtree(tmp, ignore_errors=True); os.makedirs(tmp)
+    JOBSITE, BASE, SITE = True, JOBS_DOMAIN, tmp
+    shutil.copytree(os.path.join(old_site, "assets"), os.path.join(tmp, "assets"), ignore=shutil.ignore_patterns("photos", "*.mp4", "*.mov"))
+    build_jobs(); build_apply(); slugs = build_job_pages()
+    os.makedirs(out, exist_ok=True)
+    for item in os.listdir(out):
+        if item == ".git": continue
+        p = os.path.join(out, item); shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
+    shutil.copytree(os.path.join(tmp, "assets"), os.path.join(out, "assets"))
+    shutil.copy(os.path.join(tmp, "jobs", "index.html"), os.path.join(out, "index.html"))
+    shutil.copytree(os.path.join(tmp, "apply"), os.path.join(out, "apply"))
+    for sl in slugs: shutil.copytree(os.path.join(tmp, sl), os.path.join(out, sl))
+    today = datetime.date.today().isoformat()
+    urls = ["/"] + ["/%s/" % sl for sl in slugs]
+    open(os.path.join(out, "sitemap.xml"), "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join("<url><loc>%s%s</loc><lastmod>%s</lastmod></url>" % (JOBS_DOMAIN, u, today) for u in urls) + "\n</urlset>")
+    open(os.path.join(out, "robots.txt"), "w").write("User-agent: *\nAllow: /\nDisallow: /apply/\nSitemap: %s/sitemap.xml\n" % JOBS_DOMAIN)
+    open(os.path.join(out, "CNAME"), "w").write("jobsboard.marinehq.com.au\n"); open(os.path.join(out, ".nojekyll"), "w").write("")
+    shutil.rmtree(tmp, ignore_errors=True)
+    print("jobs site built -> %s (%d job pages)" % (out, len(slugs)))
 
 def build_thanks():
     """After-payment pages for the Stripe Payment Links (crew products): /thanks/<id>/ with the download. noindex, not in the sitemap."""
@@ -735,7 +802,24 @@ GA_SNIPPET = """<script async src="https://www.googletagmanager.com/gtag/js?id=%
 </head>"""
 
 _write_orig = None
+def job_slug(j):
+    return re.sub(r"[^a-z0-9]+", "-", ("%s %s %s" % (j["position"], j["location"].split(",")[0], j["code"])).lower()).strip("-")
+
+def jobsite_fix(h):
+    h = re.sub(r'<nav class="sub".*?</nav>\n?', '', h, flags=re.S)                       # no guides sub-bar
+    h = h.replace('<a href="/">Guides</a> <span>&rsaquo;</span>', '<a href="%s/">Marine HQ</a> <span>&rsaquo;</span>' % MAIN)
+    h = h.replace('href="/crew/"', 'href="%s/crew/"' % GUIDES_DOMAIN).replace('href="/jobs/"', 'href="/"')
+    h = h.replace(JOBS_DOMAIN + '/jobs/', JOBS_DOMAIN + '/')
+    h = h.replace('content="Marine HQ Guides"', 'content="Marine HQ Jobs"')
+    h = re.sub(r'<p class="fine">.*?</p>', '<p class="fine">&copy; %s Marine HQ Pty Ltd &middot; %s &middot; 76 - 84 Waterway Dr, Coomera QLD 4209.</p>' % (datetime.date.today().year, ABN), h, flags=re.S)
+    h = re.sub(r'<div class="foot-links">.*?</div>', '<div class="foot-links"><a href="/">Jobs Board</a><a href="%s/crew/">Crew register</a><a href="%s/">Guides</a><a href="%s">Marine HQ home</a><a href="%s/contact">Contact</a></div>' % (GUIDES_DOMAIN, GUIDES_DOMAIN, MAIN, MAIN), h, flags=re.S)
+    for j in json.load(open(os.path.join(CONTENT, "_jobs.json"), encoding="utf-8"))["jobs"]:
+        h = h.replace('<h2>%s</h2>' % esc(j["title"]), '<h2><a href="/%s/" style="color:inherit;text-decoration:none">%s</a></h2>' % (job_slug(j), esc(j["title"])))
+    return h
+
 def write_page(path, html):
+    if JOBSITE: html = jobsite_fix(html)
+    elif JOBS_LIVE: html = html.replace('href="/jobs/"', 'href="%s/"' % JOBS_DOMAIN)
     if PREFIX:
         html = re.sub(r'(href|src|poster)="/(?!/)', lambda m: '%s="%s/' % (m.group(1), PREFIX), html)
         html = html.replace("url('/", "url('%s/" % PREFIX)
@@ -746,7 +830,10 @@ def write_page(path, html):
     open(path, "w", encoding="utf-8").write(html)
 
 def main():
-    global PREFIX, NOINDEX, BASE, GA4
+    global PREFIX, NOINDEX, BASE, GA4, JOBS_LIVE
+    JOBS_LIVE = "--jobs-live" in sys.argv
+    if "--jobs-site" in sys.argv:
+        build_jobs_site(os.path.expanduser("~/Documents/Marine HQ/marinehq-jobs")); return
     for i, a in enumerate(sys.argv):
         if a == "--prefix" and i + 1 < len(sys.argv): PREFIX = sys.argv[i + 1].rstrip("/")
         if a == "--base" and i + 1 < len(sys.argv):   BASE = sys.argv[i + 1].rstrip("/")
@@ -758,6 +845,13 @@ def main():
     os.makedirs(os.path.join(SITE, "guides"), exist_ok=True)
     for g in guides: build_guide(g, guides)
     build_search_index(guides); build_index(guides); build_hubs(guides); build_shop(); build_crew(); build_jobs(); build_apply(); build_thanks(); build_free(); build_go(); build_links(); build_meta(guides)
+    if JOBS_LIVE:
+        redir = lambda to, js: ('<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><title>Marine HQ Jobs Board</title>'
+                                '<meta name="robots" content="noindex"><link rel="canonical" href="%s/"><meta http-equiv="refresh" content="0;url=%s/">'
+                                '<script>%s</script></head><body style="font-family:Arial,sans-serif;padding:40px"><p>The Marine HQ Jobs Board has moved to <a href="%s/">%s</a>.</p></body></html>' % (JOBS_DOMAIN, to, js, to, to))
+        open(os.path.join(SITE, "jobs", "index.html"), "w", encoding="utf-8").write(redir(JOBS_DOMAIN, 'location.replace("%s/")' % JOBS_DOMAIN))
+        open(os.path.join(SITE, "apply", "index.html"), "w", encoding="utf-8").write(redir(JOBS_DOMAIN + "/apply", 'location.replace("%s/apply/"+location.search)' % JOBS_DOMAIN))
+        sm = os.path.join(SITE, "sitemap.xml"); t = open(sm).read(); open(sm, "w").write(re.sub(r"<url><loc>[^<]*/jobs/</loc>.*?</url>\n?", "", t))
     print("built %d guide(s) → %s" % (len(guides), SITE))
     for g in guides: print("  /guides/%s/  (%d words, %s)" % (g["slug"], g["words"], CAT_LABEL.get(g["category"], g["category"])))
     if "--check" in sys.argv: check(guides)
