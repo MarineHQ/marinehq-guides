@@ -35,6 +35,7 @@ MAIN    = "https://www.marinehq.com.au"
 PHONE   = "0439 748 387"
 PHONE_H = "+61439748387"
 EMAIL   = "yachtsupport@marinehq.com.au"
+JOBS_EMAIL = "crew@marinehq.com.au"
 ABN     = "ABN 38 661 097 221"
 ORG     = "Marine HQ"
 
@@ -97,11 +98,11 @@ __JSONLD__
     <nav class="mh-nav" aria-label="Marine HQ">__MAINNAV__</nav>
     <div class="mh-cta"><a class="mh-phone" href="tel:__PHONE_H__">0439 748 387</a><a class="mh-contact" href="__MAIN__/contact">Contact us</a></div>
     <details class="mh-menu"><summary aria-label="Menu"><i></i><i></i><i></i></summary>
-      <div class="mh-drawer">__MAINNAV__<div class="mh-drawer-sub"><span>Guides by topic</span>__NAV__<a href="/crew/">Crew placement</a><a href="/owners-kit/">Owner&rsquo;s Kit</a></div><a class="mh-phone" href="tel:__PHONE_H__">Call 0439 748 387</a></div>
+      <div class="mh-drawer">__MAINNAV__<div class="mh-drawer-sub"><span>Guides by topic</span>__NAV__<a href="/crew/">Crew placement</a><a href="/jobs/">Yacht Crew Jobs</a><a href="/owners-kit/">Owner&rsquo;s Kit</a></div><a class="mh-phone" href="tel:__PHONE_H__">Call 0439 748 387</a></div>
     </details>
   </div>
 </header>
-<nav class="sub" aria-label="Guide sections"><div class="wrap sub-bar"><a class="sub-home" href="/">All guides</a>__NAV__<a class="sub-kit" href="/crew/">Crew placement</a><a class="sub-kit" href="/owners-kit/">Owner&rsquo;s Kit</a></div></nav>
+<nav class="sub" aria-label="Guide sections"><div class="wrap sub-bar"><a class="sub-home" href="/">All guides</a>__NAV__<a class="sub-kit" href="/crew/">Crew placement</a><a class="sub-kit" href="/jobs/">Yacht Crew Jobs</a><a class="sub-kit" href="/owners-kit/">Owner&rsquo;s Kit</a></div></nav>
 '''
 
 FOOT = '''
@@ -249,7 +250,7 @@ def shell(title, desc, canon, ogtype, jsonld, inner):
                 .replace("__OGTYPE__", ogtype).replace("__BASE__", BASE).replace("__V__", v)
                 .replace("__JSONLD__", jsonld).replace("__MAINNAV__", main_nav_html()).replace("__NAV__", nav_html()).replace("__MAIN__", MAIN)
                 .replace("__PHONE_H__", PHONE_H))
-    foot = (FOOT.replace("__FOOTNAV__", nav_html() + '<a href="/crew/">Crew placement</a><a href="/owners-kit/">Owner&rsquo;s Kit</a><a href="%s">Marine HQ home</a><a href="%s/contact">Contact</a>' % (MAIN, MAIN))
+    foot = (FOOT.replace("__FOOTNAV__", nav_html() + '<a href="/crew/">Crew placement</a><a href="/jobs/">Yacht Crew Jobs</a><a href="/owners-kit/">Owner&rsquo;s Kit</a><a href="%s">Marine HQ home</a><a href="%s/contact">Contact</a>' % (MAIN, MAIN))
                 .replace("__YEAR__", str(datetime.date.today().year)).replace("__ABN__", ABN)
                 .replace("__PHONE_H__", PHONE_H).replace("__PHONE__", PHONE).replace("__EMAIL__", EMAIL).replace("__MAIN__", MAIN))
     return page + inner + foot
@@ -385,6 +386,31 @@ def build_crew():
                  BASE + "/crew/", "website", "", inner)
     os.makedirs(os.path.join(SITE, "crew"), exist_ok=True)
     write_page(os.path.join(SITE, "crew", "index.html"), page)
+
+def build_jobs():
+    """/jobs/ : jobs notice board. Roles live in content/_jobs.json; open ones are listed, apply = email crew@."""
+    from urllib.parse import quote
+    jobs = json.load(open(os.path.join(CONTENT, "_jobs.json"), encoding="utf-8"))["jobs"]
+    live = [j for j in jobs if j.get("status") == "open"]
+    cards = []
+    for j in live:
+        mail = "mailto:%s?subject=%s&amp;body=%s" % (JOBS_EMAIL, quote("Job enquiry: " + j["title"]), quote("Hi Marine HQ, I would like to be considered for: %s.\n\nName:\nMobile:\nTickets and certificates held:\nSea time / commercial experience:\nAvailability:\n" % j["title"]))
+        cards.append('<section class="crew-card job" id="%s"><span class="eyebrow">%s &middot; %s</span><h2>%s</h2><p>%s</p><ul>%s</ul>'
+                     '<div class="foot-actions"><a class="btn" href="%s">Register your interest</a></div>'
+                     '<p class="crew-note">Posted %s. Or email <a href="mailto:%s">%s</a>.</p></section>'
+                     % (j["id"], esc(j["location"]), esc(j["type"]), esc(j["title"]), esc(j["summary"]),
+                        "".join("<li>%s</li>" % esc(n) for n in j["needs"]), mail, nice_date(j["posted"]), JOBS_EMAIL, JOBS_EMAIL))
+    body = "".join(cards) if cards else '<section class="crew-card"><h2>No roles open right now</h2><p>Join the crew register and we will call when something fits.</p></section>'
+    inner = ('<section class="hero small"><div class="wrap"><div class="crumbs"><a href="/">Guides</a> <span>&rsaquo;</span> Yacht Crewing</div>'
+             '<h1>Marine HQ Yacht Crewing</h1>'
+             '<p class="stand">The yacht crew jobs board. Skipper, deckhand and day work that has come to us, casual and ongoing, so you can be called on when a job lands.</p></div></section>'
+             '<main class="wrap shop"><div class="jobs-list">%s</div>'
+             '<p class="crew-note jobs-foot">Not seeing the right role? <a href="/crew/">Join the Marine HQ crew register</a> and we will call when something fits.</p></main>' % body)
+    page = shell("Yacht crew jobs: skippers and deckhands | Marine HQ Yacht Crewing",
+                 "Current skipper, crew and day work from Marine HQ. Commercial skippers wanted in Sydney, casual and ongoing. Email crew@marinehq.com.au.",
+                 BASE + "/jobs/", "website", "", inner)
+    os.makedirs(os.path.join(SITE, "jobs"), exist_ok=True)
+    write_page(os.path.join(SITE, "jobs", "index.html"), page)
 
 def build_thanks():
     """After-payment pages for the Stripe Payment Links (crew products): /thanks/<id>/ with the download. noindex, not in the sitemap."""
@@ -620,7 +646,7 @@ def build_hubs(guides):
         write_page(os.path.join(SITE, s, "index.html"), page)
 
 def build_meta(guides):
-    urls = ["%s/" % BASE] + ["%s/%s/" % (BASE, s) for s, _, _ in CATEGORIES] + [BASE + "/owners-kit/", BASE + "/crew/", BASE + "/free-haul-out-checklist/"] + ["%s/guides/%s/" % (BASE, g["slug"]) for g in guides]
+    urls = ["%s/" % BASE] + ["%s/%s/" % (BASE, s) for s, _, _ in CATEGORIES] + [BASE + "/owners-kit/", BASE + "/crew/", BASE + "/jobs/", BASE + "/free-haul-out-checklist/"] + ["%s/guides/%s/" % (BASE, g["slug"]) for g in guides]
     lm = {("%s/guides/%s/" % (BASE, g["slug"])): g["updated"] for g in guides}
     today = datetime.date.today().isoformat()
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -670,7 +696,7 @@ def main():
     guides.sort(key=lambda g: g["updated"], reverse=True)
     os.makedirs(os.path.join(SITE, "guides"), exist_ok=True)
     for g in guides: build_guide(g, guides)
-    build_search_index(guides); build_index(guides); build_hubs(guides); build_shop(); build_crew(); build_thanks(); build_free(); build_go(); build_links(); build_meta(guides)
+    build_search_index(guides); build_index(guides); build_hubs(guides); build_shop(); build_crew(); build_jobs(); build_thanks(); build_free(); build_go(); build_links(); build_meta(guides)
     print("built %d guide(s) → %s" % (len(guides), SITE))
     for g in guides: print("  /guides/%s/  (%d words, %s)" % (g["slug"], g["words"], CAT_LABEL.get(g["category"], g["category"])))
     if "--check" in sys.argv: check(guides)

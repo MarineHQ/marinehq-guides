@@ -1,0 +1,34 @@
+{
+  "jobs": [
+    {
+      "id": "sydney-commercial-skippers",
+      "title": "Commercial skippers, Sydney Harbour",
+      "location": "Sydney, NSW",
+      "type": "Casual and ongoing",
+      "posted": "2026-10-21",
+      "status": "open",
+      "summary": "We are building a bench of commercial skippers we can call on in Sydney, from early November 2026. Work is mostly four-hour event and private charter blocks on a commercial passenger vessel, plus the occasional vessel move. Casual, as needed, with more work expected over summer as further commercial vessels come on.",
+      "needs": [
+        "Current commercial skipper qualification for passenger vessels on Sydney Harbour",
+        "Able to take short-notice work, ideally with 24-hour turnaround",
+        "Happy to be a preferred skipper or a back-up who learns the boat",
+        "Professional, presentable and good with guests"
+      ]
+    },
+    {
+      "id": "sydney-deckhands",
+      "title": "Deckhands, Sydney Harbour",
+      "location": "Sydney, NSW",
+      "type": "Casual and ongoing",
+      "posted": "2026-10-21",
+      "status": "open",
+      "summary": "We also need reliable deckhands in Sydney to crew alongside our skippers, from early November 2026. The commercial passenger vessel runs with a minimum crew of two, so every skipper job needs a deckhand. Work is mostly four-hour event and private charter blocks, casual and as needed, with more expected over summer.",
+      "needs": [
+        "Deck experience on charter, commercial or passenger vessels preferred; keen newcomers with the right attitude considered",
+        "Current first aid and relevant sea safety certificates",
+        "Able to take short-notice work, ideally with 24-hour turnaround",
+        "Professional, presentable and good with guests"
+      ]
+    }
+  ]
+}
