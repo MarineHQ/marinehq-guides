@@ -556,3 +556,7 @@ html,body{max-width:100%;overflow-x:clip}
 .a-err{color:#a34e0e;background:#fcebdc;border-left:2px solid var(--orange);padding:10px 14px;margin-top:14px}
 .apply-card button.btn:disabled{opacity:.6;cursor:wait}
 @media (max-width:640px){.a-grid{grid-template-columns:1fr}}
+.apply-role{max-width:760px;margin:8px 0 18px}
+.apply-role[hidden]{display:none}
+.apply-role h2{font-family:var(--serif);font-weight:500;font-size:1.7rem;margin:6px 0 4px;color:var(--navy)}
+#aJob{display:none!important}
