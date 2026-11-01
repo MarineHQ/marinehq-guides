@@ -534,6 +534,11 @@ def build_jobs_site(out):
     shutil.copy(os.path.join(tmp, "jobs", "index.html"), os.path.join(out, "index.html"))
     shutil.copytree(os.path.join(tmp, "apply"), os.path.join(out, "apply"))
     for sl in slugs: shutil.copytree(os.path.join(tmp, sl), os.path.join(out, sl))
+    for old, new in OLD_JOB_SLUGS.items():   # renamed jobs: keep the old address working
+        if new not in slugs: continue
+        os.makedirs(os.path.join(out, old), exist_ok=True)
+        to = "%s/%s/" % (JOBS_DOMAIN, new)
+        open(os.path.join(out, old, "index.html"), "w").write('<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=%s"><link rel="canonical" href="%s"><meta name="robots" content="noindex"></head><body><p>This job has moved to <a href="%s">%s</a>.</p></body></html>' % (to, to, to, to))
     today = datetime.date.today().isoformat()
     urls = ["/"] + ["/%s/" % sl for sl in slugs]
     open(os.path.join(out, "sitemap.xml"), "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join("<url><loc>%s%s</loc><lastmod>%s</lastmod></url>" % (JOBS_DOMAIN, u, today) for u in urls) + "\n</urlset>")
@@ -804,6 +809,11 @@ GA_SNIPPET = """<script async src="https://www.googletagmanager.com/gtag/js?id=%
 </head>"""
 
 _write_orig = None
+OLD_JOB_SLUGS = {   # old address -> current address, after a job title changes
+    "steward-sydney-mhq-jb-003": "stewardess-sydney-mhq-jb-003",
+    "steward-gold-coast-mhq-jb-004": "stewardess-gold-coast-mhq-jb-004",
+}
+
 def job_slug(j):
     return re.sub(r"[^a-z0-9]+", "-", ("%s %s %s" % (j["position"], j["location"].split(",")[0], j["code"])).lower()).strip("-")
 
