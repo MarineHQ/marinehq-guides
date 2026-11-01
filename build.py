@@ -810,8 +810,10 @@ GA_SNIPPET = """<script async src="https://www.googletagmanager.com/gtag/js?id=%
 
 _write_orig = None
 OLD_JOB_SLUGS = {   # old address -> current address, after a job title changes
-    "steward-sydney-mhq-jb-003": "stewardess-sydney-mhq-jb-003",
-    "steward-gold-coast-mhq-jb-004": "stewardess-gold-coast-mhq-jb-004",
+    "steward-sydney-mhq-jb-003": "yacht-stewardess-sydney-mhq-jb-003",
+    "steward-gold-coast-mhq-jb-004": "yacht-stewardess-gold-coast-mhq-jb-004",
+    "stewardess-sydney-mhq-jb-003": "yacht-stewardess-sydney-mhq-jb-003",
+    "stewardess-gold-coast-mhq-jb-004": "yacht-stewardess-gold-coast-mhq-jb-004",
 }
 
 def job_slug(j):
