@@ -814,6 +814,7 @@ OLD_JOB_SLUGS = {   # old address -> current address, after a job title changes
     "steward-gold-coast-mhq-jb-004": "yacht-stewardess-gold-coast-mhq-jb-004",
     "stewardess-sydney-mhq-jb-003": "yacht-stewardess-sydney-mhq-jb-003",
     "stewardess-gold-coast-mhq-jb-004": "yacht-stewardess-gold-coast-mhq-jb-004",
+    "med-engineer-gold-coast-mhq-jb-009": "med-2-gold-coast-mhq-jb-009",
 }
 
 def job_slug(j):
