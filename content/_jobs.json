@@ -151,6 +151,25 @@
         "Comfortable with sea trials and basic engine and systems checks",
         "Professional, reliable and good with owners and yard staff"
       ]
+    },
+    {
+      "id": "gc-med-day-work",
+      "code": "MHQ-JB-009",
+      "title": "MED Engineer, Day Work, Gold Coast",
+      "location": "Gold Coast, QLD",
+      "position": "MED Engineer",
+      "family": "Engineer",
+      "type": "Day work, 10 days",
+      "posted": "2026-11-04",
+      "status": "open",
+      "start": "Immediate",
+      "summary": "We are placing a Marine Engine Driver for 10 days of day work on the Gold Coast for a client, starting immediately. Tell us your MED grade, when you can start and your day rate when you apply.",
+      "needs": [
+        "Current Marine Engine Driver (MED) ticket",
+        "Available to start straight away for 10 days",
+        "On the Gold Coast or able to get here",
+        "Hands-on, reliable and tidy on board"
+      ]
     }
   ]
 }
