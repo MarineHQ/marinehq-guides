@@ -153,24 +153,24 @@
       ]
     },
     {
-      "id": "gc-med-day-work",
-      "code": "MHQ-JB-009",
-      "title": "MED 2, Day Work, Gold Coast",
-      "location": "Gold Coast, QLD",
-      "position": "MED 2",
-      "family": "Engineer",
-      "type": "Day work, 7 to 10 days",
-      "posted": "2026-11-04",
-      "status": "open",
-      "start": "Immediate",
-      "summary": "We are placing two MED 2s for 7 to 10 days of day work on a 40m vessel in the yard on the Gold Coast, starting immediately. You will assist an experienced Captain to get jobs finished while the vessel is in the yard, including valve maintenance and overboards. It is a hands-on assist role, so light engineering experience is enough. Tell us when you can start when you apply.",
-      "needs": [
-        "Current MED 2 ticket",
-        "Some light engineering experience",
-        "Available to start straight away for 7 to 10 days",
-        "On the Gold Coast or able to get here",
-        "Hands-on, reliable and tidy on board"
-      ]
+        "id": "gc-med-day-work",
+        "code": "MHQ-JB-009",
+        "title": "Shore-based Engineer, MED 2, Gold Coast",
+        "location": "Gold Coast, QLD",
+        "position": "Shore-based Engineer (MED 2)",
+        "family": "Engineer",
+        "type": "Day work",
+        "posted": "2026-11-04",
+        "status": "open",
+        "start": "Immediate",
+        "summary": "We are looking for a shore-based engineer with an MED 2 for day work on the Gold Coast, starting immediately. The work includes valve maintenance, overboards and similar jobs. It is a hands-on assist role, so light engineering experience is enough. Tell us when you can start when you apply.",
+        "needs": [
+          "Current MED 2 ticket",
+          "Some light engineering experience",
+          "Available to start straight away",
+          "On the Gold Coast or able to get here",
+          "Hands-on, reliable and tidy on board"
+        ]
     }
   ]
 }
